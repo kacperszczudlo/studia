@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSIAŻKA_TELEFONICZNA>
+<KONTAKT1>
+    <NAZWA_WYŚWIETLANA>Platynov</NAZWA_WYŚWIETLANA>
+    <IMIĘ_1>Filip</IMIĘ_1>
+    <IMIĘ_2>Hubert</IMIĘ_2>
+    <NAZWISKO>Kulon</NAZWISKO>
+    <ADRES>Urzędnicza 12c, 32-700 Bochnia</ADRES>
+    <TELEFON miejsce="dom">678 145 123</TELEFON>
+    <TELEFON miejsce="praca">634 254 234</TELEFON>
+    <TYP>Znajomi</TYP>
+</KONTAKT1>
+<KONTAKT2>
+    <NAZWA_WYŚWIETLANA>Xayoo</NAZWA_WYŚWIETLANA>
+    <IMIĘ_1>Marcin</IMIĘ_1>
+    <IMIĘ_2>Bartosz</IMIĘ_2>
+    <NAZWISKO>Majkut</NAZWISKO>
+    <ADRES>Zakolasta 32, 60-001 Poznań</ADRES>
+    <TELEFON miejsce="dom">567 744 777</TELEFON>
+    <TELEFON miejsce="praca">666 666 666</TELEFON>
+    <TYP>Rodzina</TYP>
+</KONTAKT2>
+<KONTAKT3>
+    <NAZWA_WYŚWIETLANA>Sajmon</NAZWA_WYŚWIETLANA>
+    <IMIĘ_1>Szymon</IMIĘ_1>
+    <IMIĘ_2>Norbert</IMIĘ_2>
+    <NAZWISKO>Wielki</NAZWISKO>
+    <ADRES>Cicha 12, 50-001 Warszawa</ADRES>
+    <TELEFON miejsce="dom">987 987 987</TELEFON>
+    <TELEFON miejsce="praca">997 998 999</TELEFON>
+    <TYP></TYP>
+</KONTAKT3>
+<KONTAKT4>
+    <NAZWA_WYŚWIETLANA>Byczek</NAZWA_WYŚWIETLANA>
+    <IMIĘ_1>Jan</IMIĘ_1>
+    <IMIĘ_2>Kacper</IMIĘ_2>
+    <NAZWISKO>Bystry</NAZWISKO>
+    <ADRES>Silna 1, 40-002 Bydgoszcz</ADRES>
+    <TELEFON miejsce="dom">678 222 333</TELEFON>
+    <TELEFON miejsce="praca">678 789 876</TELEFON>
+    <TYP>Znajomi</TYP>
+</KONTAKT4>
+<KONTAKT5>
+    <NAZWA_WYŚWIETLANA>Zegar mistrz</NAZWA_WYŚWIETLANA>
+    <IMIĘ_1>Bogdan</IMIĘ_1>
+    <IMIĘ_2>Kamil</IMIĘ_2>
+    <NAZWISKO>Horeszko</NAZWISKO>
+    <ADRES>Kawa 6, 20-001 Rzeszów</ADRES>
+    <TELEFON miejsce="dom">990 998 778</TELEFON>
+    <TELEFON miejsce="praca">778 990 763</TELEFON>
+    <TYP>Rodzina</TYP>
+</KONTAKT5> 
+</KSIAŻKA_TELEFONICZNA>

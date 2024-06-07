@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Formularz</title>
+</head>
+<body>
+  <h1>Formularz rejestracyjny</h1>
+  <form action="mailto:adres_email@domena.com" method="post" enctype="text/plain">
+    <label for="imie">Imię:</label>
+    <input type="text" id="imie" name="imie" maxlength="128" placeholder="Wprowadź imię" required><br><br>
+
+    <label for="nazwisko">Nazwisko:</label>
+    <input type="text" id="nazwisko" name="nazwisko" maxlength="128" placeholder="Wprowadź nazwisko" required><br><br>
+
+    <label for="haslo">Hasło:</label>
+    <input type="password" id="haslo" name="haslo" required><br><br>
+
+    <label>Aktywności sportowe:</label><br>
+    <input type="checkbox" id="sport1" name="sport" value="Piłka nożna" checked>
+    <label for="sport1">Piłka nożna</label><br>
+    <input type="checkbox" id="sport2" name="sport" value="Koszykówka" checked>
+    <label for="sport2">Koszykówka</label><br>
+    <input type="checkbox" id="sport3" name="sport" value="Bieganie" checked>
+    <label for="sport3">Bieganie</label><br>
+    <input type="checkbox" id="sport4" name="sport" value="Pływanie" checked>
+    <label for="sport4">Pływanie</label><br><br>
+
+    <label>Przedział wiekowy:</label><br>
+    <input type="radio" id="wiek1" name="wiek" value="0-25" checked>
+    <label for="wiek1">0-25</label><br>
+    <input type="radio" id="wiek2" name="wiek" value="25-50">
+    <label for="wiek2">25-50</label><br>
+    <input type="radio" id="wiek3" name="wiek" value="50-75">
+    <label for="wiek3">50-75</label><br>
+    <input type="radio" id="wiek4" name="wiek" value="75+">
+    <label for="wiek4">75 i więcej</label><br><br>
+
+    <label for="plec">Płeć:</label>
+    <select id="plec" name="plec">
+      <option value="Mężczyzna">Mężczyzna</option>
+      <option value="Kobieta">Kobieta</option>
+    </select><br><br>
+
+    <label for="info">Dodatkowe informacje:</label><br>
+    <textarea id="info" name="info" rows="4" cols="50"></textarea><br><br>
+
+    <label for="zdjecie">Zdjęcie profilowe (GIF, JPEG, PNG):</label><br>
+    <input type="file" id="zdjecie" name="zdjecie" accept="image/gif, image/jpeg, image/png"><br><br>
+
+    <input type="reset" value="Wyczyść wszystko">
+    <input type="submit" value="Wyślij">
+  </form>
+</body>
+</html>

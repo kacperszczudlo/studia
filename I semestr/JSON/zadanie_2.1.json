@@ -1,0 +1,44 @@
+{
+    "Użytkownik": [
+    {
+        "login": "kacper2000",
+        "hasło": "bezsensowanehaslo123",
+        "e-mail": "kacper123@gmail.com",
+        "role": ["administrator","użytkownik"],
+        "imię": true,
+        "nazwisko": true
+    },
+    {
+        "login": "marcin347__",
+        "hasło": "kontotrudnedohackowania**",
+        "e-mail": "majrcin123@gmail.com",
+        "role": ["administrator","użytkownik"],
+        "imię": false,
+        "nazwisko": true
+    },
+    {
+        "login": "hubert_was909090",
+        "hasło": "mojetrudnehaselko1111",
+        "e-mail": "hubert123@gmail.com",
+        "role": ["administrator"],
+        "imię": true,
+        "nazwisko": true
+    },
+    {
+        "login": "krzychu456YY",
+        "hasło": "JestemsupereloItak***",
+        "e-mail": "krzysztof123@gmail.com",
+        "role": ["użytkownik"],
+        "imię": true,
+        "nazwisko": false
+    },
+    {
+        "login": "janjan102340",
+        "hasło": "haslotrudne123",
+        "e-mail": "jan123@gmail.com",
+        "role": ["administrator","użytkownik"],
+        "imię": false,
+        "nazwisko": true
+    }
+]
+}

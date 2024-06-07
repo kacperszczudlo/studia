@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+</head>
+<body>
+    <script>
+        const tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
+        function liczbyParzyste(tab){
+            for(let i=0; i<tab.length; i++){
+                if(tab[i] % 2 == 0){
+                    console.log(tab[i]);
+                }
+            }
+        }
+        function sumaLiczbParzystych(tab) {
+            let suma = 0;
+
+            for (let i = 0; i < tab.length; i++) {
+                if (tab[i] % 2 == 0) {
+                    suma += tab[i];
+                }
+            }
+
+            return suma;
+        }
+        console.log("Wszystkie liczby: ", tab)
+        console.log("Liczby parzyste: ");
+        const parzyste = liczbyParzyste(tab);
+        const wynik = sumaLiczbParzystych(tab);
+        console.log("Suma liczb parzystych: ", wynik);
+    </script>
+</body>
+</html>

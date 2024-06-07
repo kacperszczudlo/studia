@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 36px;
+    color: #333;
+}
+
+p, ul {
+    margin: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #555;
+    text-align: justify;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+.content {
+    width: 600px; /* szerokoĹ›Ä‡ kontenera */
+  }
+  
+  img {
+    float: left; /* umieszczenie obrazka na lewo */
+    margin: 0 20px; /* margines po prawej stronie obrazka */
+    width: 400px;
+  }

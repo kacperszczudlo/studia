@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 1</title>
+    <link rel="stylesheet" href="style1.css">
+    
+</head>
+<body>
+    <header><b>Podstawy C++</b></header>
+    <hr>
+    <h2>1. Styl programowania</h2>
+    <h4>Maksymy programistyczne</h4>
+    <ul >
+        <li>Programy mają być czytane przez ludzi;</li>
+        <li>Dawaj więcej komentarzy niż będzie Ci, jak sądzisz potrzeba;</li>
+        <li>Stosuj komentarze wstępne;</li>
+    </ul>
+    <h2>2. Struktura programu</h2>
+    <p>Kurs ten przeznaczony jest dla tych, którzy chcą poznać podstawy C/C++ oraz Buildera C++ W pierwszej części kursu zajmiemy się ogólną strukturą programów pisanych we wspomnianych językach. Do jej omówienia posłużymy się prostym przykładem. Oto on:</p>
+
+    <div id="code">
+        <code>
+            #include &lt;iostream&gt;<br>
+            #include &lt;conio.h&gt;<br>
+            #pragma hdrstop<br><br>
+    
+            int main()<br>
+            {<br>
+                &emsp;std::cout &lt;&lt; "Witaj";<br>
+                &emsp;std::cout &lt;&lt; std::endl &lt;&lt; "świecie";<br>
+                &emsp;getch();<br>
+                &emsp;return 0;<br>
+            }<br>
+            //-----------------------------------------------------------------
+        </code>
+    </div>
+
+    <p>Podstawą całego programu jest funkcja <b>main()</b>. Po uruchomieniu programu to właśnie ona wykonywana jest jako pierwsza.</p>
+    <h2>3. A to już nie dotyczy C++</h2>
+    <ol>
+      <li type="I">
+        Część pierwsza
+        <ol>
+          <li>Rozdział pierwszy
+            <ul>
+              <li style="list-style-type: square;">dodatek</li>
+            </ul>
+          </li>
+          <li>Rozdział drugi</li>
+          <li>Rozdział trzeci
+            <ul style="list-style-type: square;">
+              <li>dodatek</li>
+            </ul>
+          </li>
+          <li>Rozdział czwarty</li>
+        </ol>
+      </li>
+      <li type="I">Część druga
+        <ol>
+          <li>Rozdział pierwszy
+            <ol type="a">
+              <li>podrozdział</li>
+              <li>podrozdział</li>
+            </ol>
+          </li>
+          <li>Rozdział drugi</li>
+          <li>Rozdział trzeci
+            <ol type="a">
+              <li>podrozdział</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    
+    <h4>4. System binarny</h4>
+    <div id="bottom">
+        1010<sub>(2)</sub> = 0*2<sup>0</sup> + 1*2<sup>1</sup> + 0*2<sup>2</sup> + 1*2<sup>3</sup> = 10<sub>(10)</sub>
+    </div>
+    
+</body>
+</html>

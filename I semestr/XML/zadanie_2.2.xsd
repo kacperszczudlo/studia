@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="towar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="identyfikator">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="\d{3}-\d{3}" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="nazwa">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="5" />
+                            <xs:maxLength value="300" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="opis">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="10" />
+                            <xs:maxLength value="1000" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="cenaNetto" type="xs:decimal" />
+                <xs:element name="podatekVAT" type="xs:decimal" />
+                <xs:element name="dataDodania" type="xs:date" />
+                <xs:element name="dataOstatniejZmiany" type="xs:date" />
+                <xs:element name="daneZamowienia">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="\d{8},\d{8}" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

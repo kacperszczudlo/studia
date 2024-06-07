@@ -1,0 +1,10 @@
+<towar>
+    <identyfikator>123-456</identyfikator>
+    <nazwa>Nazwa produktu</nazwa>
+    <opis>To jest opis produktu zawierający co najmniej 10 znaków</opis>
+    <cenaNetto>50.00</cenaNetto>
+    <podatekVAT>8.00</podatekVAT>
+    <dataDodania>2023-01-01</dataDodania>
+    <dataOstatniejZmiany>2023-11-15</dataOstatniejZmiany>
+    <daneZamowienia>20230101,20230105</daneZamowienia>
+</towar>

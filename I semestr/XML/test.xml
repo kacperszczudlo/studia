@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kurs-xml>
+    <artykuł>
+        <tytuł>Wprowadzenie do XML</tytuł>
+        <autor>Jan Kowalski</autor>
+    </artykuł>
+    <artykuł>
+        <!-- komentarz -->    
+    </artykuł>
+    <artykuł publikacja="2024-09-30">
+        <tytuł>Praca w XML</tytuł>
+        <autor>Jan Kowalski</autor>
+        <nakład> &lt; 500</nakład>
+    </artykuł>
+</kurs-xml>

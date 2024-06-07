@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 1 - Formularz zbiorczy</title>
+    <style>
+    </style>
+</head>
+<body>
+    
+    <form action="" method="post">
+      <fieldset>
+        <legend>Formularz zbiorczy</legend>
+        <input type="text" id="login" name="login" style="width: 270px;" required>
+        <label for="login">Podaj login</label><br>
+        <input type="password" name="haslo" id="haslo" required>
+        <label for="haslo">Podaj tajemne hasło</label>
+        <br><br>
+        <label>Czy lubisz HTML-a?</label>
+        <input type="radio" name="czyLubi1" id="czyLubi1">
+        <label for="czyLubi1">Tak</label>
+        <input type="radio" name="czyLubi2" id="czyLubi2">
+        <label for="czyLubi2">Nie</label>
+        <input type="radio" name="czyLubi3" id="czyLubi3">
+        <label for="czyLubi3">Nie wiem</label>
+        <br><br>
+        <label>Jakie znasz języki programowania?</label><br>
+        <input type="checkbox" name="jakieJezyki1" id="jakieJezyki1">
+        <label for="jakieJezyki1">Visual Basic</label>
+        <input type="checkbox" name="jakieJezyki2" id="jakieJezyki2">
+        <label for="jakieJezyki2">Java</label>
+        <input type="checkbox" name="jakieJezyki3" id="jakieJezyki3">
+        <label for="jakieJezyki3">C++</label>
+        <input type="checkbox" name="jakieJezyki4" id="jakieJezyki4">
+        <label for="jakieJezyki4">PHP</label>
+        <input type="checkbox" name="jakieJezyki5" id="jakieJezyki5">
+        <label for="jakieJezyki5">JavaScript</label>
+        <input type="checkbox" name="jakieJezyki6" id="jakieJezyki6">
+        <label for="jakieJezyki6">C#</label>
+        <br><br>
+        <select multiple id="options" name="options">
+            <option value="option1">Odpowiedź 1</option>
+            <option value="option2">Odpowiedź 2</option>
+            <option value="option3">Odpowiedź 3</option>
+            <option value="option4">Odpowiedź 4</option>
+            <option value="option5">Odpowiedź 5</Odpowiedź>
+        </select>
+        <label for="options">Zaznacz właściwą odpowiedź - może być więcej</label><br><br>
+        <textarea name="opis" id="opis" cols="55" rows="5"></textarea>
+        <label for="opis">Opisz w 200 słowach zalety HTML-a</label>
+        <br><br>
+        <input type="text" name="plik" id="plik"> 
+        <input type="file" value="Przeglądaj..." name="przegladaj" id="przegladaj multiple">
+        <br><br>
+        <input type="button" value="Reset" name="reset" id="reset">
+        <label for="reset">Skasuj, jeżeli się pomyliłeś</label>
+        <br><br>
+        <input type="image" src="https://cdn3.iconfinder.com/data/icons/simple-web-navigation/165/tick-512.png" width="25px" alt="Submit" name="wyslij" id="wyslij">        <label for="wyslij">Wyślij</label>
+      </fieldset>
+    </form>
+    
+</body>
+</html>

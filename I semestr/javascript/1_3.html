@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 1</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Wprowadz liczbe a: ");
+        a = parseFloat(a);
+        console.log("Wprowadzono a: ", a);
+        let b = prompt("Wprowadz liczbe b: ");
+        b = parseFloat(b);
+        console.log("Wprowadzono b: ", b);
+        let x = prompt("Podaj znak: ");
+        console.log("Podano znak: ", x);
+        let wynik;
+        switch(x){
+            case '+':
+                wynik = a + b;
+                console.log("Wynik dodawania: ",wynik);
+                break;
+            case '-':
+                wynik = a - b;
+                console.log("Wynik odejmowania: ",wynik);
+                break;
+            case '*':
+                wynik = a * b;
+                console.log("Wynik mnożenia: ",wynik);
+                break;
+            case '/':
+                wynik = a / b;
+                console.log("Wynik dzielenia: ",wynik);
+                break;
+            case '^':
+                wynikk = a ^ b;
+                console.log("Wynik potęgowania: ",wynik);
+                break;
+            case '.':
+                wynik = Math.sqrt(a);
+                console.log("Wynik pierwiastkowania: ",wynik);
+                break;
+            default:
+                console.log("Nieprawidłowy znak.");
+                break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Tomasz Gądek">
+
+        <title>at chess</title>
+
+        <link rel="stylesheet" href="https://tgadek.bitbucket.io/library/chess/style.css" />
+    </head>
+    <body id="0_0">
+        <label for="chess">Figura:</label>
+
+        <select id="chess">
+            <option value="KING">Król</option>
+            <option value="QUEEN">Królowa</option>
+            <option value="ROOK">Wieża</option>
+            <option value="BISHOP" selected="selected">Goniec</option>
+            <option value="KNIGHT">Konik</option>
+            <option value="PAWN">Pionek</option>
+        </select>
+
+        <script type="text/javascript" src="Bishop.js"></script>
+        <script type="text/javascript" src="King.js"></script>
+        <script type="text/javascript" src="Knight.js"></script>
+        <script type="text/javascript" src="Pawn.js"></script>
+        <script type="text/javascript" src="Queen.js"></script>
+        <script type="text/javascript" src="Rook.js"></script>
+        <script type="text/javascript" src="https://tgadek.bitbucket.io/library/chess/init.js"></script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Budowa atomu</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav>
+		<a class="logo" href="index.html">Atom</a>
+		<a href="index.html">Definicja</a>
+		<a href="structure.html">Budowa</a>
+		<a href="radioactivity.html">Promieniotwórczość</a>
+		<a href="history.html">Historia</a>
+	</nav>
+    <main>
+	    <h1>Budowa atomu</h1>
+        <p>
+            Atom składa się z trzech podstawowych elementów: protonów, neutronów i elektronów. 
+            Protony i neutrony znajdują się w centrum atomu, zwanej jądrem, a elektrony krążą 
+            wokół jądra na określonych poziomach energetycznych.
+        </p>
+        <p>
+            <strong>Hel</strong> - prezentacja graficzna:
+        </p>
+	    <canvas id="canvas" width="300" height="300"></canvas>
+    </main>
+	<script>
+        var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+
+		// rysowanie jądra atomu helu
+		ctx.beginPath();
+		ctx.arc(canvas.width/2, canvas.height/2, 30, 0, 2*Math.PI);
+		ctx.fillStyle = "red";
+		ctx.fill();
+
+		// rysowanie pierwszej orbity
+		ctx.beginPath();
+		ctx.arc(canvas.width/2, canvas.height/2, 100, 0, 2*Math.PI);
+		ctx.strokeStyle = "orange";
+		ctx.stroke();
+
+		// rysowanie pierwszego elektronu na pierwszej orbicie
+		ctx.beginPath();
+		ctx.arc(canvas.width/2, canvas.height/2 - 70, 10, 0, 2*Math.PI);
+		ctx.fillStyle = "orange";
+		ctx.fill();
+
+		// rysowanie drugiego elektronu na drugiej orbicie
+		ctx.beginPath();
+		ctx.arc(canvas.width/2, canvas.height/2 + 70, 10, 0, 2*Math.PI);
+		ctx.fillStyle = "orange";
+		ctx.fill();
+	</script>
+</body>
+</html>

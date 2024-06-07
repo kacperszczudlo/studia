@@ -1,0 +1,138 @@
+{
+    "Student":
+    [
+        {
+            "numer_indeksu": "00001",
+            "imię": "Kacper",
+            "nazwisko": "Szczudło",
+            "pesel": "12345678912",
+            "kierunek_studiów": {
+                "nazwa_kierunku": "Informatyka",
+                "forma": "stacjonarne",
+                "poziom": "I stopnia",
+                "data_rozpoczęcia": "2020-09-15",
+                "data_zakończenia": "2024-06-30"
+            },
+            "adres_zamieszkania":
+            {
+                "ulica": "Henryka Sienkiewicza",
+                "numer_domu": "50",
+                "numer_mieszkania": "32",
+                "kod_pocztowy": "32-700",
+                "miejscowość": "Bochnia"
+            },
+            "czy_dalej_studiuje": "tak",
+            "dodatkowa_aktywność": [
+                    "pilka reczna",
+                    "szachy",
+                    "łowienie ryb",
+                    "zbieranie kapsli"
+            ]
+        },
+        {
+            "numer_indeksu": "00002",
+            "imię": "Marcin",
+            "nazwisko": "Szydłowski",
+            "pesel": "12565678912",
+            "kierunek_studiów": {
+                "nazwa_kierunku": "Lingwistyka",
+                "forma": "niestacjonarne",
+                "poziom": "II stopnia",
+                "data_rozpoczęcia": "2021-09-15",
+                "data_zakończenia": "2025-06-30"
+            },
+            "adres_zamieszkania":
+            {
+                "ulica": "Michała Wielkiego",
+                "numer_domu": "40",
+                "numer_mieszkania": "52",
+                "kod_pocztowy": "36-900",
+                "miejscowość": "Michałowice"
+            },
+            "czy_dalej_studiuje": "tak",
+            "dodatkowa_aktywność": [
+                    "pilka nożna",
+                    "bierki",
+                    "skok w dal"
+            ]
+        },
+        {
+            "numer_indeksu": "00003",
+            "imię": "Bartosz",
+            "nazwisko": "Batko",
+            "pesel": "87345678912",
+            "kierunek_studiów": {
+                "nazwa_kierunku": "Pielęgniarstwo",
+                "forma": "stacjonarne",
+                "poziom": "I stopnia",
+                "data_rozpoczęcia": "2022-09-15",
+                "data_zakończenia": "2026-06-30"
+            },
+            "adres_zamieszkania":
+            {
+                "ulica": "Bartłomieja Sikorskiego",
+                "numer_domu": "10",
+                "numer_mieszkania": "12",
+                "kod_pocztowy": "33-500",
+                "miejscowość": "Kłaj"
+            },
+            "czy_dalej_studiuje": "tak",
+            "dodatkowa_aktywność": [
+                    "rzut w dal",
+                    "siatkówka"
+            ]
+        },
+        {
+            "numer_indeksu": "00004",
+            "imię": "Kacper",
+            "nazwisko": "Krzysztof",
+            "pesel": "44445678912",
+            "kierunek_studiów": {
+                "nazwa_kierunku": "Informatyka",
+                "forma": "stacjonarne",
+                "poziom": "II stopnia",
+                "data_rozpoczęcia": "2010-09-15",
+                "data_zakończenia": "2014-06-30"
+            },
+            "adres_zamieszkania":
+            {
+                "ulica": "Marcina Sienkiewicza",
+                "numer_domu": "40",
+                "numer_mieszkania": "32",
+                "kod_pocztowy": "32-900",
+                "miejscowość": "Proszówki"
+            },
+            "czy_dalej_studiuje": "nie",
+            "dodatkowa_aktywność": [
+                    "zbieranie kapsli",
+                    "granie w gry"
+            ]
+        },
+        {
+            "numer_indeksu": "00005",
+            "imię": "Michał",
+            "nazwisko": "Mały",
+            "pesel": "42345678912",
+            "kierunek_studiów": {
+                "nazwa_kierunku": "Psychologia",
+                "forma": "niestacjonarne",
+                "poziom": "I stopnia",
+                "data_rozpoczęcia": "1990-09-15",
+                "data_zakończenia": "1994-06-30"
+            },
+            "adres_zamieszkania":
+            {
+                "ulica": "Andrzeja Sienkiewicza",
+                "numer_domu": "4",
+                "numer_mieszkania": "3",
+                "kod_pocztowy": "39-700",
+                "miejscowość": "Wrocław"
+            },
+            "czy_dalej_studiuje": "nie",
+            "dodatkowa_aktywność": [
+                    "judo",
+                    "siłownia"
+            ]
+        }
+    ]
+}

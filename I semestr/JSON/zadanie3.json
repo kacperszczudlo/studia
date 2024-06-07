@@ -1,0 +1,149 @@
+{
+    "Plan zajęć:":{
+        "Poniedziałek":{
+            "1 lekcja":{
+                "nazwa": "Algebra Liniowa",
+                "rodzaj": "Ćwiczenia",
+                "godzina_rozpoczecia": "8:00",
+                "godzina_zakończenia": "9:30",
+                "wykładowca": "dr Julian Janus",
+                "sala": "C102",
+                "grupa": "CL1"
+            },
+            "2 lekcja":{
+                "nazwa": "Statystyka stosowana i probablistyka",
+                "rodzaj": "Wykład",
+                "godzina_rozpoczecia": "11:30",
+                "godzina_zakończenia": "12:15",
+                "wykładowca": "dr Julian Janus",
+                "sala": "C102",
+                "grupa": null
+            },
+            "3 lekcja":{
+                "nazwa": "Wychowanie fizyczne",
+                "rodzaj": "Zajęcia ogólne",
+                "godzina_rozpoczecia": "12:30",
+                "godzina_zakończenia": "14:00",
+                "wykładowca": "mgr Marek Skorobot",
+                "sala": "Hala sportowa Budynek E",
+                "grupa": null
+            },
+            "4 lekcja":{
+                "nazwa": "Algorytmy i struktury danych",
+                "rodzaj": "Ćwiczenia",
+                "godzina_rozpoczecia": "15:00",
+                "godzina_zakończenia": "16:30",
+                "wykładowca": "mgr inż Rafał Jędryczka",
+                "sala": "C309",
+                "grupa": "CS1"
+            },
+            "5 lekcja":{
+                "nazwa": "Języki znacznikowe",
+                "rodzaj": "Laboratoria",
+                "godzina_rozpoczecia": "16:45",
+                "godzina_zakończenia": "18:15",
+                "wykładowca": "mgr inż Marcin Bydłosz",
+                "sala": "C112",
+                "grupa": "LJ2"
+            }
+        },
+        "Wtorek":{
+            "1 lekcja":{
+                "nazwa": "Analiza matematyczna",
+                "rodzaj": "Wykład",
+                "godzina_rozpoczecia": "8:00",
+                "godzina_zakończenia": "9:30",
+                "wykładowca": "dr Julian Janus",
+                "sala": "C102",
+                "grupa": null
+            },
+            "2 lekcja":{
+                "nazwa": "Analiza matematyczna",
+                "rodzaj": "Ćwiczenia",
+                "godzina_rozpoczecia": "9:45",
+                "godzina_zakończenia": "11:15",
+                "wykładowca": "dr Julian Janus",
+                "sala": "C102",
+                "grupa": "CN1"
+            },
+            "3 lekcja":{
+                "nazwa": "Fizyka",
+                "rodzaj": "Ćwiczenia",
+                "godzina_rozpoczecia": "13:15",
+                "godzina_zakończenia": "14:45",
+                "wykładowca": "dr Piotr Kurzydło",
+                "sala": "C106",
+                "grupa": "CF1"
+            },
+            "4 lekcja":{
+                "nazwa": "Fizyka",
+                "rodzaj": "Wykład",
+                "godzina_rozpoczecia": "16:45",
+                "godzina_zakończenia": "18:15",
+                "wykładowca": "dr Piotr Kurzydło",
+                "sala": "C106",
+                "grupa": null
+            }
+        },
+        "Środa":{
+            "1 lekcja":{
+                "nazwa": "Wstęp do informatyki",
+                "rodzaj": "Wykład",
+                "godzina_rozpoczecia": "8:00",
+                "godzina_zakończenia": "9:30",
+                "wykładowca": "dr Daniel Król",
+                "sala": "C102",
+                "grupa": null
+            },
+            "2 lekcja":{
+                "nazwa": "Logika w informatyce",
+                "rodzaj": "Ćwiczenia",
+                "godzina_rozpoczecia": "9:45",
+                "godzina_zakończenia": "11:15",
+                "wykładowca": "dr inż Stanisław Stoch",
+                "sala": "C309",
+                "grupa": "CL1"
+            }
+        },
+        "Czwartek":{
+            "1 lekcja":{
+                "nazwa": "Programowanie w C",
+                "rodzaj": "Ćwiczenia",
+                "godzina_rozpoczecia": "8:00",
+                "godzina_zakończenia": "9:30",
+                "wykładowca": "dr Daniel Król",
+                "sala": "C102",
+                "grupa": "CP1"
+            },
+            "2 lekcja":{
+                "nazwa": "Statystyka stosowana i probablistyka",
+                "rodzaj": "Laboratoria",
+                "godzina_rozpoczecia": "9:45",
+                "godzina_zakończenia": "11:15",
+                "wykładowca": "dr inż Adam Pieprzycki",
+                "sala": "C105",
+                "grupa": "LS2"
+            },
+            "3 lekcja":{
+                "nazwa": "Programowanie obliczeń inżynierskich",
+                "rodzaj": "Laboratoria",
+                "godzina_rozpoczecia": "11:30",
+                "godzina_zakończenia": "13:00",
+                "wykładowca": "mgr inż Edyta Gawin",
+                "sala": "C109",
+                "grupa": "LI2"
+            }    
+        },
+        "Piątek":{
+            "1 lekcja":{
+                "nazwa": "Programowanie w C",
+                "rodzaj": "Laboratoria",
+                "godzina_rozpoczecia": "8:00",
+                "godzina_zakończenia": "9:30",
+                "wykładowca": "dr Daniel Król",
+                "sala": "C105",
+                "grupa": "LC2"
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "imię": "Kacper",
+    "nazwisko": "Szczudło",
+    "wiek": 20,
+    "Adres": {
+        "ulica": "mościckiego",
+        "numer_domu": 96
+    },
+    "zatrudniony?": true,
+    "motor": null,
+    "hobby": [
+        [
+            "handball",
+            "chess"
+        ],
+        [
+            "fishing",
+            "sleeping"
+        ]
+    ],
+
+    "Użytkownik": [
+        {
+            "imię": "Jan",
+            "nazwisko": "Paweł",
+            "wiek": 99,
+            "Adres":{
+                "ulica": "jana pawala II",
+                "numer_domu": 96
+            }
+        }
+    ]
+}

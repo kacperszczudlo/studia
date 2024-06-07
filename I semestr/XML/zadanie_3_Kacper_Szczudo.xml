@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Uczelnia>
+    <Nazwa>Akademia Tarnowska</Nazwa>
+    <Nazwa_skrócona>AT</Nazwa_skrócona>
+    <Wydziały>
+        <Politechniczny>
+            <Informatyka katedra="Informatyki">
+                <Liczba_studentów> &lt; 500 </Liczba_studentów>
+                <Liczba_pracowników>25</Liczba_pracowników>
+                <Dane_kontaktowe>
+                    <Kierownik_Katedry>dr inż. Daniel Król</Kierownik_Katedry>
+                    <Zastępca_Kierownika>mgr inż. Edyta Gawin</Zastępca_Kierownika>
+                    <Telefon>14 63-16-593</Telefon>
+                    <E-mail>ki@atar.edu.pl</E-mail>
+                </Dane_kontaktowe>
+            </Informatyka>
+            <Automatyka_i_Robotyka katedra="Automatyki i Robotyki">
+                <Liczba_studentów> &lt; 300 </Liczba_studentów>
+                <Liczba_pracowników>7</Liczba_pracowników>
+                <Dane_kontaktowe>
+                    <Kierownik_Katedry>dr hab. inż. Witold Byrski</Kierownik_Katedry>
+                    <Zastępca_Kierownika>mgr inż. Mariusz Świder</Zastępca_Kierownika>
+                    <Telefon>14 63-16-644, 14 63-16-514</Telefon>
+                    <E-mail>wby@agh.edu.pl</E-mail>
+                </Dane_kontaktowe>
+            </Automatyka_i_Robotyka>
+            <Elektornika_i_telekounikacja katedra="Elektroniki, Telekomunikacji i Mechatroniki">
+                <Liczba_studentów> &gt; 200 </Liczba_studentów>
+                <Liczba_pracowników>14</Liczba_pracowników>
+                <Dane_kontaktowe>
+                    <Kierownik_Katedry>dr inż. Robert Wielgat</Kierownik_Katedry>
+                    <Zastępca_Kierownika>dr inż. Łukasz Mik</Zastępca_Kierownika>
+                    <Telefon>14 63-16-515, 14 63-16-589</Telefon>
+                    <E-mail>rwielgat@poczta.onet.pl</E-mail>
+                </Dane_kontaktowe>
+            </Elektornika_i_telekounikacja>
+            <Mechatronika katedra="Elektroniki, Telekomunikacji i Mechatroniki">
+                <Liczba_studentów> &lt; 200 </Liczba_studentów>
+                <Liczba_pracowników>14</Liczba_pracowników>
+                <Dane_kontaktowe>
+                    <Kierownik_Katedry>dr inż. Robert Wielgat</Kierownik_Katedry>
+                    <Zastępca_Kierownika>dr inż. Tomasz Żarski</Zastępca_Kierownika>
+                    <Telefon>14 63-16-515, 14 63-16-589</Telefon>
+                    <E-mail>rwielgat@poczta.onet.pl</E-mail>
+                </Dane_kontaktowe>
+            </Mechatronika>
+            <Elektrotechnika katedra="Elektrotechniki">
+                <Liczba_studentów> &lt; 400 </Liczba_studentów>
+                <Liczba_pracowników>12</Liczba_pracowników>
+                <Dane_kontaktowe>
+                    <Kierownik_Katedry>mgr inż. Grzegorz Aksamit</Kierownik_Katedry>
+                    <Zastępca_Kierownika>brak</Zastępca_Kierownika>
+                    <Telefon>14 63-16-522</Telefon>
+                    <E-mail>aksamitg@atar.edu.pl</E-mail>
+                </Dane_kontaktowe>
+            </Elektrotechnika>
+            <Technologia_i_zarządzanie_produkcją katedra="Inzynierii Materiałowej">
+                <Liczba_studentów> &lt; 200 </Liczba_studentów>
+                <Liczba_pracowników>10</Liczba_pracowników>
+                <Dane_kontaktowe>
+                    <Kierownik_Katedry>dr inż. Jakub Sobota</Kierownik_Katedry>
+                    <Zastępca_Kierownika>dr inż. Sebastian Bielecki</Zastępca_Kierownika>
+                    <Telefon>14 63-16-510, 14 63-16-511, 14 63-16-600</Telefon>
+                    <E-mail>i_poli@pwsztar.edu.pl</E-mail>
+                </Dane_kontaktowe>    
+            </Technologia_i_zarządzanie_produkcją>
+            <Technologia_chemiczna katedra="Inżynierii Materiałowej">
+                <Liczba_studentów> &lt; 200 </Liczba_studentów>
+                <Liczba_pracowników>10</Liczba_pracowników>
+                <Dane_kontaktowe>
+                    <Kierownik_Katedry>dr inż. Jakub Sobota</Kierownik_Katedry>
+                    <Zastępca_Kierownika>dr inż. Sebastian Bielecki</Zastępca_Kierownika>
+                    <Telefon>14 63-16-510, 14 63-16-511, 14 63-16-600</Telefon>
+                    <E-mail>i_poli@pwsztar.edu.pl</E-mail>
+                </Dane_kontaktowe>  
+            </Technologia_chemiczna>
+            <Administracyjno-Ekonomiczny>
+                <Administracja>mgr Anna Marszałek</Administracja>
+                <Ekonomia>dr hab. Wojciech Sroka</Ekonomia>
+                <Praca_Socjalna>Ks. dr hab. Bogdan Węgrzyn</Praca_Socjalna>
+                <Prawo>dr Krzysztof Chmielarz</Prawo>
+            </Administracyjno-Ekonomiczny>
+        </Politechniczny>
+        <Władze_uczelni>
+            <Rektor>
+                <Imię>Małgorzata</Imię>
+                <Nazwisko>Kołpa</Nazwisko>
+                <Tytuł>Doktor Habilitowana</Tytuł>
+            </Rektor>
+            <Prorektor_ds._Studenckich_I_Dydaktycnych>
+                <Imie>Małgorzata</Imie>
+                <Nazwisko>Martowicz</Nazwisko>
+                <Tytuł>Doktor</Tytuł>
+            </Prorektor_ds._Studenckich_I_Dydaktycnych>
+            <Prorektor_ds.Nauki_i_Rozwoju>
+                <Imię>Rafał</Imię>
+                <Nazwisko>Kurczab</Nazwisko>
+                <Tytuł>Doktor Habilitowany</Tytuł>
+            </Prorektor_ds.Nauki_i_Rozwoju>    
+            <Kanclerz>
+                <Imię>Arkadiusz</Imię>
+                <Nazwisko>Kolak</Nazwisko>
+                <Tytuł>Magister</Tytuł>
+            </Kanclerz>
+        </Władze_uczelni>    
+        <Adres>
+            <Ulica>Mickiewicza</Ulica>
+            <Numer_budynku>8</Numer_budynku>
+            <Kod_pocztowy>33-100</Kod_pocztowy>
+            <Miasto>Tarnów</Miasto>
+            <NIP>873-26-79-395</NIP>
+        </Adres>
+    </Wydziały>
+</Uczelnia>
