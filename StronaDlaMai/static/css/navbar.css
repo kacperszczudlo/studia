@@ -1,0 +1,116 @@
+/* Plik navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: black;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.cart-img,
+.loupe-img {
+    height: 30px;
+    width: auto;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links-left {
+    margin-right: auto;
+}
+
+.navbar-links-right {
+    margin-left: auto;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a, .navbar-logo a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a:hover, .navbar-logo a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.cart-link,
+.loupe-link {
+    display: inline-block;
+    padding: 8px; /* Increased padding for better click area */
+}
+
+/* Dodatkowy styl dla koszyka */
+.cart-link {
+    position: relative;
+    display: inline-block;
+}
+.cart-count {
+    background-color: #ff6347;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: -8px;
+}
+
+/* Dodatkowy styl dla prawej strony paska nawigacyjnego */
+.navbar-links-right {
+    display: flex;
+    align-items: center;
+}
+.navbar-links-right li {
+    margin-left: 5px;
+}
+.navbar-links-right .cart-link {
+    position: relative;
+    margin-left: 20px; /* odstęp między elementami */
+}
+.navbar-links-right .cart-link a {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.navbar-links-right .cart-link .cart-count {
+    top: 8px; /* poprawka dla centrowania */
+    right: 8px;
+}
+
+

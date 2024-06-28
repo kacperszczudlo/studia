@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/js/menu.js"></script>
+    <script src="../static/js/cart.js"></script>
+    <title>Learn With Bees</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="../static/images/maja.jpg" alt="Logo" class="logo-img">
+            Learn With Bees
+        </a>
+        <ul class="navbar-links navbar-links-left">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#oferta">Oferta</a></li>
+            <li><a href="#help">Pomoc</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <ul class="navbar-links navbar-links-right">
+            <li class="cart-link">
+                <a href="#" id="cartBtn"><img src="../static/images/shopping-cart.png" alt="Koszyk" class="cart-img"></a>
+                <span id="cart-count" class="cart-count">0</span>
+            </li>
+            <li><a href="#search" class="loupe-link"><img src="../static/images/loupe.png" alt="Lupa" class="loupe-img"></a></li>
+            <li><a href="./register.html">Zarejestruj się</a></li>
+            <li><a href="./login.html">Zaloguj się</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Modal koszyka -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Koszyk</h2>
+            <ul id="cartItems">
+                <!-- Tutaj będą się wyświetlać elementy w koszyku -->
+            </ul>
+            <button id="checkoutBtn">Do kasy</button>
+        </div>
+    </div>
+    
+
+    <section class="main-section">
+        <div class="about-maja">
+            <div class="maja-img-container">
+                <img src="../static/images/maja2.jpg" alt="Maja" class="maja-img">
+            </div>
+            <div class="about-text">
+                <h1>Witajcie na mojej stronie!</h1>
+                <p>Nazywam się Maja i jestem lektorem języka angielskiego i niemieckiego. Postanowiłam założyć ten profil, aby dzielić się z Wami wskazówkami dotyczącymi nauki języków oraz pokazać Wam, jak wygląda praca korepetytora.<br>
+                Inne profile tego typu są dla mnie inspiracją i motywacją do działania, dlatego mam nadzieję, że mój profil również stanie się pomocny zarówno dla uczniów jak i nauczycieli.</p>
+                <p>Mam nadzieję, że zostaniecie ze mną na dłużej. 💗🐝</p>
+            </div>
+        </div>
+        
+        <div class="services-offered">
+            <h2>Co mogę zaoferować?</h2>
+            <ul>
+                <li>Przygotowanie do egzaminu ósmoklasisty z języka angielskiego i niemieckiego</li>
+                <li>Przygotowanie do matury z języka angielskiego</li>
+                <li>Miłą, luźną atmosferę - chciałabym, aby zajęcia były przyjemnością, a nie uciążliwym obowiązkiem</li>
+                <li>Naukę poprzez gry i zabawę - nawet ze starszymi!</li>
+                <li>Uzupełnianie zaległości, przygotowanie do sprawdzianów i kartkówek</li>
+                <li>Naukę nowych rzeczy dostosowanych do potrzeb ucznia (gramatyka, słownictwo, konwersacje itp.)</li>
+                <li>Ładne, przejrzyste notatki, tablice gramatyczne, prezentacje oraz sposoby na szybsze przyswajanie wiedzy</li>
+                <li>Darmowy dostęp (dla rodzica i ucznia) do platformy z kalendarzem lekcji, zadaniami domowymi, notatkami oraz przebiegiem lekcji</li>
+                <li>Kontakt po zajęciach, pomoc w każdej chwili</li>
+            </ul>
+            <p>Lekcje prowadzę głównie online - na dowolnej platformie. Istnieje również możliwość zajęć stacjonarnych (Widoma).</p>
+            <p>XOXO Maja</p>
+        </div>
+        
+        <div class="location-map">
+            <h2>Moja lokalizacja</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2553.640767312087!2d19.996485076817823!3d50.20524540498842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471653dd2f6843f3%3A0x37ac7b38816ce1b3!2sWidoma%2018%2C%2032-095%20Widoma!5e0!3m2!1spl!2spl!4v1719532237242!5m2!1spl!2spl" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+</body>
+</html>
