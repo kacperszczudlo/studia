@@ -1,14 +1,12 @@
 function odliczanie()
 	{
 		var today = new Date();
-		
 		var hour = today.getHours();
-		if (hour<10) hour = "0"+hour;
-		
 		var minute = today.getMinutes();
-		if (minute<10) minute = "0"+minute;
-		
 		var second = today.getSeconds();
+		
+		if (hour<10) hour = "0"+hour;
+		if (minute<10) minute = "0"+minute;
 		if (second<10) second = "0"+second;
 		
 		document.getElementById("zegar").innerHTML = hour+":"+minute+":"+second;
