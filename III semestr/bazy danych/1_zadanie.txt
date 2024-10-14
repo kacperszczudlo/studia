@@ -1,0 +1,60 @@
+ZADANIE T1/A
+Wyjaśnij, czy zdanie p OR NOT p zgodnie z logiką trójwartościową (3VL) jest zawsze prawdziwe?
+Propozycję rozwiązania prześlij do ZADANIA T1/A.
+
+Zdanie "p OR NOT p" nie jest zawsze prawdziwe w logice trójwartościowej (3VL).
+Dla wartości TRUE i FALSE wyrażenie jest prawdziwe, ale dla wartości UNKNOWN wynik to UNKNOWN, więc nie jest tautologią.
+
+ZADANIE T1/B
+Wyjaśnij, czy zdanie p >= 10 OR p < 10 w języku SQL jest tautologią?
+Propozycję rozwiązania prześlij do ZADANIA T1/B
+
+Zdanie "p >= 10 OR p < 10" w języku SQL jest tautologią.
+Zawsze jest prawdziwe, ponieważ obejmuje wszystkie możliwe wartości p – każda liczba spełnia przynajmniej jeden z tych warunków.
+
+ZADANIE T1/C
+Wyjaśnij, czy w języku SQL warunek NOT a IS NULL jest równoważny warunkowi a IS NOT NULL? 
+Propozycję rozwiązania prześlij do ZADANIA T1/C.
+
+Warunek "NOT a IS NULL" nie jest równoważny "a IS NOT NULL".
+Pierwszy zwraca UNKNOWN, gdy a jest NULL, a drugi zwraca FALSE. Wyniki są różne przy wartościach NULL.
+
+ZADANIE T1/D
+Podaj interpretację zdania w języku SQL NOT a IS NULL AND NOT a IS NOT NULL. 
+Propozycję rozwiązania prześlij do ZADANIA T1/D.
+
+Zdanie "NOT a IS NULL AND NOT a IS NOT NULL" zawsze zwraca FALSE.
+Nie ma wartości a, która spełniałaby oba warunki jednocześnie.
+
+ZADANIE T2/A
+Wyjaśnij, czy SQL jest językim silnego typowania (ang. strong typing) / słabego typowania (ang. weak typing) oraz typowania statycznego (ang. static typing) / typowania dynamicznego (ang. dynamic typing).
+Propozycję rozwiązania prześlij do ZADANIA T2/A.
+
+Słabe typowanie: SQL pozwala na automatyczne konwersje między różnymi typami danych (np. dodawanie liczb do ciągów znaków).
+Typowanie statyczne: Typy danych kolumn są definiowane w czasie tworzenia tabeli, co oznacza, że typ danych jest znany przed wykonaniem zapytań, ale SQL nie wymaga, aby każdy wyrażenie było typowane przed jego wykonaniem.
+
+ZADANIE T2/B
+Zdefiniuj dwa proste zapytania wybierające dane odpowiednio z tabeli przedmioty znajdującej się w schemacie dziekanat oraz z tabeli prowadzacy znajdującej się w schemacie kadry.
+Propozycję rozwiązania prześlij do ZADANIA T2/B.
+
+SELECT * 
+FROM dziekanat.przedmioty;
+
+SELECT * 
+FROM kadry.prowadzacy;
+
+ZADANIE T2/C
+Zdefiniuj zapytanie wybierające tylko parzyste rekordy z tabeli fakultety.
+Propozycję rozwiązania prześlij do ZADANIA T2/C.
+
+SELECT * 
+FROM dziekanat.fakultety 
+WHERE MOD(id_fakultetu, 2) = 0;
+
+ZADANIE T3/A
+Wyjaśnij co oznaczają parametry rows, width oraz loops w rezultacie wykonania zapytania z analizą EXPLAIN ANALYZE.
+Propozycję rozwiązania prześlij do ZADANIA T3/A.
+
+rows: Liczba wierszy, które rzeczywiście zostały zwrócone przez dany węzeł planu wykonania. Oczekiwana liczba wierszy to prognoza, a rzeczywista liczba jest pokazywana po wykonaniu.
+width: Średnia liczba bajtów na jeden wiersz. Określa rozmiar wiersza, uwzględniając liczbę i typy kolumn, co wpływa na koszty operacji I/O.
+loops: Liczba powtórzeń (pętli) dla danego węzła planu. Może być większa od 1, gdy dana operacja jest wykonywana wielokrotnie, np. w zagnieżdżonych pętlach lub podzapytaniach.
