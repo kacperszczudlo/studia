@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Przelicznik</string>
+    <string name="unit_cm">cm</string>
+    <string name="unit_km">km</string>
+    <string name="unit_mile">miles</string>
+    <string name="unit_ly">ly</string>
+    <string name="input_error">Proszę wprowadzić liczbę metrów.</string>
+</resources>
