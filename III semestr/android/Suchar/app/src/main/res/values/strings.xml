@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Joke Generator</string>
+    <string name="top_text">Joke Generator</string>
+    <string name="generate">Generate</string>
+    <string name="joke_text">Here is your joke:</string>
+    <string name="joke1">
+        Why do blondes like jokes?
+        Because they laugh three times:
+        First, before the joke
+        Second, during the joke
+        Third, when someone explains the joke to them
+    </string>
+    <string name="joke2">
+        What do you call a guy who won a car in a lottery?
+        Carlos
+    </string>
+    <string name="joke3">
+        What do you call a blonde in the shower?
+        Pure stupidity
+    </string>
+</resources>

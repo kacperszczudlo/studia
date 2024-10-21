@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Generator Sucharów</string>
+    <string name="top_text">Generator Sucharów</string>
+    <string name="generate">Generuj</string>
+    <string name="joke_text">Oto Twój suchar:</string>
+    <string name="joke1">
+        Dlaczego blondynki lubia zarty?
+        Bo smieja się 3 razy
+        1 raz przed zartem
+        2 raz w trakcie zartu
+        3 raz kiedy ktos jej wytlumaczy zart
+    </string>
+    <string name="joke2">
+        Jak nazywa się gosc co wygral auto na loterii?
+        Carlos
+    </string>
+    <string name="joke3">
+        Jak się nazywa blondynka pod prysznicem?
+        Czysta głupota
+    </string>
+</resources>
