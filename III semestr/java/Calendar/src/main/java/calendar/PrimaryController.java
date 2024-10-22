@@ -22,14 +22,8 @@ public class PrimaryController {
     @FXML
     public void initialize() {
         currentDisplayedDate = LocalDate.now();
-    }
-
-    @FXML
-    public void handleShowCalendar() {
-        LocalDate selectedDate = datePicker.getValue();
-        if (selectedDate != null) {
-            displayCalendar(selectedDate);
-        }
+        datePicker.setValue(currentDisplayedDate);
+        displayCalendar(currentDisplayedDate);
     }
 
     @FXML
@@ -43,12 +37,14 @@ public class PrimaryController {
     @FXML
     public void handlePreviousWeek() {
         currentDisplayedDate = currentDisplayedDate.minusWeeks(1);
+        datePicker.setValue(currentDisplayedDate);
         displayCalendar(currentDisplayedDate);
     }
 
     @FXML
     public void handleNextWeek() {
         currentDisplayedDate = currentDisplayedDate.plusWeeks(1);
+        datePicker.setValue(currentDisplayedDate);
         displayCalendar(currentDisplayedDate);
     }
 

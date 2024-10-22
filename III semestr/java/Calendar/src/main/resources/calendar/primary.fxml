@@ -16,7 +16,6 @@
         </HBox>
         <HBox alignment="CENTER" spacing="10">
             <Button text="&lt;&lt; Poprzedni tydzień" onAction="#handlePreviousWeek"/>
-            <Button text="Pokaż kalendarz" onAction="#handleShowCalendar"/>
             <Button text="Następny tydzień &gt;&gt;" onAction="#handleNextWeek"/>
         </HBox>
         <GridPane fx:id="calendarGrid" hgap="10" vgap="10" alignment="CENTER"/>
