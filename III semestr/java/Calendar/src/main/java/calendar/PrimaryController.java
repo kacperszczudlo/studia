@@ -1,41 +1,62 @@
 package calendar;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.scene.control.DatePicker;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import java.time.LocalDate;
 import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 
 public class PrimaryController {
 
     @FXML
-    private TextField dateField;
+    private DatePicker datePicker;
 
     @FXML
     private GridPane calendarGrid;
 
     private Button selectedDayButton;
+    private LocalDate currentDisplayedDate;
+
+    @FXML
+    public void initialize() {
+        currentDisplayedDate = LocalDate.now();
+    }
 
     @FXML
     public void handleShowCalendar() {
-        String inputDate = dateField.getText();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-        try {
-            LocalDate date = LocalDate.parse(inputDate, formatter);
-            YearMonth yearMonth = YearMonth.from(date);
-            int daysInMonth = yearMonth.lengthOfMonth();
-
-            showCalendar(yearMonth, daysInMonth, date.getDayOfMonth());
-        } catch (DateTimeParseException e) {
-            clearCalendar();
-            Text errorText = new Text("Błędny format daty. Użyj formatu RRRR-MM-DD.");
-            calendarGrid.add(errorText, 0, 0);
+        LocalDate selectedDate = datePicker.getValue();
+        if (selectedDate != null) {
+            displayCalendar(selectedDate);
         }
+    }
+
+    @FXML
+    public void handleDatePickerChange() {
+        LocalDate selectedDate = datePicker.getValue();
+        if (selectedDate != null) {
+            displayCalendar(selectedDate);
+        }
+    }
+
+    @FXML
+    public void handlePreviousWeek() {
+        currentDisplayedDate = currentDisplayedDate.minusWeeks(1);
+        displayCalendar(currentDisplayedDate);
+    }
+
+    @FXML
+    public void handleNextWeek() {
+        currentDisplayedDate = currentDisplayedDate.plusWeeks(1);
+        displayCalendar(currentDisplayedDate);
+    }
+
+    private void displayCalendar(LocalDate date) {
+        YearMonth yearMonth = YearMonth.from(date);
+        int daysInMonth = yearMonth.lengthOfMonth();
+
+        showCalendar(yearMonth, daysInMonth, date.getDayOfMonth());
     }
 
     private void showCalendar(YearMonth yearMonth, int daysInMonth, int selectedDay) {
