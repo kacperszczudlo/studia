@@ -9,12 +9,9 @@
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml" fx:controller="calendar.PrimaryController">
     <children>
-        <!-- Zmieniamy szerokość Label i ustawiamy na środek -->
         <Label text="Wprowadź datę (RRRR-MM-DD):" alignment="CENTER"/>
-        <!-- Ustawiamy szerokość TextField na 150 pikseli -->
         <TextField fx:id="dateField" alignment="CENTER"/>
         <Button text="Pokaż kalendarz" onAction="#handleShowCalendar"/>
-        <!-- Siatka na dni kalendarza, wyśrodkowana -->
         <GridPane fx:id="calendarGrid" hgap="10" vgap="10" alignment="CENTER"/>
     </children>
 </VBox>

@@ -18,7 +18,7 @@ public class PrimaryController {
     @FXML
     private GridPane calendarGrid;
 
-    private Button selectedDayButton; // Przechowuje ostatnio wybrany przycisk
+    private Button selectedDayButton;
 
     @FXML
     public void handleShowCalendar() {
@@ -30,7 +30,7 @@ public class PrimaryController {
             YearMonth yearMonth = YearMonth.from(date);
             int daysInMonth = yearMonth.lengthOfMonth();
 
-            showCalendar(yearMonth, daysInMonth, date.getDayOfMonth()); // Dodajemy dzień do podświetlenia
+            showCalendar(yearMonth, daysInMonth, date.getDayOfMonth());
         } catch (DateTimeParseException e) {
             clearCalendar();
             Text errorText = new Text("Błędny format daty. Użyj formatu RRRR-MM-DD.");
@@ -39,44 +39,40 @@ public class PrimaryController {
     }
 
     private void showCalendar(YearMonth yearMonth, int daysInMonth, int selectedDay) {
-        clearCalendar(); // Oczyść siatkę przed załadowaniem nowego kalendarza
+        clearCalendar();
 
-        // Dodaj dni tygodnia
         String[] daysOfWeek = {"Pon", "Wt", "Śr", "Czw", "Pt", "Sob", "Ndz"};
         for (int i = 0; i < daysOfWeek.length; i++) {
             Text day = new Text(daysOfWeek[i]);
-            calendarGrid.add(day, i, 0); // Dodajemy dni tygodnia w pierwszym wierszu
+            calendarGrid.add(day, i, 0);
         }
 
-        // Oblicz pierwszy dzień miesiąca
         LocalDate firstOfMonth = yearMonth.atDay(1);
-        int firstDayOfWeek = firstOfMonth.getDayOfWeek().getValue(); // 1 = Poniedziałek
+        int firstDayOfWeek = firstOfMonth.getDayOfWeek().getValue();
 
-        // Dodaj dni miesiąca jako przyciski
         for (int day = 1; day <= daysInMonth; day++) {
             Button dayButton = new Button(String.valueOf(day));
             dayButton.setOnAction(event -> {
                 if (selectedDayButton != null) {
-                    selectedDayButton.setStyle(""); // Przywracamy domyślny styl
+                    selectedDayButton.setStyle("");
                 }
-                dayButton.setStyle("-fx-background-color: lightblue; -fx-border-color: blue;"); // Zaznaczamy wybrany dzień
-                selectedDayButton = dayButton; // Zapisujemy referencję do wybranego przycisku
+                dayButton.setStyle("-fx-background-color: lightblue; -fx-border-color: blue;");
+                selectedDayButton = dayButton;
             });
 
-            int column = (firstDayOfWeek + day - 2) % 7; // Obliczamy kolumnę na podstawie dnia tygodnia
-            int row = (firstDayOfWeek + day - 2) / 7 + 1; // Obliczamy wiersz
+            int column = (firstDayOfWeek + day - 2) % 7;
+            int row = (firstDayOfWeek + day - 2) / 7 + 1;
             calendarGrid.add(dayButton, column, row);
 
-            // Sprawdzamy, czy to jest dzień, który został wybrany przez użytkownika
             if (day == selectedDay) {
-                dayButton.setStyle("-fx-background-color: lightblue; -fx-border-color: blue;"); // Ustawiamy styl dla wybranego dnia
-                selectedDayButton = dayButton; // Zapisujemy referencję do zaznaczonego przycisku
+                dayButton.setStyle("-fx-background-color: lightblue; -fx-border-color: blue;");
+                selectedDayButton = dayButton;
             }
         }
     }
 
     private void clearCalendar() {
-        calendarGrid.getChildren().clear(); // Usuwamy poprzednie elementy z siatki
-        selectedDayButton = null; // Resetujemy zaznaczenie przycisku
+        calendarGrid.getChildren().clear();
+        selectedDayButton = null;
     }
 }
