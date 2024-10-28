@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona o Rybkach</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://raw.githubusercontent.com/flesler/jquery.scrollTo/master/jquery.scrollTo.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Strona o Rybkach</div>
+        <nav class="nav">
+            <div class="dropdown">
+                <a href="#">Drapieżniki</a>
+                <div class="dropdown-content">
+                    <a href="#szczupak">Szczupak</a>
+                    <a href="#okon">Okoń</a>
+                    <a href="#karp">Karp</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Spokojne</a>
+                <div class="dropdown-content">
+                    <a href="#amur">Amur</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="content">
+        <article id="szczupak">
+            <h2>Szczupak</h2>
+            <img src="img/szczupak.png" alt="Szczupak">
+            <p>Szczupak to drapieżna ryba słodkowodna, znana ze swojego charakterystycznego, wydłużonego ciała i agresywnego zachowania. Żyje głównie w jeziorach i rzekach.</p>
+        </article>
+        <article id="okon">
+            <h2>Okoń</h2>
+            <img src="img/okon.png" alt="Okoń">
+            <p>Okoń to popularna ryba występująca w jeziorach i rzekach Europy. Jest ceniony za swoje walory smakowe oraz interesujące ubarwienie z ciemnymi pręgami na bokach.</p>
+        </article>
+        <article id="amur">
+            <h2>Amur</h2>
+            <img src="img/amur.png" alt="Amur">
+            <p>Amur to spokojna ryba słodkowodna, pochodząca z Azji. Jest roślinożerny i żyje głównie w wodach stojących lub wolno płynących.</p>
+        </article>
+        <article id="karp">
+            <h2>Karp</h2>
+            <img src="img/karp.png" alt="Karp">
+            <p>Karp to popularna ryba słodkowodna, znana ze swojego smaku i wartości odżywczych. Często hodowana w stawach.</p>
+        </article>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Strona o Rybkach</p>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            $('.nav a').click(function(event) {
+                event.preventDefault();
+                var target = $(this).attr('href');
+                $.scrollTo(target, 800);
+            });
+        });
+    </script>
+</body>
+</html>
