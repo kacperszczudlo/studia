@@ -3,64 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona o Rybkach</title>
+    <title>Moja Rybna Pasja</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://raw.githubusercontent.com/flesler/jquery.scrollTo/master/jquery.scrollTo.min.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Strona o Rybkach</div>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">
+                to<span style="color: #379c5e">tylko</span>moja<span style="color: #379c5e">rybna</span>pasja
+            </div>
+        </div>
         <nav class="nav">
-            <div class="dropdown">
-                <a href="#">Drapieżniki</a>
-                <div class="dropdown-content">
-                    <a href="#szczupak">Szczupak</a>
-                    <a href="#okon">Okoń</a>
-                    <a href="#karp">Karp</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="#">Spokojne</a>
-                <div class="dropdown-content">
-                    <a href="#amur">Amur</a>
-                </div>
-            </div>
+            <ol>
+                <li><a href="#">Drapieżniki</a>
+                    <ul>
+                        <li><a href="#szczupak">Szczupak</a></li>
+                        <li><a href="#okon">Okoń</a></li>
+                        <li><a href="#sandacz">Sandacz</a></li>
+                        <li><a href="#sum">Sum</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Spokojne</a>
+                    <ul>
+                        <li><a href="#amur">Amur</a></li>
+                        <li><a href="#karas">Karaś</a></li>
+                        <li><a href="#karp">Karp</a></li>
+                    </ul>
+                </li>
+            </ol>
         </nav>
-    </header>
-    <main class="content">
-        <article id="szczupak">
-            <h2>Szczupak</h2>
-            <img src="img/szczupak.png" alt="Szczupak">
-            <p>Szczupak to drapieżna ryba słodkowodna, znana ze swojego charakterystycznego, wydłużonego ciała i agresywnego zachowania. Żyje głównie w jeziorach i rzekach.</p>
-        </article>
-        <article id="okon">
-            <h2>Okoń</h2>
-            <img src="img/okon.png" alt="Okoń">
-            <p>Okoń to popularna ryba występująca w jeziorach i rzekach Europy. Jest ceniony za swoje walory smakowe oraz interesujące ubarwienie z ciemnymi pręgami na bokach.</p>
-        </article>
-        <article id="amur">
-            <h2>Amur</h2>
-            <img src="img/amur.png" alt="Amur">
-            <p>Amur to spokojna ryba słodkowodna, pochodząca z Azji. Jest roślinożerny i żyje głównie w wodach stojących lub wolno płynących.</p>
-        </article>
-        <article id="karp">
-            <h2>Karp</h2>
-            <img src="img/karp.png" alt="Karp">
-            <p>Karp to popularna ryba słodkowodna, znana ze swojego smaku i wartości odżywczych. Często hodowana w stawach.</p>
-        </article>
-    </main>
-    <footer class="footer">
-        <p>© 2024 Strona o Rybkach</p>
-    </footer>
-    <script>
-        $(document).ready(function() {
-            $('.nav a').click(function(event) {
-                event.preventDefault();
-                var target = $(this).attr('href');
-                $.scrollTo(target, 800);
-            });
-        });
-    </script>
+        
+        <div class="flex-container">
+            <aside class="left-ad">
+                Reklama po lewej stronie
+            </aside>
+
+            <div class="content">
+                <article id="szczupak">
+                    <h2>Szczupak</h2>
+                    <img src="img/szczupak.png" alt="Szczupak">
+                    <div class="description">
+                        <p><strong>Rozmiar:</strong> Do 150 cm.</p>
+                        <p><strong>Wygląd:</strong> Wydłużone ciało z ostrymi zębami.</p>
+                        <p><strong>Siedlisko:</strong> Jeziora i rzeki.</p>
+                        <p><strong>Dieta:</strong> Głównie ryby.</p>
+                        <p><strong>Zachowanie:</strong> Agresywny drapieżnik.</p>
+                    </div>
+                </article>
+                <article id="okon">
+                    <h2>Okoń</h2>
+                    <img src="img/okon.png" alt="Okoń">
+                    <div class="description">
+                        <p><strong>Rozmiar:</strong> Do 50 cm.</p>
+                        <p><strong>Wygląd:</strong> Ciało z wyraźnymi prążkami.</p>
+                        <p><strong>Siedlisko:</strong> Jeziora i rzeki.</p>
+                        <p><strong>Dieta:</strong> Ryby i bezkręgowce.</p>
+                        <p><strong>Zachowanie:</strong> Ławicowe ryby.</p>
+                    </div>
+                </article>
+                <article id="sandacz">
+                    <h2>Sandacz</h2>
+                    <img src="img/sandacz.png" alt="Sandacz">
+                    <div class="description">
+                        <p><strong>Rozmiar:</strong> Do 120 cm.</p>
+                        <p><strong>Wygląd:</strong> Wydłużone ciało z zielonkawym ubarwieniem.</p>
+                        <p><strong>Siedlisko:</strong> Jeziora i rzeki.</p>
+                        <p><strong>Dieta:</strong> Ryby.</p>
+                        <p><strong>Zachowanie:</strong> Drapieżnik.</p>
+                    </div>
+                </article>
+                <article id="sum">
+                    <h2>Sum</h2>
+                    <img src="img/sum.png" alt="Sum">
+                    <div class="description">
+                        <p><strong>Rozmiar:</strong> Do 300 cm.</p>
+                        <p><strong>Wygląd:</strong> Duża, okrągła głowa z wąsami.</p>
+                        <p><strong>Siedlisko:</strong> Rzeki i jeziora.</p>
+                        <p><strong>Dieta:</strong> Różnorodne.</p>
+                        <p><strong>Zachowanie:</strong> Drapieżnik.</p>
+                    </div>
+                </article>
+                <article id="amur">
+                    <h2>Amur</h2>
+                    <img src="img/amur.png" alt="Amur">
+                    <div class="description">
+                        <p><strong>Rozmiar:</strong> Do 120 cm.</p>
+                        <p><strong>Wygląd:</strong> Długie ciało z szeroką głową.</p>
+                        <p><strong>Siedlisko:</strong> Rzeki i jeziora.</p>
+                        <p><strong>Dieta:</strong> Rośliny wodne i bezkręgowce.</p>
+                        <p><strong>Zachowanie:</strong> Spokojny, często hodowany w stawach.</p>
+                    </div>
+                </article>
+                <article id="karas">
+                    <h2>Karaś</h2>
+                    <img src="img/karas.png" alt="Karaś">
+                    <div class="description">
+                        <p><strong>Rozmiar:</strong> Do 40 cm.</p>
+                        <p><strong>Wygląd:</strong> Okrągłe ciało, złociste ubarwienie.</p>
+                        <p><strong>Siedlisko:</strong> Małe jeziora i stawy.</p>
+                        <p><strong>Dieta:</strong> Rośliny i detrytus.</p>
+                        <p><strong>Zachowanie:</strong> Ławicowe ryby, wrażliwe na zmiany środowiska.</p>
+                    </div>
+                </article>
+                <article id="karp">
+                    <h2>Karp</h2>
+                    <img src="img/karp.png" alt="Karp">
+                    <div class="description">
+                        <p><strong>Rozmiar:</strong> Do 100 cm.</p>
+                        <p><strong>Wygląd:</strong> Okrągłe ciało, duże łuski.</p>
+                        <p><strong>Siedlisko:</strong> Stawy i jeziora.</p>
+                        <p><strong>Dieta:</strong> Rośliny i detrytus.</p>
+                        <p><strong>Zachowanie:</strong> Spokojny, często hodowany w stawach.</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="right-ad">
+                Reklama po prawej stronie
+            </aside>
+        </div>
+        
+        <div class="footer">Kacper Szczudło</div>
+    </div>
 </body>
 </html>
