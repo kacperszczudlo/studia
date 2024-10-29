@@ -1,6 +1,7 @@
 package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +17,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        // Sprawdź orientację ekranu i ustaw odpowiedni layout
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.landscape_activity);
+        } else {
+            setContentView(R.layout.portrait_activity);
+        }
 
         display = findViewById(R.id.editTextDisplay);
 
@@ -46,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonDelete).setOnClickListener(v -> onDeleteClick());
         findViewById(R.id.buttonPercent).setOnClickListener(v -> onPercentClick());
         findViewById(R.id.buttonNegate).setOnClickListener(v -> onNegateClick());
+
+        // Dodanie obsługi przycisków naukowych (tylko w landscape)
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            findViewById(R.id.buttonLog10).setOnClickListener(v -> onLog10Click());
+            findViewById(R.id.buttonFactorial).setOnClickListener(v -> onFactorialClick());
+            findViewById(R.id.buttonSquareRoot).setOnClickListener(v -> onSquareRootClick());
+            findViewById(R.id.buttonPower3).setOnClickListener(v -> onPower3Click());
+            findViewById(R.id.buttonPower2).setOnClickListener(v -> onPower2Click());
+        }
     }
 
     private void onNumberClick(View v) {
@@ -93,5 +109,34 @@ public class MainActivity extends AppCompatActivity {
         } else {
             display.setText("0");
         }
+    }
+
+    private void onLog10Click() {
+        double value = Double.parseDouble(display.getText().toString());
+        display.setText(String.valueOf(Math.log10(value)));
+    }
+
+    private void onFactorialClick() {
+        int value = Integer.parseInt(display.getText().toString());
+        int result = 1;
+        for (int i = 2; i <= value; i++) {
+            result *= i;
+        }
+        display.setText(String.valueOf(result));
+    }
+
+    private void onSquareRootClick() {
+        double value = Double.parseDouble(display.getText().toString());
+        display.setText(String.valueOf(Math.sqrt(value)));
+    }
+
+    private void onPower3Click() {
+        double value = Double.parseDouble(display.getText().toString());
+        display.setText(String.valueOf(Math.pow(value, 3)));
+    }
+
+    private void onPower2Click() {
+        double value = Double.parseDouble(display.getText().toString());
+        display.setText(String.valueOf(Math.pow(value, 2)));
     }
 }
