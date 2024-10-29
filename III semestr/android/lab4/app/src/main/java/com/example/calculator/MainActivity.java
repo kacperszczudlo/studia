@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Sprawdź orientację ekranu i ustaw odpowiedni layout
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.landscape_activity);
         } else {
@@ -54,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonPercent).setOnClickListener(v -> onPercentClick());
         findViewById(R.id.buttonNegate).setOnClickListener(v -> onNegateClick());
 
-        // Dodanie obsługi przycisków naukowych (tylko w landscape)
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             findViewById(R.id.buttonLog10).setOnClickListener(v -> onLog10Click());
             findViewById(R.id.buttonFactorial).setOnClickListener(v -> onFactorialClick());
