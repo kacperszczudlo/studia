@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import org.mariuszgromada.math.mxparser.Expression;
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
-    private double firstValue = 0;
-    private String currentOperator = "";
     private boolean isNewOp = true;
 
     @Override
@@ -27,26 +27,21 @@ public class MainActivity extends AppCompatActivity {
         display = findViewById(R.id.editTextDisplay);
 
         Button[] numberButtons = {
-                findViewById(R.id.button0),
-                findViewById(R.id.button1),
-                findViewById(R.id.button2),
-                findViewById(R.id.button3),
-                findViewById(R.id.button4),
-                findViewById(R.id.button5),
-                findViewById(R.id.button6),
-                findViewById(R.id.button7),
-                findViewById(R.id.button8),
-                findViewById(R.id.button9)
+                findViewById(R.id.button0), findViewById(R.id.button1),
+                findViewById(R.id.button2), findViewById(R.id.button3),
+                findViewById(R.id.button4), findViewById(R.id.button5),
+                findViewById(R.id.button6), findViewById(R.id.button7),
+                findViewById(R.id.button8), findViewById(R.id.button9)
         };
 
         for (Button btn : numberButtons) {
             btn.setOnClickListener(this::onNumberClick);
         }
 
-        findViewById(R.id.buttonAdd).setOnClickListener(this::onOperatorClick);
-        findViewById(R.id.buttonSubtract).setOnClickListener(this::onOperatorClick);
-        findViewById(R.id.buttonMultiply).setOnClickListener(this::onOperatorClick);
-        findViewById(R.id.buttonDivide).setOnClickListener(this::onOperatorClick);
+        findViewById(R.id.buttonAdd).setOnClickListener(v -> onOperatorClick("+"));
+        findViewById(R.id.buttonSubtract).setOnClickListener(v -> onOperatorClick("-"));
+        findViewById(R.id.buttonMultiply).setOnClickListener(v -> onOperatorClick("*"));
+        findViewById(R.id.buttonDivide).setOnClickListener(v -> onOperatorClick("/"));
         findViewById(R.id.buttonEqual).setOnClickListener(this::onEqualClick);
         findViewById(R.id.buttonClear).setOnClickListener(v -> display.setText("0"));
         findViewById(R.id.buttonDelete).setOnClickListener(v -> onDeleteClick());
@@ -62,6 +57,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("displayText", display.getText().toString());
+        outState.putBoolean("isNewOp", isNewOp);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        display.setText(savedInstanceState.getString("displayText", "0"));
+        isNewOp = savedInstanceState.getBoolean("isNewOp", true);
+    }
+
     private void onNumberClick(View v) {
         Button button = (Button) v;
         if (isNewOp) display.setText("");
@@ -70,23 +79,19 @@ public class MainActivity extends AppCompatActivity {
         display.setText(value);
     }
 
-    private void onOperatorClick(View v) {
-        Button button = (Button) v;
-        firstValue = Double.parseDouble(display.getText().toString());
-        currentOperator = button.getText().toString();
-        isNewOp = true;
+    private void onOperatorClick(String operator) {
+        if (isNewOp) return;
+        String currentText = display.getText().toString();
+        display.setText(currentText + operator);
+        isNewOp = false;
     }
 
     private void onEqualClick(View v) {
-        double secondValue = Double.parseDouble(display.getText().toString());
-        double result = 0;
-        switch (currentOperator) {
-            case "+": result = firstValue + secondValue; break;
-            case "-": result = firstValue - secondValue; break;
-            case "x": result = firstValue * secondValue; break;
-            case "/": result = firstValue / secondValue; break;
-        }
-        display.setText(String.valueOf(result));
+        String expressionText = display.getText().toString();
+        Expression expression = new Expression(expressionText);
+        double result = expression.calculate();
+        DecimalFormat decimalFormat = new DecimalFormat("#.########");
+        display.setText(Double.isNaN(result) ? "Error" : decimalFormat.format(result));
         isNewOp = true;
     }
 
@@ -115,9 +120,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onFactorialClick() {
-        int value = Integer.parseInt(display.getText().toString());
+        double value = Double.parseDouble(display.getText().toString());
+        if (value != (int) value || value < 0) {
+            display.setText("Error");
+            return;
+        }
         int result = 1;
-        for (int i = 2; i <= value; i++) {
+        for (int i = 2; i <= (int) value; i++) {
             result *= i;
         }
         display.setText(String.valueOf(result));
