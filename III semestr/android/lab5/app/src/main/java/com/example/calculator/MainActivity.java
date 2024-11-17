@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
+        // zapisanie stanu wyswietlacza i operacji
         super.onSaveInstanceState(outState);
         outState.putString("displayText", display.getText().toString());
         outState.putBoolean("isNewOp", isNewOp);
@@ -66,12 +67,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        // przywracanie aktualnego stanu wyswietlacza i operacji
         super.onRestoreInstanceState(savedInstanceState);
         display.setText(savedInstanceState.getString("displayText", "0"));
         isNewOp = savedInstanceState.getBoolean("isNewOp", true);
     }
 
     private void onNumberClick(View v) {
+        // dodanie kliknietej cycfry do wyswietlacza
         Button button = (Button) v;
         if (isNewOp) display.setText("");
         isNewOp = false;
@@ -80,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onOperatorClick(String operator) {
+        // dodanie operatora do wyswietlacza
         if (isNewOp) return;
         String currentText = display.getText().toString();
         display.setText(currentText + operator);
@@ -87,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onEqualClick(View v) {
+        // wynik i wyswietlanie
         String expressionText = display.getText().toString();
         Expression expression = new Expression(expressionText);
         double result = expression.calculate();
@@ -96,16 +101,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onPercentClick() {
+        // przelicza na procent
         double value = Double.parseDouble(display.getText().toString()) / 100;
         display.setText(String.valueOf(value));
     }
 
     private void onNegateClick() {
+        // negacja
         double value = Double.parseDouble(display.getText().toString()) * -1;
         display.setText(String.valueOf(value));
     }
 
     private void onDeleteClick() {
+        // usuwanie
         String current = display.getText().toString();
         if (!current.equals("0") && current.length() > 1) {
             display.setText(current.substring(0, current.length() - 1));
@@ -115,11 +123,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onLog10Click() {
+        // log10
         double value = Double.parseDouble(display.getText().toString());
         display.setText(String.valueOf(Math.log10(value)));
     }
 
     private void onFactorialClick() {
+        // silnia
         double value = Double.parseDouble(display.getText().toString());
         if (value != (int) value || value < 0) {
             display.setText("Error");
@@ -133,16 +143,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onSquareRootClick() {
+        // sqrt
         double value = Double.parseDouble(display.getText().toString());
         display.setText(String.valueOf(Math.sqrt(value)));
     }
 
     private void onPower3Click() {
+        // x^3
         double value = Double.parseDouble(display.getText().toString());
         display.setText(String.valueOf(Math.pow(value, 3)));
     }
 
     private void onPower2Click() {
+        // x^2
         double value = Double.parseDouble(display.getText().toString());
         display.setText(String.valueOf(Math.pow(value, 2)));
     }
