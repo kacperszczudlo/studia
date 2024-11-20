@@ -10,7 +10,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("database_view.fxml")); // Ścieżka do FXML
+        Parent root = FXMLLoader.load(getClass().getResource("database_view.fxml"));
         primaryStage.setTitle("Połączenie JDBC");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();

@@ -4,10 +4,9 @@
 
 	<meta charset="utf-8">
 	<title>Katalog samochodowy</title>
-	<meta name="author" content="Kacper Szczudło">
 	
 	<link rel="stylesheet" href="main.css">
-	
+
 </head>
 
 <body>
@@ -22,7 +21,7 @@
 	
 		<article>
 		
-			<form action="" method="post">
+			<form action="order.php" method="post" enctype="multipart/form-data">
 			
 				<div class="row">
 				
@@ -111,45 +110,47 @@
 				<div class="row">
 					<label> Ile kluczyków <input type="number" name="kluczyk" step="1"></label>
 				</div>
-
+				
 				<div class="row">
-					<label> Adres e-mail <input type="email" name="email"></label>
-					<label> Numer telefonu <input type="tel" name="telefon"></label>
+					<label> Adres e-mail <input type="email" name="adres" required></label>
+					<label> Numer telefonu <input type="tel" name="telefon" required></label>
+				</div>
+	
+				<div class="row">
+					<label> Data dostawy <input type="date" name="dzien"></label>
+					<label> Preferowany czas dostawy <input type="time" name="czas" step="1" min="09:00" max="18:00"></label>
 				</div>
 				
 				<div class="row">
-					<label> Data dostawy <input type="date" name="data_dostawy"></label>
-					<label> Preferowany czas dostawy <input type="time" name="czas_dostawy"></label>
+					<div><label for="komentarz"> Uwagi do zamówienia </label></div>
+					<textarea name="komentarz" id="komentarz" rows="4" cols="80" maxlength="25" minlength="10"></textarea>
 				</div>
 				
 				<div class="row">
-					<label> Uwagi do zamówienia <textarea name="uwagi"></textarea></label>
-				</div>
-				
-				<div class="row">
-					<label> Prześlij zdjęcie poprzedniego samochodu <input type="file" name="zdjecie"></label>
+					<label> Prześlij zdjęcie poprzedniego samochodu </label> <input type="file" name="obraz" accept="image/x-png,image/gif,image/jpeg">
 				</div>
 				
 				<div class="row">
 					<label> Kolor lakieru <input type="color" name="kolor" value="#ff0000"></label>
 				</div>
-				
-				<div class="row">
-					<label> Stopień realizacji zamówienia <input type="range" name="realizacja" step="1" min="0" max="100" value="75"></label>
-				</div>
-				
-				<div class="row">
-					<label> Stopień zatankowania samochodu <input type="range" name="zatankowanie" step="1" min="0" max="100" value="33"></label>
-				</div>
-				
 
 				<div class="row">
-					<label> Twoja strona www <input type="url" name="www"></label>
+					<label> Stopień realizacji zamówienia </label><progress id="realizacja" max="100" value="75"></progress>
 				</div>
 				
 				<div class="row">
-					<button type="submit">Zamawiam!</button>
-					<button type="reset">Wyczyść formularz</button>
+					<label> Stopień zatankowania samochodu </label><meter min="0" max="100" title="procent" value="30" low="30" high="70" optimum="75"></meter>
+				</div>
+				
+				<div class="row">
+					<label> Twoja strona www </label><input type="url" name="witryna">
+				</div>			
+
+				<input type="hidden" name="token" value="ug3f5jgh5f7d87874fdg4ddgh">
+				
+				<div class="row">
+					<input type="submit" value="Zamawiam!">
+					<input type="reset" value="Wyczyść formularz">
 				</div>
 				
 			</form>		

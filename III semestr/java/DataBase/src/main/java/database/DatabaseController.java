@@ -35,10 +35,9 @@ public class DatabaseController {
             ResultSetMetaData rsmd = rs.getMetaData();
             int numberOfColumns = rsmd.getColumnCount();
 
-            tableView.getColumns().clear(); // Wyczyść kolumny przed dodaniem nowych
+            tableView.getColumns().clear();
             ObservableList<ObservableList<Object>> data = FXCollections.observableArrayList();
 
-            // Dodanie kolumn do TableView
             for (int i = 1; i <= numberOfColumns; i++) {
                 final int colIndex = i - 1;
                 TableColumn<ObservableList<Object>, Object> column = new TableColumn<>(rsmd.getColumnName(i));
@@ -46,7 +45,6 @@ public class DatabaseController {
                 tableView.getColumns().add(column);
             }
 
-            // Dodanie danych do ObservableList
             while (rs.next()) {
                 ObservableList<Object> row = FXCollections.observableArrayList();
                 for (int i = 1; i <= numberOfColumns; i++) {
