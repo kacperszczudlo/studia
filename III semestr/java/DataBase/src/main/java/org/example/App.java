@@ -19,12 +19,11 @@ public class App extends Application {
 
         primaryStage.setTitle("Przeglądarka baz danych");
         primaryStage.setScene(scene);
-        primaryStage.sizeToScene(); // Dopasowanie rozmiaru do zawartości
-        primaryStage.setResizable(true); // Pozwala użytkownikowi zmieniać rozmiar
+        primaryStage.sizeToScene();
+        primaryStage.setResizable(true);
         primaryStage.show();
     }
-
-
+    
     public static void main(String[] args) {
         launch(args);
     }
