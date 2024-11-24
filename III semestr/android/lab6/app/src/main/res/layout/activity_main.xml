@@ -1,0 +1,19 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnCheckWorldTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check World Time"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp" />
+</LinearLayout>
