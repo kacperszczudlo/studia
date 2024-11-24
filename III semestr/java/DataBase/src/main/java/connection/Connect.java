@@ -17,8 +17,16 @@ public class Connect {
     }
 
     public Connection getConnection() {
+        try {
+            if (connection == null || connection.isClosed()) {
+                connection = makeConnection();
+            }
+        } catch (SQLException e) {
+            System.err.println("Błąd podczas sprawdzania połączenia: " + e.getMessage());
+        }
         return connection;
     }
+
 
     public void close() {
         try {
@@ -32,12 +40,11 @@ public class Connect {
         try {
             Class.forName(driver);
             return DriverManager.getConnection(url, user, pass);
-        } catch (ClassNotFoundException cnfe) {
-            System.err.println("Błąd ładowania sterownika: " + cnfe);
-            return null;
-        } catch (SQLException sqle) {
-            System.err.println("Błąd przy nawiązywaniu połączenia: " + sqle);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Błąd przy nawiązywaniu połączenia: " + e.getMessage());
             return null;
         }
     }
+
+
 }
