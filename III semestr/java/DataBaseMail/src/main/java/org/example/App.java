@@ -15,11 +15,10 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("database_view.fxml"));
         Parent root = loader.load();
 
-        Scene scene = new Scene(root,1000, 500);
+        Scene scene = new Scene(root, 1000, 500);
 
         primaryStage.setTitle("Przeglądarka baz danych");
         primaryStage.setScene(scene);
-        primaryStage.sizeToScene();
         primaryStage.setResizable(true);
         primaryStage.show();
     }

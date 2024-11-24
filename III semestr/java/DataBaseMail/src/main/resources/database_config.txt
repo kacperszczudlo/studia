@@ -1,0 +1,4 @@
+driver=org.postgresql.Driver
+jdbc:postgresql://195.150.230.208:5432/2024_szczudlo_kacper
+user=2024_szczudlo_kacper
+password=KacSzczud2115**
