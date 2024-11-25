@@ -14,7 +14,6 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("database_view.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root, 1000, 650);
-        scene.getStylesheets().add(getClass().getResource("/org/example/style.css").toExternalForm());
         primaryStage.setTitle("Przeglądarka baz danych");
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);

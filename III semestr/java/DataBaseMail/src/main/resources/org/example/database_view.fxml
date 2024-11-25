@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.DatabaseController" stylesheets="@style.css">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.DatabaseController">
     <children>
         <ComboBox fx:id="schemaComboBox" layoutX="20.0" layoutY="20.0" prefWidth="150.0"
                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
@@ -15,7 +15,7 @@
                    style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
         <TextArea fx:id="emailBodyArea" layoutX="20.0" layoutY="510.0" prefWidth="960.0" prefHeight="100.0" promptText="Wpisz treść wiadomości"
                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
-        <Button fx:id="sendEmailButton" layoutX="850.0" layoutY="470.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
+        <Button fx:id="sendEmailButton" layoutX="930.0" layoutY="470.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
                 style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
     </children>
 </AnchorPane>
