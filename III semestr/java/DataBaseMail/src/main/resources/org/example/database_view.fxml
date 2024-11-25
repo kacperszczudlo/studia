@@ -11,7 +11,11 @@
                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
         <TableView fx:id="tableView" layoutX="20.0" layoutY="60.0" prefHeight="400.0" prefWidth="960.0"
                    style="-fx-background-color: #ffffff; -fx-border-color: #dddddd; -fx-border-radius: 5;" />
-        <Button fx:id="sendEmailButton" layoutX="850.0" layoutY="20.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
+        <TextField fx:id="emailSubjectField" layoutX="20.0" layoutY="470.0" prefWidth="300.0" promptText="Wpisz temat wiadomości"
+                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
+        <TextArea fx:id="emailBodyArea" layoutX="20.0" layoutY="510.0" prefWidth="960.0" prefHeight="100.0" promptText="Wpisz treść wiadomości"
+                  style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
+        <Button fx:id="sendEmailButton" layoutX="850.0" layoutY="470.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
                 style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
     </children>
 </AnchorPane>

@@ -24,8 +24,13 @@ public class DatabaseController {
     private TableView<ObservableList<Object>> tableView;
     @FXML
     private Button sendEmailButton;
+    @FXML
+    private TextField emailSubjectField;
+    @FXML
+    private TextArea emailBodyArea;
 
     private final Connect connect = new Connect();
+
     @FXML
     public void initialize() {
         loadSchemas();
@@ -37,6 +42,7 @@ public class DatabaseController {
         });
         tableComboBox.setOnAction(event -> loadTableData());
     }
+
     private void loadSchemas() {
         ObservableList<String> schemas = FXCollections.observableArrayList();
         try (Connection conn = connect.getConnection();
@@ -50,6 +56,7 @@ public class DatabaseController {
         }
         schemaComboBox.setItems(schemas);
     }
+
     private void loadTablesForSchema(String schema) {
         ObservableList<String> tables = FXCollections.observableArrayList();
         try (Connection conn = connect.getConnection();
@@ -65,6 +72,7 @@ public class DatabaseController {
         }
         tableComboBox.setItems(tables);
     }
+
     private void loadTableData() {
         String selectedSchema = schemaComboBox.getValue();
         String selectedTable = tableComboBox.getValue();
@@ -128,15 +136,17 @@ public class DatabaseController {
             System.err.println("Błąd podczas ładowania danych tabeli: " + e.getMessage());
         }
     }
+
     private boolean isValidEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
         return email != null && email.matches(emailRegex);
     }
+
     @FXML
     private void sendEmails() {
-        List<String> emailAddresses = new ArrayList<>();
+        //List<String> emailAddresses = new ArrayList<>();
         // linijka do testowania czy wysyła
-        //List<String> emailAddresses = List.of("kacper.szczudlo@gmail.com");
+        List<String> emailAddresses = List.of("kacper.szczudlo@gmail.com");
         for (ObservableList<Object> row : tableView.getItems()) {
             Object emailObject = row.get(0);
             Object checkBoxObject = row.get(row.size() - 1);
@@ -153,15 +163,25 @@ public class DatabaseController {
                 emailAddresses.add(email);
             }
         }
-        System.out.println("Zaznaczone adresy e-mail do wysłania: " + emailAddresses);
         if (emailAddresses.isEmpty()) {
             System.out.println("Nie zaznaczono żadnych poprawnych adresów e-mail.");
             return;
         }
 
+        String subject = emailSubjectField.getText();
+        String body = emailBodyArea.getText();
+        if (subject == null || subject.isEmpty()) {
+            System.out.println("Temat wiadomości jest pusty.");
+            return;
+        }
+        if (body == null || body.isEmpty()) {
+            System.out.println("Treść wiadomości jest pusta.");
+            return;
+        }
+
         Mail mailService = new Mail("kacperstudenciak@gmail.com", "wpde khkz ofyq kknu");
         for (String email : emailAddresses) {
-            mailService.sendEmail(email, "Testowy e-mail", "To jest testowa wiadomość e-mail.");
-            }
+            mailService.sendEmail(email, subject, body);
         }
     }
+}
