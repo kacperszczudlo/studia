@@ -24,7 +24,6 @@ public class DatabaseUtils {
                 String[] keyValue = line.split("=");
                 String key = keyValue[0].trim();
                 String value = keyValue[1].trim();
-
                 switch (key) {
                     case "driver":
                         driver = value;
@@ -47,7 +46,6 @@ public class DatabaseUtils {
         }
     }
 
-
     private Connection getConnection() {
         try {
             Class.forName(driver);
@@ -61,7 +59,6 @@ public class DatabaseUtils {
     public String[] getAllTables() {
         List<String> tables = new ArrayList<>();
         String query = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'";
-
         try (Connection conn = getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
@@ -72,21 +69,17 @@ public class DatabaseUtils {
         } catch (SQLException e) {
             System.err.println("Błąd podczas pobierania tabel: " + e.getMessage());
         }
-
         return tables.toArray(new String[0]);
     }
 
     public String[][] getTableData(String tableName) {
         List<String[]> rows = new ArrayList<>();
         String query = "SELECT * FROM \"" + tableName + "\"";
-
         try (Connection conn = getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
-
             ResultSetMetaData rsmd = rs.getMetaData();
             int numberOfColumns = rsmd.getColumnCount();
-
             while (rs.next()) {
                 String[] row = new String[numberOfColumns];
                 for (int i = 1; i <= numberOfColumns; i++) {

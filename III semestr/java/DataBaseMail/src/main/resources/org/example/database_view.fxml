@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.DatabaseController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.DatabaseController" stylesheets="@style.css">
     <children>
-        <ComboBox fx:id="schemaComboBox" promptText="Wybierz schemat" />
-        <ComboBox fx:id="tableComboBox" promptText="Wybierz tabelę" />
-        <TableView fx:id="tableView" VBox.vgrow="ALWAYS" />
-        <Button text="Wyślij e-maile" onAction="#sendEmails" />
+        <ComboBox fx:id="schemaComboBox" layoutX="20.0" layoutY="20.0" prefWidth="150.0"
+                  style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
+        <ComboBox fx:id="tableComboBox" layoutX="180.0" layoutY="20.0" prefWidth="150.0"
+                  style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
+        <TableView fx:id="tableView" layoutX="20.0" layoutY="60.0" prefHeight="400.0" prefWidth="960.0"
+                   style="-fx-background-color: #ffffff; -fx-border-color: #dddddd; -fx-border-radius: 5;" />
+        <Button fx:id="sendEmailButton" layoutX="850.0" layoutY="20.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
+                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
     </children>
-</VBox>
-
-
-
+</AnchorPane>
