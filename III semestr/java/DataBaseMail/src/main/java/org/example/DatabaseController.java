@@ -136,7 +136,7 @@ public class DatabaseController {
     private void sendEmails() {
         List<String> emailAddresses = new ArrayList<>();
         // linijka do testowania czy wysyła
-        //List<String> emailAddresses = List.of("kamiljop1@gmail.com");
+        //List<String> emailAddresses = List.of("kacper.szczudlo@gmail.com");
         for (ObservableList<Object> row : tableView.getItems()) {
             Object emailObject = row.get(0);
             Object checkBoxObject = row.get(row.size() - 1);
