@@ -145,7 +145,7 @@ public class DatabaseController {
     @FXML
     private void sendEmails() {
         List<String> emailAddresses = new ArrayList<>();
-        // linijka do testowania czy wysyła
+        // linijka do testowania czy wysyła rjedryka@gmail.com
         //List<String> emailAddresses = List.of("kacper.szczudlo@gmail.com");
         for (ObservableList<Object> row : tableView.getItems()) {
             Object emailObject = row.get(0);
