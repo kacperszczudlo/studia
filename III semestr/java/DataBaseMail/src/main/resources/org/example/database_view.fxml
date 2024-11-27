@@ -15,7 +15,13 @@
                    style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
         <TextArea fx:id="emailBodyArea" layoutX="20.0" layoutY="510.0" prefWidth="960.0" prefHeight="100.0" promptText="Wpisz treść wiadomości"
                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
+        <Button fx:id="exportToCSVButton" layoutX="810.0" layoutY="470.0" mnemonicParsing="false"  text="Eksportuj do CSV" onAction="#onExportToCSV"
+                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
         <Button fx:id="sendEmailButton" layoutX="930.0" layoutY="470.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
+                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
+        <Button fx:id="selectAllButton" layoutX="20.0" layoutY="620.0" mnemonicParsing="false" text="Zaznacz wszystkie" onAction="#selectAllRows"
+                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
+        <Button fx:id="deselectAllButton" layoutX="150.0" layoutY="620.0" mnemonicParsing="false" text="Odznacz wszystkie" onAction="#deselectAllRows"
                 style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
     </children>
 </AnchorPane>

@@ -28,6 +28,12 @@ public class DatabaseController {
     private TextField emailSubjectField;
     @FXML
     private TextArea emailBodyArea;
+    @FXML
+    private Button exportToCSVButton;
+    @FXML
+    private Button selectAllButton;
+    @FXML
+    private Button deselectAllButton;
 
     private final Connect connect = new Connect();
 
@@ -41,6 +47,9 @@ public class DatabaseController {
             }
         });
         tableComboBox.setOnAction(event -> loadTableData());
+        exportToCSVButton.setOnAction(event -> onExportToCSV());
+        selectAllButton.setOnAction(event -> selectAllRows());
+        deselectAllButton.setOnAction(event -> deselectAllRows());
     }
 
     private void loadSchemas() {
@@ -137,6 +146,58 @@ public class DatabaseController {
         }
     }
 
+    @FXML
+    private void onExportToCSV() {
+        String selectedTable = tableComboBox.getValue();
+        String selectedSchema = schemaComboBox.getValue();
+
+        if (selectedTable != null && !selectedTable.isEmpty() && selectedSchema != null && !selectedSchema.isEmpty()) {
+            Export export = new Export();
+            List<ObservableList<Object>> selectedRows = new ArrayList<>();
+
+            // Zbieramy zaznaczone wiersze
+            for (ObservableList<Object> row : tableView.getItems()) {
+                SimpleBooleanProperty checkBoxProperty = (SimpleBooleanProperty) row.get(row.size() - 1);
+                if (checkBoxProperty.get()) {
+                    selectedRows.add(row);
+                }
+            }
+
+            if (selectedRows.isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Błąd");
+                alert.setHeaderText("Brak zaznaczonych wierszy");
+                alert.setContentText("Proszę zaznaczyć przynajmniej jeden wiersz przed eksportem.");
+                alert.showAndWait();
+                return;
+            }
+
+            export.exportSelectedRowsToCSV(selectedSchema, selectedTable, selectedRows);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Błąd");
+            alert.setHeaderText("Nie wybrano tabeli lub schematu");
+            alert.setContentText("Proszę wybrać tabelę i schemat przed eksportem.");
+            alert.showAndWait();
+        }
+    }
+
+    @FXML
+    private void selectAllRows() {
+        for (ObservableList<Object> row : tableView.getItems()) {
+            SimpleBooleanProperty checkBoxProperty = (SimpleBooleanProperty) row.get(row.size() - 1);
+            checkBoxProperty.set(true);
+        }
+    }
+
+    @FXML
+    private void deselectAllRows() {
+        for (ObservableList<Object> row : tableView.getItems()) {
+            SimpleBooleanProperty checkBoxProperty = (SimpleBooleanProperty) row.get(row.size() - 1);
+            checkBoxProperty.set(false);
+        }
+    }
+
     private boolean isValidEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
         return email != null && email.matches(emailRegex);
@@ -145,8 +206,6 @@ public class DatabaseController {
     @FXML
     private void sendEmails() {
         List<String> emailAddresses = new ArrayList<>();
-        // linijka do testowania czy wysyła rjedryka@gmail.com
-        //List<String> emailAddresses = List.of("kacper.szczudlo@gmail.com");
         for (ObservableList<Object> row : tableView.getItems()) {
             Object emailObject = row.get(0);
             Object checkBoxObject = row.get(row.size() - 1);
