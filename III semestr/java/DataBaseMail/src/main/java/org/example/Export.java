@@ -24,7 +24,7 @@ public class Export {
 
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Wybierz miejsce do zapisania pliku");
-                fileChooser.setInitialFileName(tableName + "_selected.csv");
+                fileChooser.setInitialFileName(tableName + ".csv");
                 fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
 
                 File fileToSave = fileChooser.showSaveDialog(new Stage());
@@ -40,7 +40,6 @@ public class Export {
                         }
                         writer.newLine();
 
-                        // Zapisz tylko zaznaczone wiersze
                         for (ObservableList<Object> row : selectedRows) {
                             for (int i = 0; i < columnCount; i++) {
                                 Object value = row.get(i);
