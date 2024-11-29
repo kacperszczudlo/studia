@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.stage.FileChooser?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.DatabaseController">
     <children>
@@ -20,6 +21,8 @@
         <Button fx:id="exportToCSVButton" layoutX="810.0" layoutY="510.0" mnemonicParsing="false"  text="Eksportuj do CSV" onAction="#onExportToCSV"
                 style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
         <Button fx:id="sendEmailButton" layoutX="930.0" layoutY="510.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
+                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
+        <Button fx:id="attachFileButton" layoutX="350.0" layoutY="470.0" mnemonicParsing="false" text="Załącz plik" onAction="#attachFile"
                 style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
         <Button fx:id="selectAllButton" layoutX="20.0" layoutY="660.0" mnemonicParsing="false" text="Zaznacz wszystkie" onAction="#selectAllRows"
                 style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />

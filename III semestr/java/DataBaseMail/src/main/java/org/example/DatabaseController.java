@@ -1,6 +1,8 @@
 package org.example;
 
 import connection.Connect;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import mail.Mail;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -10,12 +12,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.input.MouseEvent;
+import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseController {
 
+    @FXML
+    private TextField emailTextField;
     @FXML
     private ComboBox<String> schemaComboBox;
     @FXML
@@ -35,9 +40,8 @@ public class DatabaseController {
     @FXML
     private Button deselectAllButton;
     @FXML
-    private TextField emailTextField;
-
-
+    private Button attachFileButton;
+    private File attachedFile;
     private final Connect connect = new Connect();
 
     @FXML
@@ -53,8 +57,7 @@ public class DatabaseController {
         exportToCSVButton.setOnAction(event -> onExportToCSV());
         selectAllButton.setOnAction(event -> selectAllRows());
         deselectAllButton.setOnAction(event -> deselectAllRows());
-        // Nowe ustawienie dla pola emailTextField
-        sendEmailButton.setOnAction(event -> sendEmails());
+        attachFileButton.setOnAction(event -> attachFile());
     }
 
     private void loadSchemas() {
@@ -155,19 +158,15 @@ public class DatabaseController {
     private void onExportToCSV() {
         String selectedTable = tableComboBox.getValue();
         String selectedSchema = schemaComboBox.getValue();
-
         if (selectedTable != null && !selectedTable.isEmpty() && selectedSchema != null && !selectedSchema.isEmpty()) {
             Export export = new Export();
             List<ObservableList<Object>> selectedRows = new ArrayList<>();
-
-            // Zbieramy zaznaczone wiersze
             for (ObservableList<Object> row : tableView.getItems()) {
                 SimpleBooleanProperty checkBoxProperty = (SimpleBooleanProperty) row.get(row.size() - 1);
                 if (checkBoxProperty.get()) {
                     selectedRows.add(row);
                 }
             }
-
             if (selectedRows.isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Błąd");
@@ -176,7 +175,6 @@ public class DatabaseController {
                 alert.showAndWait();
                 return;
             }
-
             export.exportSelectedRowsToCSV(selectedSchema, selectedTable, selectedRows);
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -215,7 +213,6 @@ public class DatabaseController {
             System.out.println("Niepoprawny lub pusty adres e-mail: " + email);
             return;
         }
-
         String subject = emailSubjectField.getText();
         String body = emailBodyArea.getText();
         if (subject == null || subject.isEmpty()) {
@@ -226,9 +223,21 @@ public class DatabaseController {
             System.out.println("Treść wiadomości jest pusta.");
             return;
         }
-
         Mail mailService = new Mail("kacperstudenciak@gmail.com", "wpde khkz ofyq kknu");
-        mailService.sendEmail(email, subject, body);
+        if (attachedFile != null) {
+            mailService.sendEmailWithAttachment(email, subject, body, attachedFile);
+        } else {
+            mailService.sendEmail(email, subject, body);
+        }
     }
 
+    @FXML
+    private void attachFile() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Wybierz plik do załączenia");
+        attachedFile = fileChooser.showOpenDialog(new Stage());
+        if (attachedFile != null) {
+            System.out.println("Wybrano plik: " + attachedFile.getAbsolutePath());
+        }
+    }
 }
