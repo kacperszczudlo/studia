@@ -34,6 +34,9 @@ public class DatabaseController {
     private Button selectAllButton;
     @FXML
     private Button deselectAllButton;
+    @FXML
+    private TextField emailTextField;
+
 
     private final Connect connect = new Connect();
 
@@ -50,6 +53,8 @@ public class DatabaseController {
         exportToCSVButton.setOnAction(event -> onExportToCSV());
         selectAllButton.setOnAction(event -> selectAllRows());
         deselectAllButton.setOnAction(event -> deselectAllRows());
+        // Nowe ustawienie dla pola emailTextField
+        sendEmailButton.setOnAction(event -> sendEmails());
     }
 
     private void loadSchemas() {
@@ -205,25 +210,9 @@ public class DatabaseController {
 
     @FXML
     private void sendEmails() {
-        List<String> emailAddresses = new ArrayList<>();
-        for (ObservableList<Object> row : tableView.getItems()) {
-            Object emailObject = row.get(0);
-            Object checkBoxObject = row.get(row.size() - 1);
-            if (checkBoxObject instanceof SimpleBooleanProperty && ((SimpleBooleanProperty) checkBoxObject).get()) {
-                if (emailObject == null || !(emailObject instanceof String) || ((String) emailObject).isEmpty()) {
-                    System.out.println("Pominięto niepoprawny lub pusty adres e-mail: " + emailObject);
-                    continue;
-                }
-                String email = (String) emailObject;
-                if (!isValidEmail(email)) {
-                    System.out.println("Pominięto niepoprawny adres e-mail: " + email);
-                    continue;
-                }
-                emailAddresses.add(email);
-            }
-        }
-        if (emailAddresses.isEmpty()) {
-            System.out.println("Nie zaznaczono żadnych poprawnych adresów e-mail.");
+        String email = emailTextField.getText();
+        if (email == null || email.isEmpty() || !isValidEmail(email)) {
+            System.out.println("Niepoprawny lub pusty adres e-mail: " + email);
             return;
         }
 
@@ -239,8 +228,7 @@ public class DatabaseController {
         }
 
         Mail mailService = new Mail("kacperstudenciak@gmail.com", "wpde khkz ofyq kknu");
-        for (String email : emailAddresses) {
-            mailService.sendEmail(email, subject, body);
-        }
+        mailService.sendEmail(email, subject, body);
     }
+
 }

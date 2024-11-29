@@ -13,7 +13,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("database_view.fxml"));
         Parent root = loader.load();
-        Scene scene = new Scene(root, 1000, 650);
+        Scene scene = new Scene(root, 1000, 700);
         primaryStage.setTitle("Przeglądarka baz danych");
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
