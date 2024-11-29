@@ -14,7 +14,7 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("database_view.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root, 1000, 700);
-        primaryStage.setTitle("Przeglądarka baz danych");
+        primaryStage.setTitle("Kacper Szczudło 37738 - Inżynieria Oprogramowania II rok");
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
         primaryStage.show();

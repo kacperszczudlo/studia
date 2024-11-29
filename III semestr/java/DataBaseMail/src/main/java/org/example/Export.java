@@ -2,8 +2,9 @@ package org.example;
 
 import connection.Connect;
 import javafx.collections.ObservableList;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.*;
 import java.sql.*;
 import java.util.List;
@@ -21,15 +22,14 @@ public class Export {
                 ResultSet rs = stmt.executeQuery(query);
                 ResultSetMetaData metaData = rs.getMetaData();
 
-                JFileChooser fileChooser = new JFileChooser();
-                fileChooser.setDialogTitle("Wybierz miejsce do zapisania pliku");
-                fileChooser.setSelectedFile(new File(tableName + "_selected.csv"));
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Wybierz miejsce do zapisania pliku");
+                fileChooser.setInitialFileName(tableName + "_selected.csv");
+                fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
 
-                int userSelection = fileChooser.showSaveDialog(null);
+                File fileToSave = fileChooser.showSaveDialog(new Stage());
 
-                if (userSelection == JFileChooser.APPROVE_OPTION) {
-                    File fileToSave = fileChooser.getSelectedFile();
-
+                if (fileToSave != null) {
                     try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileToSave))) {
                         int columnCount = metaData.getColumnCount();
                         for (int i = 1; i <= columnCount; i++) {
@@ -43,27 +43,29 @@ public class Export {
                         // Zapisz tylko zaznaczone wiersze
                         for (ObservableList<Object> row : selectedRows) {
                             for (int i = 0; i < columnCount; i++) {
-                                writer.write(row.get(i).toString());
+                                Object value = row.get(i);
+                                writer.write(value != null ? value.toString() : "");
                                 if (i < columnCount - 1) {
                                     writer.write(",");
                                 }
                             }
                             writer.newLine();
-                        }
-                        JOptionPane.showMessageDialog(null, "Eksport zakończony!");
+
+                    }
+                        System.out.println("Eksport zakończony!");
                     } catch (IOException e) {
                         e.printStackTrace();
-                        JOptionPane.showMessageDialog(null, "Błąd zapisu pliku.");
+                        System.err.println("Błąd zapisu pliku.");
                     }
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-                JOptionPane.showMessageDialog(null, "Błąd zapytania do bazy danych.");
+                System.err.println("Błąd zapytania do bazy danych.");
             } finally {
                 connect.close();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Nie udało się połączyć z bazą danych.");
+            System.err.println("Nie udało się połączyć z bazą danych.");
         }
     }
 }
