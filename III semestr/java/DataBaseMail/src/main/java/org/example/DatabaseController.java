@@ -41,8 +41,12 @@ public class DatabaseController {
     private Button deselectAllButton;
     @FXML
     private Button attachFileButton;
+    @FXML
+    private Label filePathLabel;
+
     private File attachedFile;
     private final Connect connect = new Connect();
+
 
     @FXML
     public void initialize() {
@@ -59,6 +63,7 @@ public class DatabaseController {
         deselectAllButton.setOnAction(event -> deselectAllRows());
         attachFileButton.setOnAction(event -> attachFile());
     }
+
 
     private void loadSchemas() {
         ObservableList<String> schemas = FXCollections.observableArrayList();
@@ -237,7 +242,10 @@ public class DatabaseController {
         fileChooser.setTitle("Wybierz plik do załączenia");
         attachedFile = fileChooser.showOpenDialog(new Stage());
         if (attachedFile != null) {
+            filePathLabel.setText("Wybrano plik: " + attachedFile.getAbsolutePath());
             System.out.println("Wybrano plik: " + attachedFile.getAbsolutePath());
+        } else {
+            filePathLabel.setText("Nie wybrano pliku");
         }
     }
 }

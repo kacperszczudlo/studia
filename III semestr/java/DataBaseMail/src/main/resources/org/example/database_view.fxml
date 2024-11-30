@@ -12,21 +12,23 @@
                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
         <TableView fx:id="tableView" layoutX="20.0" layoutY="60.0" prefHeight="400.0" prefWidth="960.0"
                    style="-fx-background-color: #ffffff; -fx-border-color: #dddddd; -fx-border-radius: 5;" />
-        <TextField fx:id="emailTextField" layoutX="20.0" layoutY="470.0" prefWidth="300.0" promptText="Wpisz adres e-mail odbiorcy"
+        <Button fx:id="selectAllButton" layoutX="20.0" layoutY="470.0" mnemonicParsing="false" text="Zaznacz wszystkie" onAction="#selectAllRows"
+                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
+        <Button fx:id="deselectAllButton" layoutX="150.0" layoutY="470.0" mnemonicParsing="false" text="Odznacz wszystkie" onAction="#deselectAllRows"
+                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
+        <Button fx:id="exportToCSVButton" layoutX="280.0" layoutY="470.0" mnemonicParsing="false" text="Eksportuj do CSV" onAction="#onExportToCSV"
+                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
+        <TextField fx:id="emailTextField" layoutX="20.0" layoutY="520.0" prefWidth="300.0" promptText="Wpisz adres e-mail odbiorcy"
                    style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
-        <TextField fx:id="emailSubjectField" layoutX="20.0" layoutY="510.0" prefWidth="300.0" promptText="Wpisz temat wiadomości"
+        <TextField fx:id="emailSubjectField" layoutX="20.0" layoutY="560.0" prefWidth="300.0" promptText="Wpisz temat wiadomości"
                    style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
-        <TextArea fx:id="emailBodyArea" layoutX="20.0" layoutY="550.0" prefWidth="960.0" prefHeight="100.0" promptText="Wpisz treść wiadomości"
+        <TextArea fx:id="emailBodyArea" layoutX="20.0" layoutY="600.0" prefWidth="960.0" prefHeight="100.0" promptText="Wpisz treść wiadomości"
                   style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" />
-        <Button fx:id="exportToCSVButton" layoutX="810.0" layoutY="510.0" mnemonicParsing="false"  text="Eksportuj do CSV" onAction="#onExportToCSV"
+        <Button fx:id="attachFileButton" layoutX="350.0" layoutY="520.0" mnemonicParsing="false" text="Załącz plik" onAction="#attachFile"
                 style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
-        <Button fx:id="sendEmailButton" layoutX="930.0" layoutY="510.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
-                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
-        <Button fx:id="attachFileButton" layoutX="350.0" layoutY="470.0" mnemonicParsing="false" text="Załącz plik" onAction="#attachFile"
-                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
-        <Button fx:id="selectAllButton" layoutX="20.0" layoutY="660.0" mnemonicParsing="false" text="Zaznacz wszystkie" onAction="#selectAllRows"
-                style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
-        <Button fx:id="deselectAllButton" layoutX="150.0" layoutY="660.0" mnemonicParsing="false" text="Odznacz wszystkie" onAction="#deselectAllRows"
+        <Label fx:id="filePathLabel" layoutX="450.0" layoutY="525.0" text="Nie wybrano pliku"
+               style="-fx-text-fill: #000000;" />
+        <Button fx:id="sendEmailButton" layoutX="930.0" layoutY="520.0" mnemonicParsing="false" text="Wyślij" onAction="#sendEmails"
                 style="-fx-background-color: #0078d7; -fx-text-fill: #ffffff; -fx-border-radius: 5;" />
     </children>
 </AnchorPane>
