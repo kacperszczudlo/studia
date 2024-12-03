@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05cd76b6-2136-4c08-8624-6ea7eb9d38d5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../android/WeatherApp/app/src/main/java/com/example/weatherapp/WeatherActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../android/WeatherApp/app/src/main/res/layout/activity_weather.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../android/WeatherApp/app/src/main/res/xml/network_security_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../html/5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../html/5/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/database_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/database_view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mail/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mail/Mail.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

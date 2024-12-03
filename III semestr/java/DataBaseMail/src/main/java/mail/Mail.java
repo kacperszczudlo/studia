@@ -40,7 +40,7 @@ public class Mail {
             message.setSubject(subject);
             message.setText(content);
             Transport.send(message);
-            System.out.println("Email sent to: " + to);
+            System.out.println("Email wysłany do: " + to);
         } catch (AddressException e) {
             System.err.println("Niepoprawny adres e-mail: " + to + " - " + e.getMessage());
         } catch (MessagingException e) {
