@@ -1,179 +1,217 @@
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#F8F8F8"
     android:padding="16dp">
 
-    <!-- City: oraz Nazwa miasta z ikonką po prawej -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="City:"
-            android:textSize="18sp" />
-
+        <!-- Nagłówek z miastem i ikoną -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/cityName"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_weight="1"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="#0F2E71"
-                android:layout_marginRight="8dp"/>
+                android:gravity="start">
+
+                <TextView
+                    android:id="@+id/staticCityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:id="@+id/cityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gdynia"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:textColor="#223377" />
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/weatherIcon"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="end"
-                android:src="@drawable/weather_icon"
-                android:contentDescription="@string/weather_icon_desc"/>
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/weather_icon" />
         </LinearLayout>
-    </LinearLayout>
 
-    <!-- Aktualna godzina wysrodkowana -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center">
-
+        <!-- Czas -->
         <TextView
             android:id="@+id/currentTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="17:32"
+            android:gravity="center"
             android:textSize="28sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
-    </LinearLayout>
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp" />
 
-    <!-- Temperatura -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Temp:"
-            android:textSize="18sp"
-            android:textColor="#0F2E71"/>
-
-        <TextView
-            android:id="@+id/weatherInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="28sp"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <!-- Ciśnienie -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pressure:"
-            android:textSize="18sp"
-            android:textColor="#0F2E71"/>
-
-        <TextView
-            android:id="@+id/pressureValue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="28sp"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <!-- Wilgotność -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Humidity:"
-            android:textSize="18sp"
-            android:textColor="#0F2E71"/>
-
-        <TextView
-            android:id="@+id/humidityValue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="28sp"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <!-- Min i Max Temperatura obok siebie -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
+        <!-- Szczegóły pogodowe -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="start"
+            android:layout_marginBottom="24dp">
 
-            <TextView
+            <!-- Temperatura -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Temp Min:"
-                android:textSize="18sp"
-                android:textColor="#0F2E71"/>
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
 
-            <TextView
-                android:id="@+id/tempMin"
+                <TextView
+                    android:id="@+id/staticTempText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#223377" />
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.58 °C"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- Ciśnienie -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:textStyle="bold"/>
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/staticPressureText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pressure"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#223377" />
+
+                <TextView
+                    android:id="@+id/pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1023 hPa"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- Wilgotność -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/staticHumidityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#223377" />
+
+                <TextView
+                    android:id="@+id/humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="91 %"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+            </LinearLayout>
         </LinearLayout>
 
+        <!-- Temp min i max -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
 
-            <TextView
-                android:layout_width="match_parent"
+            <!-- Temp min -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Temp Max:"
-                android:textSize="18sp"
-                android:textColor="#0F2E71"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
 
-            <TextView
-                android:id="@+id/tempMax"
-                android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/staticTempMinText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temp min"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#223377" />
+
+                <TextView
+                    android:id="@+id/tempMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.81 °C"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- Temp max -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:textStyle="bold"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/staticTempMaxText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temp max"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#223377" />
+
+                <TextView
+                    android:id="@+id/tempMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.51 °C"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+            </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
-</LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
