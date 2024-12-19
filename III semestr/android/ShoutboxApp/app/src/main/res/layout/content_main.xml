@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- This will be the area to display logs -->
+    <TextView
+        android:id="@+id/logsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Logs will be displayed here"
+        android:gravity="center"
+        android:textSize="18sp" />
+</FrameLayout>
