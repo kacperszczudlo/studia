@@ -3,19 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="8dp">
 
+    <!-- Górna część: Pozioma linia z Nick, Data i Godziną -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Nick -->
+        <TextView
+            android:id="@+id/textViewNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="Nick"
+            android:textSize="18sp"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Data -->
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2024-12-16"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Godzina -->
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="08:01:43"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!-- Dolna część: Treść wiadomości -->
     <TextView
-        android:id="@+id/content"
+        android:id="@+id/textViewContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@android:color/black" />
+        android:text="Message content"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="4dp" />
 
-    <TextView
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textColor="@android:color/darker_gray" />
+    <!-- Separator -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp" />
 </LinearLayout>

@@ -1,47 +1,86 @@
 package com.example.shoutboxapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
-    private List<Message> messages;
+public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
 
-    public MessageAdapter(List<Message> messages) {
-        this.messages = messages;
+    private List<Message> messageList;
+    private OnItemClickListener listener;
+
+    // Interfejs obsługujący kliknięcie elementu
+    public interface OnItemClickListener {
+        void onItemClick(Message message);
+    }
+
+    // Konstruktor z callbackiem
+    public MessageAdapter(List<Message> messageList, OnItemClickListener listener) {
+        this.messageList = messageList;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message, parent, false);
-        return new ViewHolder(view);
+    public MessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_message, parent, false);
+        return new MessageViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Message message = messages.get(position);
-        holder.content.setText(message.getContent());
-        holder.login.setText(message.getLogin());
+    public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
+        Message message = messageList.get(position);
+
+        holder.textViewNick.setText(message.getLogin());
+        holder.textViewDate.setText(message.getDate().split("T")[0]); // Wyświetla tylko datę
+        holder.textViewTime.setText(message.getTime());
+        holder.textViewContent.setText(message.getContent());
+
+        // Obsługa kliknięcia za pomocą callbacka
+        holder.itemView.setOnClickListener(v -> {
+            SharedPreferences sharedPreferences = v.getContext()
+                    .getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
+            String currentUser = sharedPreferences.getString("user_login", "Anonymous");
+
+            // Sprawdzenie, czy użytkownik jest autorem
+            if (currentUser.equals(message.getLogin())) {
+                Intent intent = new Intent(v.getContext(), EditCommentActivity.class);
+                intent.putExtra("commentId", message.getId());
+                intent.putExtra("commentLogin", message.getLogin());
+                intent.putExtra("commentContent", message.getContent());
+                v.getContext().startActivity(intent);
+            } else {
+                Toast.makeText(v.getContext(),
+                        "You can only edit your own comments.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return messages.size();
+        return messageList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView content, login;
+    static class MessageViewHolder extends RecyclerView.ViewHolder {
+        TextView textViewNick, textViewDate, textViewTime, textViewContent;
 
-        public ViewHolder(@NonNull View itemView) {
+        public MessageViewHolder(@NonNull View itemView) {
             super(itemView);
-            content = itemView.findViewById(R.id.content);
-            login = itemView.findViewById(R.id.login);
+            textViewNick = itemView.findViewById(R.id.textViewNick);
+            textViewDate = itemView.findViewById(R.id.textViewDate);
+            textViewTime = itemView.findViewById(R.id.textViewTime);
+            textViewContent = itemView.findViewById(R.id.textViewContent);
         }
     }
 }
