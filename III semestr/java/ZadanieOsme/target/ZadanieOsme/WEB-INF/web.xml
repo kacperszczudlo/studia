@@ -1,0 +1,22 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+  <servlet>
+    <servlet-name>main</servlet-name>
+    <servlet-class>
+      org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>
+  </servlet>
+
+  <!--    Servlet jest podstawowym elementem aplikacji biznesowych tworzonych w języku Java.-->
+  <!--    W rzeczywistości jest to klasa rozszerzająca klasę HttpServlet, która jest zdolna do przetwarzania żądań HTTP.-->
+  <!--    Serwlety wykorzystywane są zarówno w aplikacjach Javy EE jak i tych tworzonych w Spring MVC.-->
+
+  <servlet-mapping>
+    <servlet-name>main</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+</web-app>
