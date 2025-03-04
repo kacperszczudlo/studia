@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Świat Ryb</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icon.png" sizes="any" class="favicon">
+  <style>
+    .favicon {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body style="cursor: url('worm.png') 8 8, auto;">
+  <nav class="navbar">
+    <div class="logo">Świat Ryb</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Strona Główna</a></li>
+      <li><a href="ryby.html" class="active">Ryby</a></li>
+      <li><a href="metody.html">Metody</a></li>
+      <li><a href="lowiska.html">Łowiska</a></li>
+      <li><a href="porady-wiedza.html">Porady i Wiedza</a></li>
+      <li><a href="sklep.html">Sklep</a></li>
+    </ul>
+    <div class="icons">
+      <img src="images/user.png" alt="Login" style="border-radius: 0;">
+      <img src="images/shopping-cart.png" alt="Shopping Cart" style="border-radius: 0;">
+    </div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <section class="fish-atlas" style="margin-top: 40px;">
+    <h2>Atlas Polskich Ryb</h2>
+    <div class="fish-grid">
+      <div class="column predatory">
+        <h3>Ryby Drapieżne</h3>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-bolen-min.jpg" alt="BOLEN">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-brzana-min.jpg" alt="BRZANA">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-dorsz-min.jpg" alt="DORSZ">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-jaz-min.jpg" alt="JAZ">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-klen-min.jpg" alt="KLEN">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-lipien-min.jpg" alt="LIPIEN">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-losos-min.jpg" alt="LOSOS">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-okon-min.jpg" alt="OKONI">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-pstrag-min.jpg" alt="PSTRAG">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-sandacz-min.jpg" alt="SANDACZ">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-sum-min.jpg" alt="SUM">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/predatory/ryby-kafle-szczupak-min.jpg" alt="SZCZUPAK">
+        </div>
+      </div>
+      <div class="column white">
+        <h3>Ryby Białe</h3>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-amur-min.jpg" alt="AMUR">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-brzana-min.jpg" alt="BRZANA">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-jaz-min.jpg" alt="JAZ">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-karas-min.jpg" alt="KARAS">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-karp-min.jpg" alt="KARP">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-klen-min.jpg" alt="KLEN">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-krap-min.jpg" alt="KRAP">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-leszcz-min.jpg" alt="LESZCZ">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-lin-min.jpg" alt="LIN">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-ploc-min.jpg" alt="PLOC">
+        </div>
+        <div class="fish-item">
+          <img src="images/fish/white/ryby-kafle-tolpyga-min.jpg" alt="TOLPYGA">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">Logowanie</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="password" placeholder="Hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="login-btn" onclick="signIn()">Zaloguj się</button>
+        <button class="register-btn">Zarejestruj się</button>
+      </div>
+      <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
+    </div>
+  </div>
+
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">Rejestracja</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Hasło" required>
+        <input type="password" placeholder="Potwierdź hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="register-btn" onclick="register()">Zarejestruj się</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Świat Ryb - projekt zaliczeniowy z Projektowanie Interfejsów Użytkownika</p>
+    <div class="social-media">
+      <a href="https://www.google.com" target="_blank"><img src="images/google.png" alt="Google"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+    <p>© 2025 Świat Ryb. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <img id="fish" src="images/fish.png" alt="Rybka" />
+
+  <script src="script.js"></script>
+</body>
+</html>

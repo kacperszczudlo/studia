@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Świat Ryb</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icon.png" sizes="any" class="favicon">
+  <style>
+    .favicon {
+      border-radius: 50%;
+    }
+    .hero {
+      background: url('images/under_water.jpg') no-repeat center center/cover;
+      height: 80vh;
+    }
+    .icons img {
+      border-radius: 0;
+    }
+  </style>
+</head>
+<body style="cursor: url('worm.png') 8 8, auto;">
+  <!-- Nowoczesne menu -->
+  <nav class="navbar">
+    <div class="logo">Świat Ryb</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Strona Główna</a></li>
+      <li><a href="ryby.html">Ryby</a></li>
+      <li><a href="metody.html">Metody</a></li>
+      <li><a href="lowiska.html">Łowiska</a></li>
+      <li><a href="porady-wiedza.html">Porady i Wiedza</a></li>
+      <li><a href="sklep.html">Sklep</a></li>
+    </ul>
+    <div class="icons">
+      <img src="images/user.png" alt="Login" style="border-radius: 0;">
+      <img src="images/shopping-cart.png" alt="Shopping Cart" style="border-radius: 0;">
+    </div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <!-- Treść strony głównej -->
+  <header class="hero">
+    <h1>Witaj w Świecie Ryb</h1>
+    <p>Poznaj fascynujący świat wędkarstwa i odkryj najlepsze łowiska!</p>
+  </header>
+
+  <!-- Modal for Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">Logowanie</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="password" placeholder="Hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="login-btn" onclick="signIn()">Zaloguj się</button>
+        <button class="register-btn">Zarejestruj się</button>
+      </div>
+      <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
+    </div>
+  </div>
+
+  <!-- Modal for Registration -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">Rejestracja</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn">Anuluj</button>
+        <button class="register-btn" onclick="register()">Zarejestruj się</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stopka -->
+  <footer class="footer">
+    <p>Świat Ryb - projekt zaliczeniowy z Projektowanie Interfejsów Użytkownika</p>
+    <div class="social-media">
+      <a href="https://www.google.com" target="_blank"><img src="images/google.png" alt="Google"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+    <p>© 2025 Świat Ryb. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- Rybka podążająca za kursorem -->
+  <img id="fish" src="images/fish.png" alt="Rybka" />
+
+  <script src="script.js"></script>
+</body>
+</html>

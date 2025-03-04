@@ -4,72 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05cd76b6-2136-4c08-8624-6ea7eb9d38d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/java/com/example/shoutboxapp/LoginActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/java/com/example/shoutboxapp/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/java/com/example/shoutboxapp/MessageAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/java/com/example/shoutboxapp/network/ApiClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/java/com/example/shoutboxapp/network/ApiService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/res/layout/item_message.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../android/ShoutboxApp/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/migrations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/androidTest/java/com/example/navigationdraweractivity/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/java/com/example/navigationdraweractivity/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/java/com/example/navigationdraweractivity/Message.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/java/com/example/navigationdraweractivity/MessagesAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/layout/activity_main_drawer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/layout/content_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/values-night/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/app/src/test/java/com/example/navigationdraweractivity/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/gradle/libs.versions.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../android/lab9/settings.gradle.kts" beforeDir="false" />
-    </list>
+    <list default="true" id="05cd76b6-2136-4c08-8624-6ea7eb9d38d5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
