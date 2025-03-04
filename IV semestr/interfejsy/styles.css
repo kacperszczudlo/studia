@@ -340,6 +340,7 @@ body {
   flex: 1;
   margin: 5px;
   white-space: nowrap;
+  background: none; /* Remove blue background */
 }
 
 .modal-footer .login-btn {
@@ -760,4 +761,16 @@ body {
 
 .cart-modal-content button:hover {
   background-color: #0056b3;
+}
+
+/* Trash Icon Styles */
+.trash-icon {
+  width: 16px; /* Adjust size */
+  height: 16px; /* Adjust size */
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+
+.trash-icon:hover {
+  transform: scale(1.2);
 }

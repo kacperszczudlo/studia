@@ -42,6 +42,41 @@
     <!-- Content goes here -->
   </main>
 
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">Logowanie</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="password" placeholder="Hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="login-btn" onclick="signIn()">Zaloguj się</button>
+        <button class="register-btn">Zarejestruj się</button>
+        <button class="cancel-btn">Anuluj</button> <!-- Added cancel button -->
+      </div>
+      <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">Rejestracja</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn">Anuluj</button>
+        <button class="register-btn" onclick="register()">Zarejestruj się</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Cart Modal -->
   <div id="cartModal" class="modal">
     <div class="cart-modal-content">
@@ -64,23 +99,6 @@
     </div>
     <p>© 2025 Świat Ryb. Wszystkie prawa zastrzeżone.</p>
   </footer>
-
-  <div id="loginModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="modal-header">Logowanie</div>
-      <div class="modal-body">
-        <input type="text" placeholder="Nazwa użytkownika" required>
-        <input type="password" placeholder="Hasło" required>
-      </div>
-      <div class="modal-footer">
-        <button class="login-btn" onclick="signIn()">Zaloguj się</button>
-        <button class="register-btn">Zarejestruj się</button>
-        <button class="cancel-btn">Anuluj</button> <!-- Added cancel button -->
-      </div>
-      <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>

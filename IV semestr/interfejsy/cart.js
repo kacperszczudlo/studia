@@ -11,20 +11,28 @@ document.addEventListener('DOMContentLoaded', function() {
   function addToCart(productId, productName, productPrice) {
     const existingItem = cart.find(item => item.id === productId);
     if (existingItem) {
-      cart = cart.filter(item => item.id !== productId);
+      existingItem.quantity += 1;
     } else {
       cart.push({
         id: productId,
         name: productName,
-        price: parseFloat(productPrice)
+        price: parseFloat(productPrice),
+        quantity: 1
       });
     }
 
     updateCartCount();
   }
 
+  function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    updateCartCount();
+    renderCartItems();
+  }
+
   function updateCartCount() {
-    cartCountElement.textContent = cart.length;
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCountElement.textContent = totalItems;
   }
 
   function renderCartItems() {
@@ -32,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cart.forEach(item => {
       const li = document.createElement('li');
-      li.textContent = `${item.name} - ${item.price} PLN`;
+      li.innerHTML = `${item.name} - ${item.price} PLN (x${item.quantity}) <button class="remove-item" data-product-id="${item.id}"><img src="images/trash.png" alt="Usuń" class="trash-icon"></button>`;
       cartItemsElement.appendChild(li);
     });
 
@@ -43,6 +51,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     cartModal.style.display = 'block';
+
+    const removeItemButtons = document.querySelectorAll('.remove-item');
+    removeItemButtons.forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const productId = button.getAttribute('data-product-id');
+        removeFromCart(productId);
+      });
+    });
   }
 
   closeBtn.addEventListener('click', function() {
