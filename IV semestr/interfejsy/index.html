@@ -12,7 +12,12 @@
     }
     .hero {
       background: url('images/under_water.jpg') no-repeat center center/cover;
-      height: 80vh;
+      height: 100vh; /* Change height to cover the entire viewport */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
     .icons img {
       border-radius: 0;
@@ -60,6 +65,7 @@
       <div class="modal-footer">
         <button class="login-btn" onclick="signIn()">Zaloguj się</button>
         <button class="register-btn">Zarejestruj się</button>
+        <button class="cancel-btn">Anuluj</button>
       </div>
       <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
     </div>

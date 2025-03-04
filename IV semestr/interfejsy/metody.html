@@ -52,6 +52,23 @@
     <p>© 2025 Świat Ryb. Wszystkie prawa zastrzeżone.</p>
   </footer>
 
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">Logowanie</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="password" placeholder="Hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="login-btn" onclick="signIn()">Zaloguj się</button>
+        <button class="register-btn">Zarejestruj się</button>
+        <button class="cancel-btn">Anuluj</button> <!-- Added cancel button -->
+      </div>
+      <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

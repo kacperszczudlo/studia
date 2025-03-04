@@ -49,21 +49,21 @@ function animateFish() {
 animateFish();
 
 const loginIcon = document.querySelector('.icons img[alt="Login"]');
-const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.close');
-const cancelBtn = document.querySelector('.cancel-btn');
-const forgotPassword = document.querySelector('.forgot-password');
+const loginModal = document.getElementById('loginModal');
+const closeLoginModal = document.querySelector('#loginModal .close');
+const cancelLoginBtn = document.querySelector('#loginModal .cancel-btn');
+const forgotPassword = document.querySelector('#loginModal .forgot-password a');
 
 loginIcon.addEventListener('click', () => {
-  modal.style.display = 'block';
+  loginModal.style.display = 'block';
 });
 
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
+closeLoginModal.addEventListener('click', () => {
+  loginModal.style.display = 'none';
 });
 
-cancelBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
+cancelLoginBtn.addEventListener('click', () => {
+  loginModal.style.display = 'none';
 });
 
 forgotPassword.addEventListener('click', () => {
@@ -71,18 +71,18 @@ forgotPassword.addEventListener('click', () => {
 });
 
 window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
+  if (event.target === loginModal) {
+    loginModal.style.display = 'none';
   }
 });
 
 function signIn() {
-  const username = document.querySelector('.modal-body input[type="text"]').value;
-  const password = document.querySelector('.modal-body input[type="password"]').value;
+  const username = document.querySelector('#loginModal .modal-body input[type="text"]').value;
+  const password = document.querySelector('#loginModal .modal-body input[type="password"]').value;
 
   if (username && password) {
     alert(`Zalogowano jako ${username}`);
-    modal.style.display = 'none';
+    loginModal.style.display = 'none';
   } else {
     alert('Proszę wypełnić wszystkie pola.');
   }
@@ -94,7 +94,7 @@ const closeRegisterModal = document.querySelector('#registerModal .close');
 const cancelRegisterBtn = document.querySelector('#registerModal .cancel-btn');
 
 registerBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
+  loginModal.style.display = 'none';
   registerModal.style.display = 'block';
 });
 
