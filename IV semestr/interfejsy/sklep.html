@@ -11,6 +11,7 @@
       border-radius: 50%;
     }
   </style>
+  <script src="cart.js"></script>
 </head>
 <body style="cursor: url('worm.png') 8 8, auto;">
   <!-- Nowoczesne menu -->
@@ -26,7 +27,8 @@
     </ul>
     <div class="icons">
       <img src="images/user.png" alt="Login" style="border-radius: 0;">
-      <img src="images/shopping-cart.png" alt="Shopping Cart" style="border-radius: 0;">
+      <a href="#" id="cartBtn" class="cart-link"><img src="images/shopping-cart.png" alt="Koszyk" class="cart-img"></a>
+      <span id="cart-count" class="cart-count">0</span>
     </div>
     <div class="hamburger">
       <div class="line"></div>
@@ -36,6 +38,38 @@
   </nav>
 
   <main>
+    <section class="shop-items">
+      <h2>Produkty</h2>
+
+      <div class="product-category">
+        <h3>Wędki</h3>
+        <div class="product-grid">
+          <div class="product-item">
+            <img src="images/products/wedka.jpg" alt="Wędka">
+            <p class="product-name">Wędka</p>
+            <p class="product-price">Cena: 100 PLN</p>
+            <button type="button" class="add-to-cart-button" data-product-id="1">Dodaj do koszyka</button>
+          </div>
+          <!-- Add more products as needed -->
+        </div>
+      </div>
+
+      <div class="product-category">
+        <h3>Przynęty</h3>
+        <div class="product-grid">
+          <div class="product-item">
+            <img src="images/products/przyneta.jpg" alt="Przynęta">
+            <p class="product-name">Przynęta</p>
+            <p class="product-price">Cena: 50 PLN</p>
+            <button type="button" class="add-to-cart-button" data-product-id="2">Dodaj do koszyka</button>
+          </div>
+          <!-- Add more products as needed -->
+        </div>
+      </div>
+
+      <!-- Add more categories as needed -->
+
+    </section>
   </main>
 
   <div id="loginModal" class="modal">
@@ -52,6 +86,18 @@
         <button class="cancel-btn">Anuluj</button> <!-- Added cancel button -->
       </div>
       <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="cart-modal-content">
+      <span class="close">&times;</span>
+      <h2>Koszyk</h2>
+      <ul id="cartItems">
+        <!-- Cart items will be displayed here -->
+      </ul>
+      <button id="checkoutBtn">Do kasy</button>
     </div>
   </div>
 

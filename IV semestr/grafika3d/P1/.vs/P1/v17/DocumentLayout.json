@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\studia\\IV semestr\\grafika3d\\P1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66252122-774F-4224-8A5E-3737F0AAC721}|P1\\P1.vcxproj|D:\\studia\\IV semestr\\grafika3d\\P1\\P1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{66252122-774F-4224-8A5E-3737F0AAC721}|P1\\P1.vcxproj|solutionrelative:P1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66252122-774F-4224-8A5E-3737F0AAC721}|P1\\P1.vcxproj|D:\\Lib\\GLAD\\src\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "glad.c",
+              "DocumentMoniker": "D:\\Lib\\GLAD\\src\\glad.c",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Lib\\GLAD\\src\\glad.c",
+              "ToolTip": "D:\\Lib\\GLAD\\src\\glad.c",
+              "RelativeToolTip": "..\\..\\..\\..\\Lib\\GLAD\\src\\glad.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-04T21:48:26.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\studia\\IV semestr\\grafika3d\\P1\\P1\\main.cpp",
+              "RelativeDocumentMoniker": "P1\\main.cpp",
+              "ToolTip": "D:\\studia\\IV semestr\\grafika3d\\P1\\P1\\main.cpp",
+              "RelativeToolTip": "P1\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-04T21:45:01.682Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

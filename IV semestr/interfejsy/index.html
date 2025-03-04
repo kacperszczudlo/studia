@@ -38,7 +38,8 @@
     </ul>
     <div class="icons">
       <img src="images/user.png" alt="Login" style="border-radius: 0;">
-      <img src="images/shopping-cart.png" alt="Shopping Cart" style="border-radius: 0;">
+      <a href="#" id="cartBtn" class="cart-link"><img src="images/shopping-cart.png" alt="Koszyk" class="cart-img"></a>
+      <span id="cart-count" class="cart-count">0</span>
     </div>
     <div class="hamburger">
       <div class="line"></div>
@@ -85,6 +86,18 @@
         <button class="cancel-btn">Anuluj</button>
         <button class="register-btn" onclick="register()">Zarejestruj się</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="cart-modal-content">
+      <span class="close">&times;</span>
+      <h2>Koszyk</h2>
+      <ul id="cartItems">
+        <!-- Cart items will be displayed here -->
+      </ul>
+      <button id="checkoutBtn">Do kasy</button>
     </div>
   </div>
 

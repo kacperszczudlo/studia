@@ -124,3 +124,8 @@ function register() {
     alert('Proszę wypełnić wszystkie pola.');
   }
 }
+
+// Ensure no conflicts with cart.js
+document.addEventListener('DOMContentLoaded', function() {
+  // ...existing code...
+});
