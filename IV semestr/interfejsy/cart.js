@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeBtn = cartModal.querySelector('.close');
   const cartBtn = document.getElementById('cartBtn');
 
-  let cart = [];
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
 
   function addToCart(productId, productName, productPrice) {
     const existingItem = cart.find(item => item.id === productId);
@@ -22,12 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateCartCount();
+    saveCart();
   }
 
   function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     updateCartCount();
     renderCartItems();
+    saveCart();
   }
 
   function updateCartCount() {
@@ -71,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cart = [];
     updateCartCount();
     renderCartItems();
+    saveCart();
     cartModal.style.display = 'none';
   });
 
@@ -92,4 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
       addToCart(productId, productName, productPrice);
     });
   });
+
+  updateCartCount();
 });
