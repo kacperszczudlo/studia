@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCartCount();
     saveCart();
+    alert(`Dodano ${productName} do koszyka.`);
   }
 
   function removeFromCart(productId) {

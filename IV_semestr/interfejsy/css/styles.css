@@ -463,6 +463,7 @@ body {
   margin-bottom: 20px;
   color: #007BFF;
   text-align: center;
+  margin-top: 10px; /* Reduced margin */
 }
 
 .product-grid {
@@ -587,7 +588,7 @@ body {
 
 .shop-menu {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 10px; /* Adjusted margin */
 }
 
 .shop-menu ul {
@@ -618,4 +619,24 @@ body {
   height: auto;
   pointer-events: none;
   transition: transform 0.1s ease-out, left 0.1s linear, top 0.1s linear;
+  z-index: 1000; /* Ensure fish is above other elements */
+}
+
+.wedki, .przynety {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product-item {
+  width: 300px;
+  height: auto;
+  padding: 20px;
+}
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.product-item p, .product-item button {
+  margin: 5px 0;
 }

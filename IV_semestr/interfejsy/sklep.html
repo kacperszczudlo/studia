@@ -11,13 +11,30 @@
     .favicon {
       border-radius: 50%;
     }
+    /* Modyfikacja stylu kafelków produktów */
     .product-item {
-      width: 150px;
-      height: 200px;
+      width: 300px; /* Zwiększenie szerokości kafelka */
+      height: auto; /* Usunięcie stałej wysokości, aby dostosować do zawartości */
+      padding: 20px; /* Dodanie większego paddingu dla lepszego rozmieszczenia */
+    }
+    .product-grid {
+      display: flex;
+      justify-content: center; /* Wycentrowanie kafelków w poziomie */
+      gap: 20px; /* Dodanie odstępu między kafelkami */
+    }
+    /* Modyfikacja stylu przycisku, aby był w jednej linii */
+    .product-item p, .product-item button {
+      margin: 5px 0; /* Mniejsze marginesy dla lepszego ułożenia w pionie */
+    }
+    /* Dodatkowy styl dla wycentrowania i kolorów nagłówków */
+    .category-header {
+      text-align: center;
+      color: #007BFF; /* Niebieski pasujący do strony, zgodny z istniejącymi stylami */
+      margin-top: 5px;
     }
   </style>
-  <script src="cart.js"></script>
   <script src="script.js"></script>
+  <script src="cart.js"></script>
 </head>
 <body style="cursor: url('worm.png') 8 8, auto;">
   <nav class="navbar">
@@ -31,7 +48,7 @@
       <li><a href="sklep.html" class="active">Sklep</a></li>
     </ul>
     <div class="icons">
-      <img src="images/user.png" alt="Login" id="loginIcon">
+      <img src="images/user.png" alt="Login" id="loginIcon" style="border-radius: 50%;">
       <a href="#" id="cartBtn" class="cart-link"><img src="images/shopping-cart.png" alt="Koszyk" class="cart-img"></a>
       <span id="cart-count" class="cart-count">0</span>
     </div>
@@ -43,35 +60,150 @@
   </nav>
 
   <main style="padding-top: 80px;">
-    <nav class="shop-menu" style="margin-bottom: 20px;">
+    <nav class="shop-menu" style="margin-bottom: 5px;">
       <ul>
         <li><a href="#wedki">Wędki</a></li>
         <li><a href="#przynety">Przynęty</a></li>
+        <li><a href="#zylki">Żyłki</a></li>
+        <li><a href="#siedzenia">Siedzenia</a></li>
+        <li><a href="#podbieraki">Podbieraki</a></li>
+        <li><a href="#kolowrotki">Kołowrotki</a></li>
+        <li><a href="#haczyki">Haczyki</a></li>
+        <li><a href="#splawiki">Spławiki</a></li>
+        <li><a href="#ciezarki">Ciężarki</a></li>
+        <li><a href="#odziez">Odzież wędkarska</a></li>
+        <li><a href="#siatki">Siatki na ryby</a></li>
       </ul>
     </nav>
 
-    <section class="shop-items">
-      <div class="product-category" id="wedki">
-        <h3>Wędki</h3>
-        <div class="product-grid">
-          <div class="product-item">
-            <img src="images/products/wedka.jpg" alt="Wędka">
-            <p class="product-name">Wędka</p>
-            <p class="product-price">Cena: 100 PLN</p>
-            <button type="button" class="add-to-cart-button" data-product-id="1">Dodaj do koszyka</button>
-          </div>
+    <section class="wedki" id="wedki">
+      <h3 class="category-header">Wędki</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/wedka.jpg" alt="Wędka">
+          <p class="product-name">Wędka</p>
+          <p class="product-price">Cena: 100 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="1">Dodaj do koszyka</button>
         </div>
       </div>
+    </section>
 
-      <div class="product-category" id="przynety">
-        <h3>Przynęty</h3>
-        <div class="product-grid">
-          <div class="product-item">
-            <img src="images/products/przyneta.jpg" alt="Przynęta">
-            <p class="product-name">Przynęta</p>
-            <p class="product-price">Cena: 50 PLN</p>
-            <button type="button" class="add-to-cart-button" data-product-id="2">Dodaj do koszyka</button>
-          </div>
+    <section class="przynety" id="przynety">
+      <h3 class="category-header">Przynęty</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/przyneta.jpg" alt="Przynęta">
+          <p class="product-name">Przynęta</p>
+          <p class="product-price">Cena: 50 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="2">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="zylki" id="zylki">
+      <h3 class="category-header">Żyłki</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/zylka.jpg" alt="Żyłka">
+          <p class="product-name">Żyłka</p>
+          <p class="product-price">Cena: 30 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="3">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="siedzenia" id="siedzenia">
+      <h3 class="category-header">Siedzenia</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/siedzenie.jpg" alt="Siedzenie">
+          <p class="product-name">Siedzenie</p>
+          <p class="product-price">Cena: 150 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="4">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="podbieraki" id="podbieraki">
+      <h3 class="category-header">Podbieraki</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/podbierak.jpg" alt="Podbierak">
+          <p class="product-name">Podbierak</p>
+          <p class="product-price">Cena: 80 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="5">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="kolowrotki" id="kolowrotki">
+      <h3 class="category-header">Kołowrotki</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/kolowrotek.jpg" alt="Kołowrotek">
+          <p class="product-name">Kołowrotek</p>
+          <p class="product-price">Cena: 120 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="6">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="haczyki" id="haczyki">
+      <h3 class="category-header">Haczyki</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/haczek.jpg" alt="Haczyk">
+          <p class="product-name">Haczyk</p>
+          <p class="product-price">Cena: 10 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="7">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="splawiki" id="splawiki">
+      <h3 class="category-header">Spławiki</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/splawik.jpg" alt="Spławik">
+          <p class="product-name">Spławik</p>
+          <p class="product-price">Cena: 15 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="8">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ciezarki" id="ciezarki">
+      <h3 class="category-header">Ciężarki</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/ciezarek.jpg" alt="Ciężarek">
+          <p class="product-name">Ciężarek</p>
+          <p class="product-price">Cena: 20 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="9">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="odziez" id="odziez">
+      <h3 class="category-header">Odzież wędkarska</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/odziez.jpg" alt="Odzież wędkarska">
+          <p class="product-name">Odzież wędkarska</p>
+          <p class="product-price">Cena: 200 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="10">Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="siatki" id="siatki">
+      <h3 class="category-header">Siatki na ryby</h3>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="images/products/siatka.jpg" alt="Siatka na ryby">
+          <p class="product-name">Siatka na ryby</p>
+          <p class="product-price">Cena: 70 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="11">Dodaj do koszyka</button>
         </div>
       </div>
     </section>
@@ -79,7 +211,7 @@
 
   <div id="loginModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <div class="modal-header">Logowanie</div>
       <div class="modal-body">
         <input type="text" placeholder="Nazwa użytkownika" required>
@@ -96,7 +228,7 @@
 
   <div id="registerModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <div class="modal-header">Rejestracja</div>
       <div class="modal-body">
         <input type="text" placeholder="Nazwa użytkownika" required>
@@ -111,7 +243,7 @@
   </div>
   <div id="cartModal" class="modal">
     <div class="cart-modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <h2>Koszyk</h2>
       <ul id="cartItems">
         <!-- Cart items will be displayed here -->
@@ -131,42 +263,5 @@
   </footer>
 
   <img id="fish" src="images/fish.png" alt="Rybka" />
-
-  <script src="script.js"></script>
-  <script src="cart.js"></script>
-  <script>
-    const fish = document.getElementById('fish');
-    const navbar = document.querySelector('.navbar');
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
-    let fishX = mouseX;
-    let fishY = mouseY;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.pageX;
-      mouseY = e.pageY;
-    });
-
-    function animateFish() {
-      const fishWidth = fish.offsetWidth;
-      const fishHeight = fish.offsetHeight;
-      const navbarHeight = navbar.offsetHeight;
-      const footerHeight = document.querySelector('.footer').offsetHeight;
-      const footerTop = document.querySelector('.footer').offsetTop;
-
-      fishX += (mouseX - fishX) * 0.1;
-      fishY += (mouseY - fishY) * 0.1;
-
-      fishX = Math.max(0, Math.min(fishX, window.innerWidth - fishWidth));
-      fishY = Math.max(navbarHeight, Math.min(fishY, footerTop - fishHeight));
-
-      fish.style.left = `${fishX}px`;
-      fish.style.top = `${fishY}px`;
-
-      requestAnimationFrame(animateFish);
-    }
-
-    animateFish();
-  </script>
 </body>
 </html>
