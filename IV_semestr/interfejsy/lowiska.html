@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Świat Ryb</title>
+  <title>Świat Ryb - Łowiska</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/menu.css">
-  <!-- Add favicon -->
   <link rel="icon" type="image/png" href="icon.png" sizes="any" class="favicon">
   <style>
     .favicon {
       border-radius: 50%;
     }
   </style>
-  <!-- Load Google Maps API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_ACTUAL_API_KEY&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk917fRIFg03UUE0BghFKPpvnSFxiYqh4&callback=initMap" async defer></script>
 </head>
 <body style="cursor: url('worm.png') 8 8, auto;">
   <!-- Nowoczesne menu -->
@@ -43,7 +41,7 @@
   <!-- Modal for Login -->
   <div id="loginModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <div class="modal-header">Logowanie</div>
       <div class="modal-body">
         <input type="text" placeholder="Nazwa użytkownika" required>
@@ -61,7 +59,7 @@
   <!-- Modal for Registration -->
   <div id="registerModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <div class="modal-header">Rejestracja</div>
       <div class="modal-body">
         <input type="text" placeholder="Nazwa użytkownika" required>
@@ -79,13 +77,49 @@
   <section class="fishing-spots">
     <h1>Łowiska w Polsce</h1>
     <p>Odkryj najlepsze miejsca do wędkowania w Polsce na interaktywnej mapie!</p>
+
+    <div class="filters">
+        <input type="text" id="nameFilter" placeholder="Nazwa łowiska (np. Jezioro Białe)">
+        <select id="voivodeshipFilter">
+            <option value="">Wszystkie województwa</option>
+            <option value="Dolnośląskie">Dolnośląskie</option>
+            <option value="Kujawsko-Pomorskie">Kujawsko-Pomorskie</option>
+            <option value="Lubelskie">Lubelskie</option>
+            <option value="Lubuskie">Lubuskie</option>
+            <option value="Łódzkie">Łódzkie</option>
+            <option value="Małopolskie">Małopolskie</option>
+            <option value="Mazowieckie">Mazowieckie</option>
+            <option value="Opolskie">Opolskie</option>
+            <option value="Podkarpackie">Podkarpackie</option>
+            <option value="Podlaskie">Podlaskie</option>
+            <option value="Pomorskie">Pomorskie</option>
+            <option value="Śląskie">Śląskie</option>
+            <option value="Świętokrzyskie">Świętokrzyskie</option>
+            <option value="Warmińsko-Mazurskie">Warmińsko-Mazurskie</option>
+            <option value="Wielkopolskie">Wielkopolskie</option>
+            <option value="Zachodniopomorskie">Zachodniopomorskie</option>
+        </select>
+        <select id="fishFilter">
+            <option value="">Wszystkie ryby</option>
+            <option value="pike">Szczupak</option>
+            <option value="perch">Okoń</option>
+            <option value="carp">Karp</option>
+            <option value="zander">Sandacz</option>
+            <option value="roach">Płoć</option>
+            <option value="bream">Leszcz</option>
+            <option value="catfish">Sum</option>
+        </select>
+        <button id="applyFilters">Filtruj</button>
+        <button id="resetFilters">Wyczyść filtry</button>
+    </div>
+
     <div id="map" style="height: 600px; width: 100%; margin: 20px 0;"></div>
   </section>
 
   <!-- Cart Modal -->
   <div id="cartModal" class="modal">
     <div class="cart-modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <h2>Koszyk</h2>
       <ul id="cartItems">
         <!-- Cart items will be displayed here -->
@@ -105,11 +139,19 @@
     <p>© 2025 Świat Ryb. Wszystkie prawa zastrzeżone.</p>
   </footer>
 
-  <!-- Rybka podążająca za kurso -->
+  <!-- Rybka podążająca za kursorem -->
   <img id="fish" src="images/fish.png" alt="Rybka" />
 
+  <!-- Skrypty -->
   <script src="script.js"></script>
   <script src="cart.js"></script>
   <script src="lowiska-script.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (typeof initMap === 'function') {
+        initMap();
+      }
+    });
+  </script>
 </body>
 </html>

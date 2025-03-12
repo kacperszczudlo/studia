@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let mouseY = window.innerHeight / 2;
     let fishX = mouseX;
     let fishY = mouseY;
+    let isFlipped = false;
 
     document.addEventListener('mousemove', (e) => {
       mouseX = e.pageX;
@@ -60,6 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
       fish.style.left = `${fishX}px`;
       fish.style.top = `${fishY}px`;
+
+      // Flip the fish horizontally when it crosses the center of the screen
+      if (mouseX > window.innerWidth / 2 && !isFlipped) {
+        fish.style.transform = 'scaleX(-1)';
+        isFlipped = true;
+      } else if (mouseX <= window.innerWidth / 2 && isFlipped) {
+        fish.style.transform = 'scaleX(1)';
+        isFlipped = false;
+      }
 
       requestAnimationFrame(animateFish);
     }
