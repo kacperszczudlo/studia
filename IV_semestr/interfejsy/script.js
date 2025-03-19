@@ -113,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
           loginModal.style.display = 'none';
           updateUserInterface();
         } else {
-          // Zablokowane przez window.alert – brak alertu
           console.log('Nazwa użytkownika musi mieć co najmniej 3 znaki, a hasło 6 znaków.');
         }
       } else {
@@ -221,37 +220,53 @@ document.addEventListener('DOMContentLoaded', function() {
   function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
+    // Notify cart.js to update the cart modal if it's open
+    if (typeof window.updateCartModal === 'function') {
+      window.updateCartModal();
+    }
   }
 
   function updateCartCount() {
     const totalItems = cart.reduce((total, item) => total + (item.quantity || 0), 0);
     if (cartCountElement) {
-      cartCountElement.textContent = totalItems > 0 ? totalItems : '0';
+      cartCountElement.textContent = totalItems >= 0 ? totalItems : '0';
     }
   }
 
   function toggleCart(productId, productName, productPrice, button) {
     const existingItemIndex = cart.findIndex(item => item.id === productId);
 
-    if (existingItemIndex !== -1) {
-      // Produkt już istnieje w koszyku – usuń go
-      cart.splice(existingItemIndex, 1);
-      // Przywróć pierwotny stan przycisku (niebieski "Dodaj do koszyka")
-      button.style.backgroundColor = '#007BFF'; // Niebieski, stan "Dodaj do koszyka"
-      button.style.color = '#fff';
-      button.textContent = 'Dodaj do koszyka';
-    } else {
-      // Dodaj produkt do koszyka
-      cart.push({
-        id: productId,
-        name: productName,
-        price: parseFloat(productPrice),
-        quantity: 1
-      });
-      // Zmień kolor i nazwę przycisku (jasnoniebieski "Dodano do koszyka")
-      button.style.backgroundColor = '#6ab0ff'; // Jasnoniebieski, stan "Dodano do koszyka"
-      button.style.color = '#fff';
-      button.textContent = 'Dodano do koszyka';
+    if (button.textContent === 'Dodano do koszyka') {
+      // Produkt powinien zostać usunięty z koszyka
+      if (existingItemIndex !== -1) {
+        cart.splice(existingItemIndex, 1);
+        button.style.backgroundColor = '#007BFF'; // Niebieski, stan "Dodaj do koszyka"
+        button.style.color = '#fff';
+        button.textContent = 'Dodaj do koszyka';
+      } else {
+        // If the product isn't in the cart but the button says "Dodano do koszyka", reset the button
+        button.style.backgroundColor = '#007BFF';
+        button.style.color = '#fff';
+        button.textContent = 'Dodaj do koszyka';
+      }
+    } else if (button.textContent === 'Dodaj do koszyka') {
+      // Produkt powinien zostać dodany do koszyka
+      if (existingItemIndex === -1) {
+        cart.push({
+          id: productId,
+          name: productName,
+          price: parseFloat(productPrice),
+          quantity: 1
+        });
+        button.style.backgroundColor = '#6ab0ff'; // Jasnoniebieski, stan "Dodano do koszyka"
+        button.style.color = '#fff';
+        button.textContent = 'Dodano do koszyka';
+      } else {
+        // If the product is already in the cart but the button says "Dodaj do koszyka", update the button
+        button.style.backgroundColor = '#6ab0ff';
+        button.style.color = '#fff';
+        button.textContent = 'Dodano do koszyka';
+      }
     }
 
     saveCart();
@@ -276,7 +291,9 @@ document.addEventListener('DOMContentLoaded', function() {
         button.textContent = 'Dodaj do koszyka';
       }
 
-      button.addEventListener('click', function(e) {
+      // Usuń istniejące event listenery, aby uniknąć duplikatów
+      button.removeEventListener('click', button._clickHandler);
+      button._clickHandler = function(e) {
         e.preventDefault();
         const productId = button.getAttribute('data-product-id');
         const productName = button.parentNode.querySelector('.product-name').textContent.trim();
@@ -284,7 +301,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const productPrice = productPriceText.replace('Cena: ', '').replace(' PLN', '');
 
         toggleCart(productId, productName, productPrice, button);
-      });
+      };
+      button.addEventListener('click', button._clickHandler);
     });
   }
 
