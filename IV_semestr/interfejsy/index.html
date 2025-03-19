@@ -6,7 +6,7 @@
   <title>Bez Ryby Ani Rusz</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/menu.css">
-  <link rel="icon" type="image/jpeg" href="icon.jpg" sizes="any" class="favicon">
+  <link rel="icon" type="image/jpeg" href="/images/icon.jpg" sizes="any" class="favicon">
   <style>
     .favicon {
       border-radius: 50%;
@@ -40,10 +40,9 @@
       <li><a href="lowiska.html">Łowiska</a></li>
       <li><a href="porady-wiedza.html">Porady i Wiedza</a></li>
       <li><a href="sklep.html">Sklep</a></li>
-      <li><a href="przynety.html">Przynęty</a></li>
     </ul>
     <div class="icons">
-      <img src="images/user.png" alt="Login" style="border-radius: 50%;">
+      <img src="images/user.png" alt="Login" id="loginIcon" style="border-radius: 50%;">
       <a href="#" id="cartBtn" class="cart-link">
         <img src="images/shopping-cart.png" alt="Koszyk" class="cart-img">
         <span id="cart-count" class="cart-count">0</span>
@@ -66,7 +65,7 @@
   <section class="product-carousel">
     <h2 class="carousel-title">Polecane Produkty</h2>
     <div class="carousel-container">
-      <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+      <button class="carousel-btn prev" id="prevBtn">❮</button>
       <div class="carousel-track" id="carouselTrack">
         <!-- Produkt z kategorii Wędki -->
         <div class="product-item">
@@ -146,7 +145,7 @@
           <button type="button" class="add-to-cart-button" data-product-id="11">Dodaj do koszyka</button>
         </div>
       </div>
-      <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+      <button class="carousel-btn next" id="nextBtn">❯</button>
     </div>
   </section>
 
@@ -162,7 +161,6 @@
       <div class="modal-footer">
         <button class="login-btn" onclick="signIn()">Zaloguj się</button>
         <button class="register-btn">Zarejestruj się</button>
-        <button class="cancel-btn">Anuluj</button>
       </div>
       <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
     </div>

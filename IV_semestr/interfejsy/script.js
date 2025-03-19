@@ -84,10 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const loginIcon = document.getElementById('loginIcon');
   const loginModal = document.getElementById('loginModal');
   const closeLoginModal = document.querySelector('#loginModal .close');
-  const cancelLoginBtn = document.querySelector('#loginModal .cancel-btn');
   const forgotPassword = document.querySelector('#loginModal .forgot-password a');
 
-  if (loginIcon && loginModal && closeLoginModal && cancelLoginBtn && forgotPassword) {
+  if (loginIcon && loginModal && closeLoginModal && forgotPassword) {
     loginIcon.addEventListener('click', () => {
       loginModal.style.display = 'block';
     });
@@ -96,34 +95,59 @@ document.addEventListener('DOMContentLoaded', function() {
       loginModal.style.display = 'none';
     });
 
-    cancelLoginBtn.addEventListener('click', () => {
-      loginModal.style.display = 'none';
-    });
-
-    forgotPassword.addEventListener('click', () => {
-      // Zablokowane przez window.alert – brak alertu
-    });
-
     window.addEventListener('click', (event) => {
       if (event.target === loginModal) {
         loginModal.style.display = 'none';
       }
     });
 
-    function signIn() {
+    window.signIn = function() {
       const username = document.querySelector('#loginModal .modal-body input[type="text"]').value;
       const password = document.querySelector('#loginModal .modal-body input[type="password"]').value;
 
       if (username && password) {
-        loginModal.style.display = 'none'; // Brak alertu
+        // Prosta walidacja - w prawdziwej aplikacji byłaby tu komunikacja z backendem
+        if (username.length >= 3 && password.length >= 6) {
+          localStorage.setItem('isLoggedIn', 'true');
+          localStorage.setItem('username', username);
+          loginModal.style.display = 'none';
+          updateUserInterface();
+        } else {
+          // Zablokowane przez window.alert – brak alertu
+          console.log('Nazwa użytkownika musi mieć co najmniej 3 znaki, a hasło 6 znaków.');
+        }
       } else {
-        // Brak alertu o błędzie
+        console.log('Proszę wypełnić wszystkie pola.');
+      }
+    };
+
+    function updateUserInterface() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      if (isLoggedIn) {
+        loginIcon.src = 'images/user-logged-in.png'; // Zakładamy, że masz inną ikonę dla zalogowanego użytkownika
+        loginIcon.alt = 'Wyloguj';
+        loginIcon.removeEventListener('click', openLoginModal);
+        loginIcon.addEventListener('click', logout);
       }
     }
+
+    function logout() {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('username');
+      loginIcon.src = 'images/user.png';
+      loginIcon.alt = 'Login';
+      loginIcon.removeEventListener('click', logout);
+      loginIcon.addEventListener('click', () => {
+        loginModal.style.display = 'block';
+      });
+    }
+
+    // Inicjalizacja interfejsu użytkownika przy ładowaniu strony
+    updateUserInterface();
   }
 
   // Logika rejestracji
-  const registerBtn = document.querySelector('.register-btn');
+  const registerBtn = document.querySelector('#loginModal .register-btn');
   const registerModal = document.getElementById('registerModal');
   const closeRegisterModal = document.querySelector('#registerModal .close');
   const cancelRegisterBtn = document.querySelector('#registerModal .cancel-btn');
@@ -148,17 +172,25 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    function register() {
+    window.register = function() {
       const username = document.querySelector('#registerModal .modal-body input[type="text"]').value;
       const email = document.querySelector('#registerModal .modal-body input[type="email"]').value;
       const password = document.querySelector('#registerModal .modal-body input[type="password"]').value;
 
       if (username && email && password) {
-        registerModal.style.display = 'none'; // Brak alertu
+        // Prosta walidacja - w prawdziwej aplikacji byłaby tu komunikacja z backendem
+        if (username.length >= 3 && email.includes('@') && password.length >= 6) {
+          localStorage.setItem('isLoggedIn', 'true');
+          localStorage.setItem('username', username);
+          registerModal.style.display = 'none';
+          updateUserInterface();
+        } else {
+          console.log('Proszę wypełnić poprawnie wszystkie pola.');
+        }
       } else {
-        // Brak alertu o błędzie
+        console.log('Proszę wypełnić wszystkie pola.');
       }
-    }
+    };
   }
 
   // Obsługa przewijania do sekcji z uwzględnieniem wysokości navbaru
@@ -192,33 +224,33 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function updateCartCount() {
-    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    const totalItems = cart.reduce((total, item) => total + (item.quantity || 0), 0);
     if (cartCountElement) {
-      cartCountElement.textContent = totalItems;
+      cartCountElement.textContent = totalItems > 0 ? totalItems : '0';
     }
   }
 
   function toggleCart(productId, productName, productPrice, button) {
-    const existingItem = cart.find(item => item.id === productId);
+    const existingItemIndex = cart.findIndex(item => item.id === productId);
 
-    if (existingItem) {
-      // Usuń produkt z koszyka (przycisk niebieski "Dodano do koszyka" usuwa)
-      cart = cart.filter(item => item.id !== productId);
-      // Przywróć pierwotny stan przycisku (zielony "Dodaj do koszyka")
-      button.style.backgroundColor = '#28a745'; // Zielony, stan "Dodaj do koszyka"
-      button.style.color = '#fff'; // Biały tekst
+    if (existingItemIndex !== -1) {
+      // Produkt już istnieje w koszyku – usuń go
+      cart.splice(existingItemIndex, 1);
+      // Przywróć pierwotny stan przycisku (niebieski "Dodaj do koszyka")
+      button.style.backgroundColor = '#007BFF'; // Niebieski, stan "Dodaj do koszyka"
+      button.style.color = '#fff';
       button.textContent = 'Dodaj do koszyka';
     } else {
-      // Dodaj produkt do koszyka (przycisk zielony "Dodaj do koszyka" dodaje)
+      // Dodaj produkt do koszyka
       cart.push({
         id: productId,
         name: productName,
         price: parseFloat(productPrice),
         quantity: 1
       });
-      // Zmień kolor i nazwę przycisku (niebieski "Dodano do koszyka")
+      // Zmień kolor i nazwę przycisku (jasnoniebieski "Dodano do koszyka")
       button.style.backgroundColor = '#6ab0ff'; // Jasnoniebieski, stan "Dodano do koszyka"
-      button.style.color = '#fff'; // Biały tekst dla lepszej widoczności
+      button.style.color = '#fff';
       button.textContent = 'Dodano do koszyka';
     }
 
@@ -231,11 +263,25 @@ document.addEventListener('DOMContentLoaded', function() {
   // Obsługa kliknięcia przycisków "Dodaj do koszyka"
   if (addToCartButtons.length > 0) {
     addToCartButtons.forEach(button => {
+      // Sprawdź, czy produkt jest już w koszyku i ustaw odpowiedni stan przycisku
+      const productId = button.getAttribute('data-product-id');
+      const existingItem = cart.find(item => item.id === productId);
+      if (existingItem) {
+        button.style.backgroundColor = '#6ab0ff'; // Jasnoniebieski, stan "Dodano do koszyka"
+        button.style.color = '#fff';
+        button.textContent = 'Dodano do koszyka';
+      } else {
+        button.style.backgroundColor = '#007BFF'; // Niebieski, stan "Dodaj do koszyka"
+        button.style.color = '#fff';
+        button.textContent = 'Dodaj do koszyka';
+      }
+
       button.addEventListener('click', function(e) {
         e.preventDefault();
         const productId = button.getAttribute('data-product-id');
         const productName = button.parentNode.querySelector('.product-name').textContent.trim();
-        const productPrice = button.parentNode.querySelector('.product-price').textContent.trim().replace('Cena: ', '');
+        const productPriceText = button.parentNode.querySelector('.product-price').textContent.trim();
+        const productPrice = productPriceText.replace('Cena: ', '').replace(' PLN', '');
 
         toggleCart(productId, productName, productPrice, button);
       });
@@ -298,6 +344,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
-// Ensure no conflicts with cart.js
-// ...existing code...
