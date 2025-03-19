@@ -76,18 +76,26 @@
 
 .cart-link {
   position: relative;
+  display: inline-block; /* Ensure the link tightly wraps the image */
+  line-height: 0; /* Remove any extra space around the image */
+}
+
+.cart-img {
+  display: block; /* Ensure the image behaves as a block element */
 }
 
 .cart-count {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  background: red;
+  top: -8px; /* Position above the top edge of the image */
+  right: -8px; /* Position to the right of the image */
+  background: #007BFF; /* Blue background to match the example image */
   color: white;
   border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-  transform: translate(50%, -50%); /* Adjust position */
+  padding: 4px 8px; /* Adjusted padding for a larger circle */
+  font-size: 14px; /* Slightly larger font size for better visibility */
+  font-weight: bold; /* Make the number bold */
+  z-index: 1001; /* Ensure the counter is above the icon */
+  line-height: 1; /* Ensure the number is vertically centered */
 }
 
 .hamburger {
