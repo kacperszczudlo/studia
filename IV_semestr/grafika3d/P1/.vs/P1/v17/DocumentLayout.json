@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\studia\\IV_semestr\\grafika3d\\P1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -33,24 +33,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "zad3.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp",
-              "RelativeDocumentMoniker": "P1\\zad3.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp",
-              "RelativeToolTip": "P1\\zad3.cpp",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAiwLEAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "zad1.cpp",
+              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.cpp",
+              "RelativeDocumentMoniker": "P1\\zad1.cpp",
+              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.cpp",
+              "RelativeToolTip": "P1\\zad1.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T17:10:31.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T14:44:25.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "zad2.cpp",
               "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.cpp",
               "RelativeDocumentMoniker": "P1\\zad2.cpp",
@@ -58,7 +57,19 @@
               "RelativeToolTip": "P1\\zad2.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T17:02:40.863Z",
+              "WhenOpened": "2025-03-05T17:02:40.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "zad3.cpp",
+              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp",
+              "RelativeDocumentMoniker": "P1\\zad3.cpp",
+              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp",
+              "RelativeToolTip": "P1\\zad3.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T17:10:31.643Z",
               "EditorCaption": ""
             },
             {
@@ -71,8 +82,7 @@
               "RelativeToolTip": "P1\\przyklad2.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T17:02:11.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T17:02:11.048Z"
             },
             {
               "$type": "Document",
@@ -84,8 +94,7 @@
               "RelativeToolTip": "P1\\przyklad1.cpp",
               "ViewState": "AgIAAJYAAAAAAAAAAAAiwMAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T16:53:29.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T16:53:29.886Z"
             },
             {
               "$type": "Document",
@@ -98,19 +107,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-03-05T14:45:32.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "zad1.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.cpp",
-              "RelativeDocumentMoniker": "P1\\zad1.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.cpp",
-              "RelativeToolTip": "P1\\zad1.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T14:44:25.331Z",
-              "EditorCaption": ""
             }
           ]
         }
