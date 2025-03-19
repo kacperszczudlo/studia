@@ -241,6 +241,62 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // Logika karuzeli produktów
+  const carouselTrack = document.getElementById('carouselTrack');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  if (carouselTrack && prevBtn && nextBtn) {
+    const items = carouselTrack.querySelectorAll('.product-item');
+    const itemWidth = items[0].offsetWidth; // Szerokość jednego elementu (wraz z paddingiem)
+    let currentPosition = 0;
+    const totalItems = items.length;
+    const itemsPerView = 3; // Liczba elementów widocznych na raz
+    const maxPosition = totalItems - itemsPerView; // Maksymalna pozycja przewijania
+
+    function updateButtonVisibility() {
+      // Ukryj strzałkę w lewo, jeśli jesteśmy na początku
+      if (currentPosition === 0) {
+        prevBtn.classList.add('hidden');
+      } else {
+        prevBtn.classList.remove('hidden');
+      }
+
+      // Ukryj strzałkę w prawo, jeśli jesteśmy na końcu
+      if (currentPosition >= maxPosition) {
+        nextBtn.classList.add('hidden');
+      } else {
+        nextBtn.classList.remove('hidden');
+      }
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentPosition > 0) {
+        currentPosition--;
+        carouselTrack.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
+        updateButtonVisibility();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentPosition < maxPosition) {
+        currentPosition++;
+        carouselTrack.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
+        updateButtonVisibility();
+      }
+    });
+
+    // Początkowa widoczność przycisków
+    updateButtonVisibility();
+
+    // Aktualizuj widoczność przycisków przy zmianie rozmiaru okna
+    window.addEventListener('resize', () => {
+      const newItemWidth = items[0].offsetWidth;
+      carouselTrack.style.transform = `translateX(-${currentPosition * newItemWidth}px)`;
+      updateButtonVisibility();
+    });
+  }
 });
 
 // Ensure no conflicts with cart.js

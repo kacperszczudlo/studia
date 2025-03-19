@@ -40,6 +40,7 @@
       <li><a href="lowiska.html">Łowiska</a></li>
       <li><a href="porady-wiedza.html">Porady i Wiedza</a></li>
       <li><a href="sklep.html">Sklep</a></li>
+      <li><a href="przynety.html">Przynęty</a></li>
     </ul>
     <div class="icons">
       <img src="images/user.png" alt="Login" style="border-radius: 50%;">
@@ -60,6 +61,94 @@
     <h1>Witaj w Świecie Ryb</h1>
     <p>Poznaj fascynujący świat wędkarstwa i odkryj najlepsze łowiska!</p>
   </header>
+
+  <!-- Sekcja z karuzelą produktów -->
+  <section class="product-carousel">
+    <h2 class="carousel-title">Polecane Produkty</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Produkt z kategorii Wędki -->
+        <div class="product-item">
+          <img src="images/products/wedka.jpg" alt="Wędka">
+          <p class="product-name">Wędka</p>
+          <p class="product-price">Cena: 100 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="1">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Przynęty -->
+        <div class="product-item">
+          <img src="images/products/przyneta.jpg" alt="Przynęta">
+          <p class="product-name">Przynęta</p>
+          <p class="product-price">Cena: 50 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="2">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Żyłki -->
+        <div class="product-item">
+          <img src="images/products/zylka.jpg" alt="Żyłka">
+          <p class="product-name">Żyłka</p>
+          <p class="product-price">Cena: 30 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="3">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Siedzenia -->
+        <div class="product-item">
+          <img src="images/products/siedzenie.jpg" alt="Siedzenie">
+          <p class="product-name">Siedzenie</p>
+          <p class="product-price">Cena: 150 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="4">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Podbieraki -->
+        <div class="product-item">
+          <img src="images/products/podbierak.jpg" alt="Podbierak">
+          <p class="product-name">Podbierak</p>
+          <p class="product-price">Cena: 80 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="5">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Kołowrotki -->
+        <div class="product-item">
+          <img src="images/products/kolowrotek.jpg" alt="Kołowrotek">
+          <p class="product-name">Kołowrotek</p>
+          <p class="product-price">Cena: 120 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="6">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Haczyki -->
+        <div class="product-item">
+          <img src="images/products/haczek.jpg" alt="Haczyk">
+          <p class="product-name">Haczyk</p>
+          <p class="product-price">Cena: 10 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="7">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Spławiki -->
+        <div class="product-item">
+          <img src="images/products/splawik.jpg" alt="Spławik">
+          <p class="product-name">Spławik</p>
+          <p class="product-price">Cena: 15 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="8">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Ciężarki -->
+        <div class="product-item">
+          <img src="images/products/ciezarek.jpg" alt="Ciężarek">
+          <p class="product-name">Ciężarek</p>
+          <p class="product-price">Cena: 20 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="9">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Odzież wędkarska -->
+        <div class="product-item">
+          <img src="images/products/odziez.jpg" alt="Odzież wędkarska">
+          <p class="product-name">Odzież wędkarska</p>
+          <p class="product-price">Cena: 200 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="10">Dodaj do koszyka</button>
+        </div>
+        <!-- Produkt z kategorii Siatki na ryby -->
+        <div class="product-item">
+          <img src="images/products/siatka.jpg" alt="Siatka na ryby">
+          <p class="product-name">Siatka na ryby</p>
+          <p class="product-price">Cena: 70 PLN</p>
+          <button type="button" class="add-to-cart-button" data-product-id="11">Dodaj do koszyka</button>
+        </div>
+      </div>
+      <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+    </div>
+  </section>
 
   <!-- Modal for Login -->
   <div id="loginModal" class="modal">

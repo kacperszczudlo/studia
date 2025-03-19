@@ -693,3 +693,84 @@ body {
       max-width: 300px;
   }
 }
+
+/* Product Carousel Styles */
+.product-carousel {
+  padding: 40px 10%;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-track .product-item {
+  flex: 0 0 33.33%; /* Show 3 items at a time (100% / 3) */
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: opacity 0.3s;
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+.carousel-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .carousel-track .product-item {
+    flex: 0 0 50%; /* Show 2 items at a time on medium screens */
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .carousel-track .product-item {
+    flex: 0 0 100%; /* Show 1 item at a time on small screens */
+    max-width: 100%;
+  }
+
+  .product-carousel {
+    padding: 20px 5%;
+  }
+
+  .carousel-title {
+    font-size: 1.5rem;
+  }
+}
