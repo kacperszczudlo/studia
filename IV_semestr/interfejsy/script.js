@@ -38,7 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let mouseY = window.innerHeight / 2;
     let fishX = mouseX;
     let fishY = mouseY;
-    let isFlipped = false;
+    let isFlipped = false; // Czy rybka jest odwrócona (true = w lewo, false = w prawo)
+
+    // Ustaw punkt obrotu rybki na jej środek (dla spójności, choć nie używamy rotate)
+    fish.style.transformOrigin = 'center center';
+    fish.style.position = 'absolute'; // Upewnij się, że pozycja jest absolutna
 
     document.addEventListener('mousemove', (e) => {
       mouseX = e.pageX;
@@ -46,30 +50,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function animateFish() {
-      const fishWidth = fish.offsetWidth;
-      const fishHeight = fish.offsetHeight;
-      const navbarHeight = navbar.offsetHeight;
+      const fishWidth = fish.offsetWidth || 50; // Domyślna szerokość, jeśli offsetWidth jest 0
+      const fishHeight = fish.offsetHeight || 30; // Domyślna wysokość, jeśli offsetHeight jest 0
+      const navbarHeight = navbar.offsetHeight || 0;
       const footer = document.querySelector('.footer');
       const footerHeight = footer ? footer.offsetHeight : 0;
       const footerTop = footer ? footer.offsetTop : window.innerHeight;
 
+      // Płynne śledzenie kursora
       fishX += (mouseX - fishX) * 0.1;
       fishY += (mouseY - fishY) * 0.1;
 
+      // Ogranicz pozycję rybki, aby nie wychodziła poza ekran
       fishX = Math.max(0, Math.min(fishX, window.innerWidth - fishWidth));
       fishY = Math.max(navbarHeight + 20, Math.min(fishY, footerTop - fishHeight));
 
+      // Określ, czy rybka powinna być odwrócona na podstawie różnicy w osi X
+      const deltaX = mouseX - fishX;
+      const threshold = 5; // Próg, aby uniknąć drgań przy małych różnicach
+      if (deltaX > threshold) {
+        isFlipped = true; // Kursor po prawej stronie rybki -> nos w prawo
+      } else if (deltaX < -threshold) {
+        isFlipped = false; // Kursor po lewej stronie rybki -> nos w lewo
+      }
+
+      // Zastosuj pozycję i obrót (odwrócenie w poziomie)
       fish.style.left = `${fishX}px`;
       fish.style.top = `${fishY}px`;
-
-      // Flip the fish horizontally when it crosses the center of the screen
-      if (mouseX > window.innerWidth / 2 && !isFlipped) {
-        fish.style.transform = 'scaleX(-1)';
-        isFlipped = true;
-      } else if (mouseX <= window.innerWidth / 2 && isFlipped) {
-        fish.style.transform = 'scaleX(1)';
-        isFlipped = false;
-      }
+      fish.style.transform = `scaleX(${isFlipped ? -1 : 1})`;
 
       requestAnimationFrame(animateFish);
     }
@@ -78,6 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fish.style.left = `${window.innerWidth / 2}px`;
     fish.style.top = `${window.innerHeight / 2}px`;
     animateFish();
+  } else {
+    console.error('Fish or navbar element not found:', { fish, navbar });
   }
 
   // Logika logowania
@@ -314,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (carouselTrack && prevBtn && nextBtn) {
     const items = carouselTrack.querySelectorAll('.product-item');
     const itemWidth = items[0].offsetWidth; // Szerokość jednego elementu (wraz z paddingiem)
-    let currentPosition = 0;
+    let currentPosition = 0; // Poprawiona nazwa zmiennej
     const totalItems = items.length;
     const itemsPerView = 3; // Liczba elementów widocznych na raz
     const maxPosition = totalItems - itemsPerView; // Maksymalna pozycja przewijania
