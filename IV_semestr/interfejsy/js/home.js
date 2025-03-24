@@ -1,7 +1,7 @@
 // Funkcja do pobierania produktów z lokalnego pliku JSON
 async function fetchProducts() {
     try {
-      const response = await fetch('products.json');
+      const response = await fetch('/json/products.json');
       if (!response.ok) {
         throw new Error('Błąd podczas pobierania produktów');
       }
