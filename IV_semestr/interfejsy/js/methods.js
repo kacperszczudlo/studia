@@ -1,239 +1,158 @@
+// Zabezpieczenie przed wielokrotnym wykonaniem
+let isInitialized = false;
+
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOMContentLoaded wywołane');
+  // Jeśli już zainicjalizowano, nie wykonuj ponownie
+  if (isInitialized) {
+    console.log('Już zainicjalizowano, pomijam');
+    return;
+  }
+  isInitialized = true;
+
+  console.log('Inicjalizacja kodu');
+
   const loader = document.getElementById('loader');
   const methodsContainer = document.getElementById('methodsContainer');
   const filterButtons = document.querySelectorAll('.filter-btn');
 
-  // Show loader
-  loader.style.display = 'block';
-  methodsContainer.style.display = 'none';
+  // Klucz API YouTube
+  const API_KEY = 'AIzaSyAlio65JA1wm8j67rnYOGr9FPTxMELlNYY';
 
-  // Statyczna lista z konkretnymi poradnikami
-  const fishingMethods = [
-    {
-      name: "Spinning",
-      description: "Jak poprawnie zarzucać wędkę spinningową i łowić więcej ryb.",
-      videoId: "hUurIgE2H8U", // How to Cast a Spinning Reel and Catch More Fish
-      views: "1,027,960",
-      likes: "6,882",
-      difficulty: "Średni",
-      category: "spinning"
-    },
-    {
-      name: "Spinning",
-      description: "Przewodnik po zakładaniu żyłki na kołowrotek spinningowy.",
-      videoId: "IyUp5T6-piE", // How To Put Line On A Spinning Reel
-      views: "450,320",
-      likes: "5,120",
-      difficulty: "Średni",
-      category: "spinning"
-    },
-    {
-      name: "Spinning",
-      description: "Łowienie na przynęty sztuczne – poradnik dla początkujących.",
-      videoId: "SamrdgVjpQk", // Fishing with Lures for Beginners
-      views: "320,150",
-      likes: "3,890",
-      difficulty: "Średni",
-      category: "spinning"
-    },
-    {
-      name: "Spławik",
-      description: "Łatwy sposób na łowienie na spławik – poradnik dla początkujących.",
-      videoId: "4Sb0cqSndTk", // How To Float Fish - the easy way!
-      views: "1,078,381",
-      likes: "12,087",
-      difficulty: "Łatwy",
-      category: "spławik"
-    },
-    {
-      name: "Spławik",
-      description: "Pełny przewodnik po łowieniu na spławik dla początkujących.",
-      videoId: "upK-3iJFwNQ", // Float Fishing For Beginners - FULL GUIDE
-      views: "280,450",
-      likes: "3,210",
-      difficulty: "Łatwy",
-      category: "spławik"
-    },
-    {
-      name: "Spławik",
-      description: "Nauka łowienia na spławik – szybki poradnik dla nowych wędkarzy.",
-      videoId: "l-gV4UfriGE", // Learn To Float Fish - Coarse Fishing Quickbite
-      views: "150,780",
-      likes: "1,890",
-      difficulty: "Łatwy",
-      category: "spławik"
-    },
-    {
-      name: "Grunt",
-      description: "Rozpocznij łowienie metodą feederową z prostym zestawem wędkarskim.",
-      videoId: "-OinQ_Fn4lc", // Start Method Feeder Fishing with my Simple Fishing Kit!
-      views: "380,650",
-      likes: "4,560",
-      difficulty: "Łatwy",
-      category: "grunt"
-    },
-    {
-      name: "Grunt",
-      description: "Pełny przewodnik po łowieniu metodą feederową dla początkujących.",
-      videoId: "icGScqmXmBo", // How to Fish the METHOD FEEDER - Full Guide!
-      views: "290,340",
-      likes: "3,450",
-      difficulty: "Łatwy",
-      category: "grunt"
-    },
-    {
-      name: "Grunt",
-      description: "Jak łowić metodą feederową – 5 kroków do większej liczby ryb.",
-      videoId: "3TjpPwyMgBk", // How To Fish The Method Feeder - 5 Steps To Catch More Fish
-      views: "456,789",
-      likes: "5,678",
-      difficulty: "Łatwy",
-      category: "grunt"
-    },
-    {
-      name: "Karp",
-      description: "Jak zacząć łowienie karpi – ustawianie wędki karpiowej.",
-      videoId: "t2pv64sLFGY", // Starting Carp Fishing - How To Set Up A Carp Rod
-      views: "210,890",
-      likes: "2,780",
-      difficulty: "Trudny",
-      category: "karp"
-    },
-    {
-      name: "Karp",
-      description: "Łowienie karpi – powrót do podstaw dla początkujących.",
-      videoId: "2xu49SHg_9k", // Carp Fishing - Back To Basics
-      views: "789,123",
-      likes: "8,901",
-      difficulty: "Trudny",
-      category: "karp"
-    },
-    {
-      name: "Karp",
-      description: "Jak łowić karpie na kukurydzę – łatwa i tania przynęta.",
-      videoId: "-mCalYsZASg", // How To Catch Carp With Corn! (Easy and cheap bait for carp fishing)
-      views: "180,560",
-      likes: "2,340",
-      difficulty: "Trudny",
-      category: "karp"
-    },
-    {
-      name: "Muchowa",
-      description: "Jak rzucać wędką muchową – 5 wskazówek dla początkujących.",
-      videoId: "0-9GqI-f5PE", // How to Cast a Fly Rod for Beginners (5 Fly Casting Tips That Will Help!)
-      views: "320,450",
-      likes: "4,120",
-      difficulty: "Trudny",
-      category: "muchowa"
-    },
-    {
-      name: "Muchowa",
-      description: "Podstawy sprzętu do wędkarstwa muchowego – jak zacząć.",
-      videoId: "j7GXqUQQ2i0", // Fly Fishing Gear Basics - How to Get Started in Fly Fishing
-      views: "250,780",
-      likes: "3,210",
-      difficulty: "Trudny",
-      category: "muchowa"
-    },
-    {
-      name: "Muchowa",
-      description: "Nauka wędkarstwa muchowego w jednym filmie – pełny przewodnik.",
-      videoId: "Gk2ZusF6eJw", // Learn to Fly Fish in One Video — A Complete Beginner's Journey!
-      views: "190,340",
-      likes: "2,890",
-      difficulty: "Trudny",
-      category: "muchowa"
-    },
-    {
-      name: "Morska",
-      description: "Szybki przewodnik po rozpoczęciu wędkarstwa morskiego we właściwy sposób.",
-      videoId: "t4l8YeKNVss", // A Quick Guide to Starting Sea Fishing the right way
-      views: "310,560",
-      likes: "3,890",
-      difficulty: "Średni",
-      category: "morska"
-    },
-    {
-      name: "Morska",
-      description: "Przewodnik po wędkarstwie morskim z brzegu dla początkujących – z przynętami.",
-      videoId: "x_fNuU_EEy0", // Beginner Saltwater Shore Fishing Guide - With Lures
-      views: "270,450",
-      likes: "3,450",
-      difficulty: "Średni",
-      category: "morska"
-    },
-    {
-      name: "Morska",
-      description: "Nauka łowienia z plaży – podstawowe techniki wędkarstwa morskiego.",
-      videoId: "hTPUEHdfZac", // Learn To Beach Fish Basic Beach Fishing Techniques - Sea Fishing Quickbite
-      views: "150,780",
-      likes: "1,890",
-      difficulty: "Średni",
-      category: "morska"
-    },
-    {
-      name: "Podlodowe",
-      description: "Podstawy wędkarstwa podlodowego dla początkujących – jak zacząć.",
-      videoId: "KpISHNqoaLQ", // Ice Fishing Basics For Beginners / How To Go Ice Fishing Explained 101
-      views: "280,340",
-      likes: "3,210",
-      difficulty: "Średni",
-      category: "podlodowe"
-    },
-    {
-      name: "Podlodowe",
-      description: "Jak łowić pod lodem – podstawy wędkarstwa podlodowego 101.",
-      videoId: "R1r7RzzZBag", // How to Ice Fish - Beginner Ice Fishing 101
-      views: "220,560",
-      likes: "2,780",
-      difficulty: "Średni",
-      category: "podlodowe"
-    },
-    {
-      name: "Podlodowe",
-      description: "Łowienie okoni pod lodem – wszystko, co musisz wiedzieć.",
-      videoId: "8r4wyyr2tGY", // Ice Fishing Perch – EVERYTHING You Need To Know
-      views: "180,450",
-      likes: "2,340",
-      difficulty: "Średni",
-      category: "podlodowe"
+  // Funkcja do pobierania danych o filmie z YouTube API
+  async function fetchVideoDetails(videoId) {
+    const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,status&id=${videoId}&key=${API_KEY}`;
+    
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      
+      if (data.items && data.items.length > 0) {
+        const video = data.items[0];
+        return {
+          title: video.snippet.title,
+          views: video.statistics.viewCount || '0',
+          likes: video.statistics.likeCount || '0',
+          embeddable: video.status.embeddable,
+          available: true
+        };
+      } else {
+        return {
+          title: 'Film niedostępny',
+          views: '0',
+          likes: '0',
+          embeddable: false,
+          available: false
+        };
+      }
+    } catch (error) {
+      console.error(`Błąd podczas pobierania danych filmu ${videoId}:`, error);
+      return {
+        title: 'Błąd podczas ładowania filmu',
+        views: '0',
+        likes: '0',
+        embeddable: false,
+        available: false
+      };
     }
+  }
+
+  // Statyczna lista z podstawowymi danymi
+  const fishingMethods = [
+    { id: 1, name: "Spinning", videoId: "hUurIgE2H8U", difficulty: "Średni", category: "spinning" },
+    { id: 2, name: "Spinning", videoId: "IyUp5T6-piE", difficulty: "Średni", category: "spinning" },
+    { id: 3, name: "Spinning", videoId: "SamrdgVjpQk", difficulty: "Średni", category: "spinning" },
+    { id: 4, name: "Spławik", videoId: "4Sb0cqSndTk", difficulty: "Łatwy", category: "spławik" },
+    { id: 5, name: "Spławik", videoId: "upK-3iJFwNQ", difficulty: "Łatwy", category: "spławik" },
+    { id: 6, name: "Spławik", videoId: "l-gV4UfriGE", difficulty: "Łatwy", category: "spławik" },
+    { id: 7, name: "Grunt", videoId: "-OinQ_Fn4lc", difficulty: "Łatwy", category: "grunt" },
+    { id: 8, name: "Grunt", videoId: "icGScqmXmBo", difficulty: "Łatwy", category: "grunt" },
+    { id: 9, name: "Grunt", videoId: "3TjpPwyMgBk", difficulty: "Łatwy", category: "grunt" },
+    { id: 10, name: "Karp", videoId: "t2pv64sLFGY", difficulty: "Trudny", category: "karp" },
+    { id: 11, name: "Karp", videoId: "2xu49SHg_9k", difficulty: "Trudny", category: "karp" },
+    { id: 12, name: "Karp", videoId: "-mCalYsZASg", difficulty: "Trudny", category: "karp" },
+    { id: 13, name: "Muchowa", videoId: "0-9GqI-f5PE", difficulty: "Trudny", category: "muchowa" },
+    { id: 14, name: "Muchowa", videoId: "j7GXqUQQ2i0", difficulty: "Trudny", category: "muchowa" },
+    { id: 15, name: "Muchowa", videoId: "Gk2ZusF6eJw", difficulty: "Trudny", category: "muchowa" },
+    { id: 16, name: "Morska", videoId: "t4l8YeKNVss", difficulty: "Średni", category: "morska" },
+    { id: 17, name: "Morska", videoId: "x_fNuU_EEy0", difficulty: "Średni", category: "morska" },
+    { id: 18, name: "Morska", videoId: "hTPUEHdfZac", difficulty: "Średni", category: "morska" },
+    { id: 19, name: "Podlodowe", videoId: "KpISHNqoaLQ", difficulty: "Średni", category: "podlodowe" },
+    { id: 20, name: "Podlodowe", videoId: "R1r7RzzZBag", difficulty: "Średni", category: "podlodowe" },
+    { id: 21, name: "Podlodowe", videoId: "8r4wyyr2tGY", difficulty: "Średni", category: "podlodowe" }
   ];
 
-  function displayMethods(filter = 'all') {
+  // Funkcja wyświetlająca metody
+  async function displayMethods(filter = 'all') {
+    console.log(`Wywołano displayMethods z filtrem: ${filter}`);
     methodsContainer.innerHTML = '';
+    loader.style.display = 'block';
+    methodsContainer.style.display = 'none';
 
     const filteredMethods = filter === 'all' 
       ? fishingMethods 
       : fishingMethods.filter(method => method.category === filter);
 
-    filteredMethods.forEach(method => {
+    console.log(`Liczba filtrowanych metod: ${filteredMethods.length}`);
+    console.log('Filtrowane metody:', filteredMethods.map(method => method.videoId));
+
+    // Pobierz dane dla wszystkich filmów równolegle
+    const videoDetailsPromises = filteredMethods.map(method => fetchVideoDetails(method.videoId));
+    const videoDetailsArray = await Promise.all(videoDetailsPromises);
+
+    // Wyświetl karty z filmami
+    filteredMethods.forEach((method, index) => {
+      const videoDetails = videoDetailsArray[index];
+      
       const methodCard = document.createElement('div');
       methodCard.className = 'method-card';
       methodCard.dataset.category = method.category;
 
-      methodCard.innerHTML = `
-        <div class="method-difficulty" data-difficulty="${method.difficulty}">${method.difficulty}</div>
-        <iframe class="method-video" src="https://www.youtube.com/embed/${method.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        <div class="method-info">
-          <h2>${method.name}</h2>
-          <p>${method.description}</p>
-          <div class="method-views">${method.views} wyświetleń</div>
-          <div class="method-likes">${method.likes} polubień</div>
-        </div>
-      `;
+      if (videoDetails.available && videoDetails.embeddable) {
+        methodCard.innerHTML = `
+          <div class="method-difficulty" data-difficulty="${method.difficulty}">${method.difficulty}</div>
+          <iframe class="method-video" src="https://www.youtube.com/embed/${method.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="method-info">
+            <h2>${method.name}</h2>
+            <p>${videoDetails.title}</p>
+            <div class="method-views">${parseInt(videoDetails.views).toLocaleString('pl-PL')} wyświetleń</div>
+            <div class="method-likes">${parseInt(videoDetails.likes).toLocaleString('pl-PL')} polubień</div>
+          </div>
+        `;
+      } else {
+        methodCard.innerHTML = `
+          <div class="method-difficulty" data-difficulty="${method.difficulty}">${method.difficulty}</div>
+          <div class="method-video" style="background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1rem;">
+            Film niedostępny
+          </div>
+          <div class="method-info">
+            <h2>${method.name}</h2>
+            <p>${videoDetails.title}</p>
+            <div class="method-views">0 wyświetleń</div>
+            <div class="method-likes">0 polubień</div>
+          </div>
+        `;
+      }
 
+      console.log(`Dodano kartę dla filmu: ${method.videoId}`);
       methodsContainer.appendChild(methodCard);
     });
 
+    console.log(`Liczba dzieci w methodsContainer: ${methodsContainer.children.length}`);
     loader.style.display = 'none';
     methodsContainer.style.display = 'grid';
   }
 
+  // Wywołanie funkcji przy ładowaniu strony
+  console.log('Wywołanie displayMethods przy ładowaniu strony');
   displayMethods();
 
-  filterButtons.forEach(button => {
+  // Obsługa filtrów
+  console.log(`Znaleziono ${filterButtons.length} przycisków filtrów`);
+  filterButtons.forEach((button, index) => {
+    console.log(`Dodano nasłuchiwanie dla przycisku ${index}: ${button.dataset.filter}`);
     button.addEventListener('click', () => {
+      console.log(`Kliknięto przycisk z filtrem: ${button.dataset.filter}`);
       filterButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
       loader.style.display = 'block';
@@ -242,6 +161,6 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => {
         displayMethods(button.dataset.filter);
       }, 300);
-    });
+    }, { once: true });
   });
 });
