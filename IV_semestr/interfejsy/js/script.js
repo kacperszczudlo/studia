@@ -1,7 +1,6 @@
 // Zablokowanie alertów w przeglądarce
 const originalAlert = window.alert;
 window.alert = function(message) {
-  // Pusta funkcja – blokuje wyświetlanie alertów
   return null;
 };
 
@@ -77,8 +76,23 @@ if (links.length > 0) {
   });
 }
 
-// Animacja rybki podążającej za kursorem
-document.addEventListener('DOMContentLoaded', function() {
+// Funkcja do pobierania danych z Wikipedii
+async function fetchFishData(fishName) {
+  try {
+    const response = await fetch(
+      `https://pl.wikipedia.org/w/api.php?action=query&prop=extracts&titles=${encodeURIComponent(fishName)}&format=json&origin=*`
+    );
+    const data = await response.json();
+    const page = Object.values(data.query.pages)[0];
+    return page.extract ? page.extract : "Brak opisu dla tej ryby w Wikipedii. Spróbuj poszukać informacji w innych źródłach.";
+  } catch (error) {
+    console.error(`Błąd podczas pobierania danych dla ${fishName}:`, error);
+    return "Wystąpił błąd podczas ładowania opisu.";
+  }
+}
+
+// Animacja rybki i ładowanie opisów ryb
+document.addEventListener('DOMContentLoaded', async () => {
   const fish = document.getElementById('fish');
   const navbar = document.querySelector('.navbar');
 
@@ -137,9 +151,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const loginIcon = document.getElementById('loginIcon');
   const loginModal = document.getElementById('loginModal');
   const closeLoginModal = document.querySelector('#loginModal .close');
-  const forgotPassword = document.querySelector('#loginModal .forgot-password a');
 
-  if (loginIcon && loginModal && closeLoginModal && forgotPassword) {
+  if (loginIcon && loginModal && closeLoginModal) {
     loginIcon.addEventListener('click', () => {
       loginModal.style.display = 'block';
     });
@@ -200,19 +213,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const registerBtn = document.querySelector('#loginModal .register-btn');
   const registerModal = document.getElementById('registerModal');
   const closeRegisterModal = document.querySelector('#registerModal .close');
-  const cancelRegisterBtn = document.querySelector('#registerModal .cancel-btn');
 
-  if (registerBtn && registerModal && closeRegisterModal && cancelRegisterBtn) {
+  if (registerBtn && registerModal && closeRegisterModal) {
     registerBtn.addEventListener('click', () => {
       loginModal.style.display = 'none';
       registerModal.style.display = 'block';
     });
 
     closeRegisterModal.addEventListener('click', () => {
-      registerModal.style.display = 'none';
-    });
-
-    cancelRegisterBtn.addEventListener('click', () => {
       registerModal.style.display = 'none';
     });
 
@@ -242,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
 
-  // Obsługa przewijania do sekcji z uwzględnieniem wysokości navbaru
+  // Obsługa przewijania do sekcji
   const shopMenuLinks = document.querySelectorAll('.shop-menu ul li a');
   if (shopMenuLinks.length > 0) {
     shopMenuLinks.forEach(link => {
@@ -261,4 +269,33 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // Dynamiczne ładowanie opisów ryb z Wikipedii
+  const fishImages = document.querySelectorAll('.fish-image');
+  const fishInfoModal = document.getElementById('fishInfoModal');
+  const fishInfoModalHeader = document.getElementById('fishInfoModalHeader');
+  const fishInfoModalBody = document.getElementById('fishInfoModalBody');
+  const closeFishInfoModal = fishInfoModal.querySelector('.close');
+
+  for (let image of fishImages) {
+    const fishName = image.getAttribute('data-fish-name');
+
+    image.addEventListener('click', async () => {
+      const description = await fetchFishData(fishName);
+      fishInfoModalHeader.textContent = fishName;
+      fishInfoModalBody.innerHTML = description;
+      fishInfoModal.style.display = 'block';
+    });
+  }
+
+  // Zamykanie modala z informacjami o rybie
+  closeFishInfoModal.addEventListener('click', () => {
+    fishInfoModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === fishInfoModal) {
+      fishInfoModal.style.display = 'none';
+    }
+  });
 });

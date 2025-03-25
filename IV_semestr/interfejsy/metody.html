@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bez Ryby Ani Rusz</title>
+  <title>Bez Ryby Ani Rusz - Metody Wędkowania</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/menu.css">
   <link rel="icon" type="image/jpeg" href="/images/icon.png" sizes="any" class="favicon">
@@ -15,10 +15,162 @@
       text-decoration: none;
       color: inherit;
     }
+    
+    /* Styling for methods section */
+    .fishing-methods {
+      padding: 80px 10% 20px;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+    
+    .fishing-methods h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #007BFF;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .fishing-methods h1::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background: linear-gradient(90deg, #007BFF, transparent);
+      bottom: -10px;
+      left: 25%;
+    }
+    
+    .methods-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .method-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .method-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .method-video {
+      width: 100%;
+      height: 200px;
+      border: none;
+      background-color: #000;
+    }
+    
+    .method-info {
+      padding: 20px;
+      text-align: left;
+    }
+    
+    .method-info h2 {
+      color: #007BFF;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+    
+    .method-info p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .method-views, .method-likes {
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+    
+    .method-difficulty {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: white;
+    }
+    
+    /* Kolory dla poziomów trudności */
+    .method-difficulty[data-difficulty="Łatwy"] {
+      background-color: #28a745; /* Zielony */
+    }
+    
+    .method-difficulty[data-difficulty="Średni"] {
+      background-color: #FFA41C; /* Pomarańczowy */
+    }
+    
+    .method-difficulty[data-difficulty="Trudny"] {
+      background-color: #dc3545; /* Czerwony */
+    }
+    
+    @media screen and (max-width: 768px) {
+      .methods-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .fishing-methods {
+        padding: 60px 5% 20px;
+      }
+    }
+    
+    /* Loading spinner */
+    .loader {
+      display: none;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #007BFF;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 40px auto;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Filter buttons */
+    .method-filters {
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .filter-btn {
+      padding: 8px 16px;
+      background-color: white;
+      border: 1px solid #007BFF;
+      color: #007BFF;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .filter-btn:hover, .filter-btn.active {
+      background-color: #007BFF;
+      color: white;
+    }
   </style>
+  <script src="/js/methods.js"></script> <!-- Added reference to methods.js -->
 </head>
-<body style="cursor: url('worm.png') 8 8, auto;">
-  <!-- Nowoczesne menu -->
+<body style="cursor: url('/images/worm.png') 8 8, auto;">
   <nav class="navbar">
     <div class="logo">
       <a href="index.html">
@@ -48,15 +200,31 @@
     </div>
   </nav>
 
-  <!-- Treść strony -->
-  <main>
-    <!-- Content goes here -->
-  </main>
+  <section class="fishing-methods">
+    <h1>Metody Wędkowania</h1>
+    <p style="max-width: 800px; margin: 0 auto 30px; color: #555;">Poznaj najlepsze techniki wędkarskie wraz z profesjonalnymi poradnikami. Wybraliśmy dla Ciebie najwyżej oceniane filmy instruktażowe, które pomogą Ci opanować każdą metodę.</p>
+    
+    <div class="method-filters">
+      <button class="filter-btn active" data-filter="all">Wszystkie</button>
+      <button class="filter-btn" data-filter="spinning">Spinning</button>
+      <button class="filter-btn" data-filter="spławik">Spławik</button>
+      <button class="filter-btn" data-filter="grunt">Grunt</button>
+      <button class="filter-btn" data-filter="karp">Karp</button>
+      <button class="filter-btn" data-filter="muchowa">Muchowa</button>
+      <button class="filter-btn" data-filter="morska">Morska</button>
+      <button class="filter-btn" data-filter="podlodowe">Podlodowe</button>
+    </div>
+    
+    <div class="loader" id="loader"></div>
+    <div class="methods-container" id="methodsContainer">
+      <!-- Methods will be loaded here by JavaScript -->
+    </div>
+  </section>
 
   <!-- Login Modal -->
   <div id="loginModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <div class="modal-header">Logowanie</div>
       <div class="modal-body">
         <input type="text" placeholder="Nazwa użytkownika" required>
@@ -73,7 +241,7 @@
   <!-- Register Modal -->
   <div id="registerModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <div class="modal-header">Rejestracja</div>
       <div class="modal-body">
         <input type="text" placeholder="Nazwa użytkownika" required>
@@ -90,7 +258,7 @@
   <!-- Cart Modal -->
   <div id="cartModal" class="modal">
     <div class="cart-modal-content">
-      <span class="close">&times;</span>
+      <span class="close">×</span>
       <h2>Koszyk</h2>
       <ul id="cartItems">
         <!-- Cart items will be displayed here -->
@@ -99,7 +267,6 @@
     </div>
   </div>
 
-  <!-- Stopka -->
   <footer class="footer" style="position: relative;">
     <p>Bez Ryby Ani Rusz - projekt zaliczeniowy z Projektowanie Interfejsów Użytkownika</p>
     <div class="social-media">
@@ -110,6 +277,10 @@
     <p>© 2025 Bez Ryby Ani Rusz. Wszystkie prawa zastrzeżone.</p>
   </footer>
 
+  <img id="fish" src="images/fish.png" alt="Rybka" />
+
   <script src="/js/script.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/methods.js"></script> <!-- Added reference to methods.js -->
 </body>
 </html>
