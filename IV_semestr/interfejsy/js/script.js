@@ -1,3 +1,4 @@
+// script.js
 // Zablokowanie alertów w przeglądarce
 const originalAlert = window.alert;
 window.alert = function(message) {
@@ -84,11 +85,24 @@ async function fetchFishData(fishName) {
     );
     const data = await response.json();
     const page = Object.values(data.query.pages)[0];
-    return page.extract ? page.extract : "Brak opisu dla tej ryby w Wikipedii. Spróbuj poszukać informacji w innych źródłach.";
+    return page.extract ? page.extract : "Brak opisu dla tej ryby w Wikipedii.";
   } catch (error) {
     console.error(`Błąd podczas pobierania danych dla ${fishName}:`, error);
     return "Wystąpił błąd podczas ładowania opisu.";
   }
+}
+
+// Funkcje walidacyjne
+function validateUsername(username) {
+  return username.length >= 3 && /^[a-zA-Z0-9_]+$/.test(username);
+}
+
+function validatePassword(password) {
+  return password.length >= 6 && /[A-Z]/.test(password) && /[0-9]/.test(password);
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 // Animacja rybki i ładowanie opisów ryb
@@ -143,68 +157,152 @@ document.addEventListener('DOMContentLoaded', async () => {
     fish.style.left = `${window.innerWidth / 2}px`;
     fish.style.top = `${window.innerHeight / 2}px`;
     animateFish();
-  } else {
-    console.error('Fish or navbar element not found:', { fish, navbar });
   }
 
   // Logika logowania
   const loginIcon = document.getElementById('loginIcon');
   const loginModal = document.getElementById('loginModal');
   const closeLoginModal = document.querySelector('#loginModal .close');
+  const logoutModal = document.createElement('div');
+  logoutModal.id = 'logoutModal';
+  logoutModal.className = 'modal';
+  logoutModal.innerHTML = `
+    <div class="modal-content">
+      <span class="close">×</span>
+      <div class="modal-header">Wylogowanie</div>
+      <div class="modal-body">
+        <p>Czy na pewno chcesz się wylogować?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn" id="logout-cancel">Anuluj</button>
+        <button class="logout-btn" onclick="logout()">Wyloguj</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(logoutModal);
+
+  const loginError = document.createElement('p');
+  loginError.style.color = 'red';
+  loginError.style.textAlign = 'center';
+  loginError.id = 'login-error';
 
   if (loginIcon && loginModal && closeLoginModal) {
-    loginIcon.addEventListener('click', () => {
+    loginModal.querySelector('.modal-body').appendChild(loginError);
+
+    const openLoginModal = () => {
       loginModal.style.display = 'block';
+      loginError.textContent = '';
+    };
+
+    const openLogoutModal = () => {
+      logoutModal.style.display = 'block';
+    };
+
+    loginIcon.addEventListener('click', () => {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      if (isLoggedIn) {
+        openLogoutModal();
+      } else {
+        openLoginModal();
+      }
     });
 
     closeLoginModal.addEventListener('click', () => {
       loginModal.style.display = 'none';
+      loginError.textContent = '';
+    });
+
+    logoutModal.querySelector('.close').addEventListener('click', () => {
+      logoutModal.style.display = 'none';
+    });
+
+    logoutModal.querySelector('#logout-cancel').addEventListener('click', () => {
+      logoutModal.style.display = 'none';
     });
 
     window.addEventListener('click', (event) => {
       if (event.target === loginModal) {
         loginModal.style.display = 'none';
+        loginError.textContent = '';
+      }
+      if (event.target === logoutModal) {
+        logoutModal.style.display = 'none';
       }
     });
 
     window.signIn = function() {
-      const username = document.querySelector('#loginModal .modal-body input[type="text"]').value;
-      const password = document.querySelector('#loginModal .modal-body input[type="password"]').value;
+      const usernameInput = document.querySelector('#loginModal .modal-body input[type="text"]');
+      const passwordInput = document.querySelector('#loginModal .modal-body input[type="password"]');
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value.trim();
 
-      if (username && password) {
-        if (username.length >= 3 && password.length >= 6) {
+      if (!username || !password) {
+        loginError.textContent = 'Proszę wypełnić wszystkie pola.';
+        return;
+      }
+
+      if (!validateUsername(username)) {
+        loginError.textContent = 'Nazwa użytkownika musi mieć co najmniej 3 znaki i zawierać tylko litery, cyfry lub "_".';
+        return;
+      }
+
+      if (!validatePassword(password)) {
+        loginError.textContent = 'Hasło musi mieć co najmniej 6 znaków, zawierać dużą literę i cyfrę.';
+        return;
+      }
+
+      const storedUsername = localStorage.getItem('username');
+      const storedPassword = localStorage.getItem('password');
+
+      if (storedUsername && storedPassword) {
+        if (storedUsername === username && storedPassword === password) {
           localStorage.setItem('isLoggedIn', 'true');
-          localStorage.setItem('username', username);
           loginModal.style.display = 'none';
+          loginError.textContent = '';
           updateUserInterface();
         } else {
-          console.log('Nazwa użytkownika musi mieć co najmniej 3 znaki, a hasło 6 znaków.');
+          loginError.textContent = 'Nieprawidłowa nazwa użytkownika lub hasło.';
         }
       } else {
-        console.log('Proszę wypełnić wszystkie pola.');
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        localStorage.setItem('isLoggedIn', 'true');
+        loginModal.style.display = 'none';
+        loginError.textContent = '';
+        updateUserInterface();
       }
     };
 
     function updateUserInterface() {
       const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      console.log('Updating UI, isLoggedIn:', isLoggedIn);
+
       if (isLoggedIn) {
+        console.log('Setting logged-in icon');
         loginIcon.src = 'images/user-logged-in.png';
         loginIcon.alt = 'Wyloguj';
-        loginIcon.removeEventListener('click', openLoginModal);
-        loginIcon.addEventListener('click', logout);
+        loginIcon.style.display = 'block';
+      } else {
+        console.log('Setting logged-out icon');
+        loginIcon.src = 'images/user.png';
+        loginIcon.alt = 'Login';
+        loginIcon.style.display = 'block';
       }
+
+      loginIcon.onerror = () => {
+        console.error('Failed to load image:', loginIcon.src);
+        loginIcon.src = 'images/user.png';
+      };
     }
 
-    function logout() {
+    window.logout = function() {
+      console.log('Logging out');
       localStorage.removeItem('isLoggedIn');
       localStorage.removeItem('username');
-      loginIcon.src = 'images/user.png';
-      loginIcon.alt = 'Login';
-      loginIcon.removeEventListener('click', logout);
-      loginIcon.addEventListener('click', () => {
-        loginModal.style.display = 'block';
-      });
-    }
+      localStorage.removeItem('password');
+      logoutModal.style.display = 'none';
+      updateUserInterface();
+    };
 
     updateUserInterface();
   }
@@ -213,40 +311,93 @@ document.addEventListener('DOMContentLoaded', async () => {
   const registerBtn = document.querySelector('#loginModal .register-btn');
   const registerModal = document.getElementById('registerModal');
   const closeRegisterModal = document.querySelector('#registerModal .close');
+  const registerError = document.createElement('p');
+  registerError.style.color = 'red';
+  registerError.style.textAlign = 'center';
+  registerError.id = 'register-error';
 
   if (registerBtn && registerModal && closeRegisterModal) {
+    registerModal.querySelector('.modal-body').appendChild(registerError);
+
+    // Sprawdzenie i dodanie pola "Powtórz hasło" jeśli nie istnieje
+    let repeatPasswordInput = registerModal.querySelector('input[placeholder="Powtórz hasło"]');
+    if (!repeatPasswordInput) {
+      repeatPasswordInput = document.createElement('input');
+      repeatPasswordInput.type = 'password';
+      repeatPasswordInput.placeholder = 'Powtórz hasło';
+      repeatPasswordInput.required = true;
+      registerModal.querySelector('.modal-body').insertBefore(repeatPasswordInput, registerModal.querySelector('.modal-footer'));
+    }
+
     registerBtn.addEventListener('click', () => {
       loginModal.style.display = 'none';
       registerModal.style.display = 'block';
+      registerError.textContent = '';
     });
 
     closeRegisterModal.addEventListener('click', () => {
       registerModal.style.display = 'none';
+      registerError.textContent = '';
     });
+
+    const cancelRegisterBtn = registerModal.querySelector('.cancel-btn');
+    if (cancelRegisterBtn) {
+      cancelRegisterBtn.addEventListener('click', () => {
+        registerModal.style.display = 'none';
+        registerError.textContent = '';
+      });
+    } else {
+      console.error('Cancel button not found in register modal');
+    }
 
     window.addEventListener('click', (event) => {
       if (event.target === registerModal) {
         registerModal.style.display = 'none';
+        registerError.textContent = '';
       }
     });
 
     window.register = function() {
-      const username = document.querySelector('#registerModal .modal-body input[type="text"]').value;
-      const email = document.querySelector('#registerModal .modal-body input[type="email"]').value;
-      const password = document.querySelector('#registerModal .modal-body input[type="password"]').value;
+      const usernameInput = document.querySelector('#registerModal .modal-body input[type="text"]');
+      const emailInput = document.querySelector('#registerModal .modal-body input[type="email"]');
+      const passwordInput = document.querySelector('#registerModal .modal-body input[type="password"]');
+      const repeatPasswordInput = document.querySelector('#registerModal .modal-body input[placeholder="Powtórz hasło"]');
+      const username = usernameInput.value.trim();
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+      const repeatPassword = repeatPasswordInput.value.trim();
 
-      if (username && email && password) {
-        if (username.length >= 3 && email.includes('@') && password.length >= 6) {
-          localStorage.setItem('isLoggedIn', 'true');
-          localStorage.setItem('username', username);
-          registerModal.style.display = 'none';
-          updateUserInterface();
-        } else {
-          console.log('Proszę wypełnić poprawnie wszystkie pola.');
-        }
-      } else {
-        console.log('Proszę wypełnić wszystkie pola.');
+      if (!username || !email || !password || !repeatPassword) {
+        registerError.textContent = 'Proszę wypełnić wszystkie pola.';
+        return;
       }
+
+      if (!validateUsername(username)) {
+        registerError.textContent = 'Nazwa użytkownika musi mieć co najmniej 3 znaki i zawierać tylko litery, cyfry lub "_".';
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        registerError.textContent = 'Proszę podać poprawny adres email.';
+        return;
+      }
+
+      if (!validatePassword(password)) {
+        registerError.textContent = 'Hasło musi mieć co najmniej 6 znaków, zawierać dużą literę i cyfrę.';
+        return;
+      }
+
+      if (password !== repeatPassword) {
+        registerError.textContent = 'Hasła nie są zgodne.';
+        return;
+      }
+
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+      localStorage.setItem('isLoggedIn', 'true');
+      registerModal.style.display = 'none';
+      registerError.textContent = '';
+      updateUserInterface();
     };
   }
 
@@ -275,27 +426,27 @@ document.addEventListener('DOMContentLoaded', async () => {
   const fishInfoModal = document.getElementById('fishInfoModal');
   const fishInfoModalHeader = document.getElementById('fishInfoModalHeader');
   const fishInfoModalBody = document.getElementById('fishInfoModalBody');
-  const closeFishInfoModal = fishInfoModal.querySelector('.close');
+  const closeFishInfoModal = fishInfoModal?.querySelector('.close');
 
-  for (let image of fishImages) {
-    const fishName = image.getAttribute('data-fish-name');
+  if (fishImages.length > 0 && fishInfoModal && closeFishInfoModal) {
+    for (let image of fishImages) {
+      const fishName = image.getAttribute('data-fish-name');
+      image.addEventListener('click', async () => {
+        const description = await fetchFishData(fishName);
+        fishInfoModalHeader.textContent = fishName;
+        fishInfoModalBody.innerHTML = description;
+        fishInfoModal.style.display = 'block';
+      });
+    }
 
-    image.addEventListener('click', async () => {
-      const description = await fetchFishData(fishName);
-      fishInfoModalHeader.textContent = fishName;
-      fishInfoModalBody.innerHTML = description;
-      fishInfoModal.style.display = 'block';
+    closeFishInfoModal.addEventListener('click', () => {
+      fishInfoModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === fishInfoModal) {
+        fishInfoModal.style.display = 'none';
+      }
     });
   }
-
-  // Zamykanie modala z informacjami o rybie
-  closeFishInfoModal.addEventListener('click', () => {
-    fishInfoModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === fishInfoModal) {
-      fishInfoModal.style.display = 'none';
-    }
-  });
 });
