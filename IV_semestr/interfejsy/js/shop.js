@@ -38,7 +38,6 @@ async function displayProducts() {
     { id: 'kolowrotki-grid', name: 'Kołowrotki' },
     { id: 'haczyki-grid', name: 'Haczyki' },
     { id: 'splawiki-grid', name: 'Spławiki' },
-    { id: 'ciezarki-grid', name: 'Ciężarki' },
     { id: 'odziez-grid', name: 'Odzież wędkarska' },
     { id: 'siatki-grid', name: 'Siatki na ryby' },
   ];
@@ -49,6 +48,8 @@ async function displayProducts() {
       console.error(`Nie znaleziono elementu o ID: ${category.id}`);
       return;
     }
+
+    grid.innerHTML = ''; // Clear the grid before appending new products
 
     // Filtruj produkty dla danej kategorii
     const categoryProducts = products
@@ -67,38 +68,26 @@ async function displayProducts() {
       `;
 
       grid.appendChild(productItem);
-    });
 
-    const addToCartButtons = grid.querySelectorAll('.add-to-cart-button');
-    addToCartButtons.forEach(button => {
-      const productId = button.getAttribute('data-product-id');
+      // Add event listener for the "Dodaj do koszyka" button
+      const addToCartButton = productItem.querySelector('.add-to-cart-button');
+      addToCartButton.addEventListener('click', () => {
+        const productId = product.id;
+        const productName = product.title;
+        const productPrice = product.price;
+
+        // Call the global toggleCart function
+        window.toggleCart(productId, productName, productPrice, addToCartButton);
+      });
+
+      // Update button state if the product is already in the cart
       const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const existingItem = cart.find(item => item.id === productId);
+      const existingItem = cart.find(item => item.id === product.id);
       if (existingItem) {
-        button.style.backgroundColor = '#6ab0ff';
-        button.style.color = '#fff';
-        button.textContent = 'Dodano do koszyka';
-      } else {
-        button.style.backgroundColor = '#007BFF';
-        button.style.color = '#fff';
-        button.textContent = 'Dodaj do koszyka';
+        addToCartButton.style.backgroundColor = '#6ab0ff';
+        addToCartButton.style.color = '#fff';
+        addToCartButton.textContent = 'Dodano do koszyka';
       }
-
-      button.removeEventListener('click', button._clickHandler);
-      button._clickHandler = function(e) {
-        e.preventDefault();
-        const productId = button.getAttribute('data-product-id');
-        const productName = button.parentNode.querySelector('.product-name').textContent.trim();
-        const productPriceText = button.parentNode.querySelector('.product-price').textContent.trim();
-        const productPrice = productPriceText.replace('Cena: ', '').replace(' PLN', '');
-
-        if (typeof window.toggleCart === 'function') {
-          window.toggleCart(productId, productName, productPrice, button);
-        } else {
-          console.error('Funkcja toggleCart nie jest zdefiniowana.');
-        }
-      };
-      button.addEventListener('click', button._clickHandler);
     });
   });
 

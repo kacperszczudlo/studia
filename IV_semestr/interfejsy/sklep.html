@@ -212,5 +212,42 @@
 
   <!-- Dołączamy shop.js na końcu body, aby upewnić się, że DOM jest załadowany -->
   <script src="/js/shop.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const productGrid = document.getElementById('product-grid');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Zmień aktywny przycisk
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          // Filtruj produkty
+          const filter = button.getAttribute('data-filter');
+          const products = document.querySelectorAll('.product-item');
+
+          products.forEach(product => {
+            if (filter === 'all' || product.dataset.category === filter) {
+              product.style.display = 'block';
+            } else {
+              product.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Wyświetl produkty
+      displayProducts();
+    });
+  </script>
 </body>
 </html>
