@@ -1,3 +1,4 @@
+/* styles.css */
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +12,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  cursor: url('/images/worm.png') 8 8, auto; /* Custom cursor */
-  overflow: auto; /* Allow scrolling on mobile and tablet devices */
+  cursor: url('/images/worm.png') 8 8, auto;
+  overflow: auto;
 }
 
 .hero {
@@ -58,7 +59,6 @@ body {
   cursor: inherit;
 }
 
-/* Stopka */
 .footer {
   text-align: center;
   padding: 20px;
@@ -97,18 +97,18 @@ body {
 }
 
 .fish-grid {
-  display: flex; /* Change from grid to flexbox */
-  flex-wrap: wrap; /* Allow wrapping of items */
-  justify-content: center; /* Center items horizontally */
-  gap: 20px; /* Add spacing between items */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   max-width: 1200px;
-  margin: 0 auto; /* Center the grid container */
+  margin: 0 auto;
   cursor: inherit;
 }
 
 .column {
-  flex: 1 1 300px; /* Allow columns to grow and shrink, with a base width of 300px */
-  max-width: 400px; /* Limit the maximum width of each column */
+  flex: 1 1 300px;
+  max-width: 400px;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -116,14 +116,14 @@ body {
   cursor: inherit;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content inside the column */
+  align-items: center;
 }
 
 .column h3 {
   margin-bottom: 20px;
   color: #007BFF;
   cursor: inherit;
-  font-size: 1.5rem; /* Większy nagłówek dla czytelności */
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -134,14 +134,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px; /* Stała wysokość dla spójności */
-  width: 100%; /* Pełna szerokość w kolumnie */
+  height: 200px;
+  width: 100%;
   cursor: inherit;
 }
 
 .fish-item img {
   max-width: 100%;
-  max-height: 150px; /* Ograniczenie wysokości obrazka */
+  max-height: 150px;
   width: auto;
   height: auto;
   border-radius: 4px;
@@ -155,7 +155,7 @@ body {
 }
 
 .fish-description {
-  font-size: 0.9rem; /* Większy tekst dla czytelności */
+  font-size: 0.9rem;
   color: #666;
   margin-top: 10px;
   line-height: 1.4;
@@ -166,7 +166,7 @@ body {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1001; /* Ensure modal is above other elements */
+  z-index: 1001;
   left: 0;
   top: 0;
   width: 100%;
@@ -244,8 +244,7 @@ body {
   flex: 1;
   margin: 5px;
   white-space: nowrap;
-  background: none; /* Remove blue background */
-  cursor: pointer; /* Ensure modal buttons have a pointer cursor */
+  background: none;
 }
 
 .modal-footer .login-btn {
@@ -269,18 +268,17 @@ body {
 }
 
 .modal-footer .logout-btn {
-  background-color: #dc3545; /* Red for logout */
+  background-color: #dc3545;
   color: white;
 }
 
 .modal-footer .cancel-btn {
-  background-color: #6c757d; /* Gray for cancel */
+  background-color: #6c757d;
   color: white;
 }
 
-/* Shop Page Design */
 .shop-items {
-  padding-top: 120px; /* Adjusted to ensure it does not overlap with the header */
+  padding-top: 120px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -304,7 +302,7 @@ body {
   margin-bottom: 20px;
   color: #007BFF;
   text-align: center;
-  margin-top: 10px; /* Reduced margin */
+  margin-top: 10px;
 }
 
 .product-grid {
@@ -323,7 +321,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease-out;
-  width: 200px; /* Adjusted width */
+  width: 200px;
 }
 
 .product-item:hover {
@@ -336,17 +334,17 @@ body {
   border-radius: 4px;
   object-fit: contain;
   margin-bottom: 10px;
-  cursor: pointer; /* Ensure product images have a pointer cursor */
+  cursor: pointer;
 }
 
 .product-name {
-  font-size: 1rem; /* Adjusted font size */
+  font-size: 1rem;
   margin: 10px 0;
   color: #007BFF;
 }
 
 .product-price {
-  font-size: 0.9rem; /* Adjusted font size */
+  font-size: 0.9rem;
   color: #333;
   margin-bottom: 10px;
 }
@@ -354,7 +352,7 @@ body {
 .add-to-cart-button {
   padding: 8px 16px;
   font-size: 0.9rem;
-  background-color: #007BFF; /* Default blue for "Dodaj" */
+  background-color: #007BFF; /* Domyślny kolor */
   color: white;
   border: none;
   border-radius: 5px;
@@ -363,33 +361,25 @@ body {
 }
 
 .add-to-cart-button:hover {
-  background-color: #0056b3; /* Darker blue for "Dodaj" hover */
+  background-color: #0056b3;
 }
 
-.add-to-cart-button[style*="background-color: #6ab0ff"] {
-  background-color: #6ab0ff; /* Light blue for "Dodano" */
+/* Usuwamy nadpisywanie dla stanu "Dodano" */
+.add-to-cart-button[style*="background-color: #28a745"] {
+  background-color: #28a745 !important; /* Zielony dla "Dodano" */
 }
 
-.add-to-cart-button[style*="background-color: #6ab0ff"]:hover {
-  background-color: #5a9ae6; /* Slightly darker blue for "Dodano" hover */
+.add-to-cart-button[style*="background-color: #28a745"]:hover {
+  background-color: #218838 !important; /* Ciemniejszy zielony dla hover */
 }
 
-.add-to-cart-button[style*="background-color: #dc3545"] {
-  background-color: #dc3545; /* Red for "Usuń" */
-}
-
-.add-to-cart-button[style*="background-color: #dc3545"]:hover {
-  background-color: #c82333; /* Darker red for "Usuń" hover */
-}
-
-/* Cart Modal Design */
 .cart-modal-content {
   background-color: #fefefe;
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
-  max-width: 600px; /* Ensure consistent width */
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.3s;
@@ -405,17 +395,17 @@ body {
 .cart-modal-content ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px; /* Add spacing below the list */
+  margin-bottom: 20px;
 }
 
 .cart-modal-content ul li {
-  margin-bottom: 10px; /* Add spacing between items */
-  padding: 10px; /* Add padding for better readability */
-  border-bottom: 1px solid #ddd; /* Add a separator between items */
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 .cart-modal-content ul li:last-child {
-  border-bottom: none; /* Remove the separator for the last item */
+  border-bottom: none;
 }
 
 .cart-modal-content button {
@@ -433,10 +423,9 @@ body {
   background-color: #0056b3;
 }
 
-/* Trash Icon Styles */
 .trash-icon {
-  width: 16px; /* Adjust size */
-  height: 16px; /* Adjust size */
+  width: 16px;
+  height: 16px;
   cursor: pointer;
   transition: transform 0.3s ease-out;
 }
@@ -447,17 +436,16 @@ body {
 
 .shop-menu {
   text-align: center;
-  margin: 20px 0 10px; /* Adjusted margin */
+  margin: 20px 0 10px;
 }
 
 .shop-menu ul {
   list-style: none;
   padding: 0;
-  display: inline-block;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; /* Odstępy między przyciskami */
+  gap: 10px;
 }
 
 .shop-menu ul li {
@@ -483,26 +471,24 @@ body {
   color: white;
 }
 
-/* Responsywność dla menu kategorii */
 @media (max-width: 768px) {
   .shop-menu ul {
-    flex-direction: column; /* Ustawienie przycisków w kolumnie */
-    gap: 5px; /* Mniejsze odstępy między przyciskami */
+    flex-direction: column;
+    gap: 5px;
   }
-
   .shop-menu ul li a {
-    width: 100%; /* Przyciski zajmują pełną szerokość */
+    width: 100%;
     text-align: center;
   }
 }
 
 #fish {
   position: absolute;
-  width: 100px; /* Reduced size for better usability */
+  width: 100px;
   height: auto;
   pointer-events: none;
   transition: transform 0.1s ease-out, left 0.1s linear, top 0.1s linear;
-  z-index: 1000; /* Ensure fish is above other elements */
+  z-index: 1000;
 }
 
 .wedki, .przynety {
@@ -551,7 +537,6 @@ body {
   background-color: #c82333;
 }
 
-/* Modernized Product Carousel Styles */
 .product-carousel {
   padding: 60px 5%;
   background: linear-gradient(135deg, #e6f0fa 0%, #f5f5f5 100%);
@@ -595,7 +580,7 @@ body {
 }
 
 .carousel-track .product-item {
-  flex: 0 0 33.33%; /* Show 3 items at a time */
+  flex: 0 0 33.33%;
   max-width: 33.33%;
   box-sizing: border-box;
   padding: 15px;
@@ -701,176 +686,58 @@ body {
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Media Queries */
-
-/* Tablet: 768px - 1023px */
 @media screen and (max-width: 1023px) and (min-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .fish-atlas, .fishing-spots {
-    padding: 60px 5% 20px;
-  }
-  .fish-atlas h2, .fishing-spots h1 {
-    font-size: 2rem;
-  }
-  .fish-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolumny na tablecie */
-  }
-  .fish-grid .column:nth-child(3) {
-    grid-column: span 2; /* Trzecia kolumna na całą szerokość poniżej */
-  }
-  .column {
-    padding: 15px;
-  }
-  .column h3 {
-    font-size: 1.2rem;
-  }
-  .fish-item {
-    height: 180px; /* Mniejsza wysokość dla tabletu */
-  }
-  .fish-item img {
-    max-height: 130px; /* Mniejszy obrazek */
-  }
-  .fish-description {
-    font-size: 0.85rem;
-  }
-  .fishing-spots p {
-    font-size: 1rem;
-  }
-  #map {
-    height: 400px;
-  }
-  .footer {
-    padding: 15px;
-    font-size: 0.9rem;
-  }
-  .shop-items {
-    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 kolumny */
-  }
-  .product-grid {
-    gap: 15px;
-  }
-  .product-item {
-    width: 180px;
-  }
-  .carousel-track .product-item {
-    flex: 0 0 50%; /* 2 items na tablecie */
-    max-width: 50%;
-  }
-  .carousel-title {
-    font-size: 2rem;
-  }
-  .product-carousel {
-    padding: 40px 3%;
-  }
-  .filters {
-    gap: 10px;
-  }
+  .hero h1 { font-size: 2.5rem; }
+  .hero p { font-size: 1rem; }
+  .fish-atlas, .fishing-spots { padding: 60px 5% 20px; }
+  .fish-atlas h2, .fishing-spots h1 { font-size: 2rem; }
+  .fish-grid { grid-template-columns: repeat(2, 1fr); }
+  .fish-grid .column:nth-child(3) { grid-column: span 2; }
+  .column { padding: 15px; }
+  .column h3 { font-size: 1.2rem; }
+  .fish-item { height: 180px; }
+  .fish-item img { max-height: 130px; }
+  .fish-description { font-size: 0.85rem; }
+  .fishing-spots p { font-size: 1rem; }
+  #map { height: 400px; }
+  .footer { padding: 15px; font-size: 0.9rem; }
+  .shop-items { grid-template-columns: repeat(2, minmax(250px, 1fr)); }
+  .product-grid { gap: 15px; }
+  .product-item { width: 180px; }
+  .carousel-track .product-item { flex: 0 0 50%; max-width: 50%; }
+  .carousel-title { font-size: 2rem; }
+  .product-carousel { padding: 40px 3%; }
+  .filters { gap: 10px; }
 }
 
-/* Mobile: ≤767px */
 @media screen and (max-width: 767px) {
-  .hero {
-    height: 80vh;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 0.9rem;
-  }
-  .fish-atlas, .fishing-spots {
-    padding: 50px 3% 20px;
-  }
-  .fish-atlas h2, .fishing-spots h1 {
-    font-size: 1.5rem;
-  }
-  .fish-grid {
-    grid-template-columns: 1fr; /* 1 kolumna na mobile */
-  }
-  .column {
-    padding: 10px;
-  }
-  .column h3 {
-    font-size: 1rem;
-  }
-  .fish-item {
-    height: 150px; /* Jeszcze mniejsza wysokość dla mobile */
-  }
-  .fish-item img {
-    max-height: 100px; /* Jeszcze mniejszy obrazek */
-  }
-  .fish-description {
-    font-size: 0.8rem;
-  }
-  .fishing-spots p {
-    font-size: 0.9rem;
-  }
-  .footer {
-    padding: 10px;
-    font-size: 0.8rem;
-    position: relative;
-  }
-  .shop-items {
-    grid-template-columns: 1fr; /* 1 kolumna */
-    padding-top: 80px;
-  }
-  .product-grid {
-    gap: 10px;
-  }
-  .product-item {
-    width: 100%;
-    max-width: 300px;
-  }
-  .carousel-track .product-item {
-    flex: 0 0 100%; /* 1 item na mobile */
-    max-width: 100%;
-  }
-  .carousel-title {
-    font-size: 1.5rem;
-  }
-  .product-carousel {
-    padding: 30px 2%;
-  }
-  .carousel-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
-  }
-  .filters {
-    flex-direction: column;
-    align-items: center;
-  }
-  .filters input, .filters select, .filters button {
-    width: 100%;
-    max-width: 300px;
-  }
-  body,
-  .hero,
-  .hero h1,
-  .hero p,
-  .fishing-spots,
-  .fishing-spots h1,
-  .fishing-spots p,
-  .footer,
-  .footer p,
-  .fish-atlas,
-  .fish-atlas h2,
-  .fish-grid,
-  .column,
-  .column h3,
-  .fish-item,
-  .fish-item img {
-    cursor: auto;
-  }
+  .hero { height: 80vh; }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 0.9rem; }
+  .fish-atlas, .fishing-spots { padding: 50px 3% 20px; }
+  .fish-atlas h2, .fishing-spots h1 { font-size: 1.5rem; }
+  .fish-grid { grid-template-columns: 1fr; }
+  .column { padding: 10px; }
+  .column h3 { font-size: 1rem; }
+  .fish-item { height: 150px; }
+  .fish-item img { max-height: 100px; }
+  .fish-description { font-size: 0.8rem; }
+  .fishing-spots p { font-size: 0.9rem; }
+  .footer { padding: 10px; font-size: 0.8rem; position: relative; }
+  .shop-items { grid-template-columns: 1fr; padding-top: 80px; }
+  .product-grid { gap: 10px; }
+  .product-item { width: 100%; max-width: 300px; }
+  .carousel-track .product-item { flex: 0 0 100%; max-width: 100%; }
+  .carousel-title { font-size: 1.5rem; }
+  .product-carousel { padding: 30px 2%; }
+  .carousel-btn { width: 35px; height: 35px; font-size: 1rem; }
+  .filters { flex-direction: column; align-items: center; }
+  .filters input, .filters select, .filters button { width: 100%; max-width: 300px; }
+  body, .hero, .hero h1, .hero p, .fishing-spots, .fishing-spots h1, .fishing-spots p, .footer, .footer p, .fish-atlas, .fish-atlas h2, .fish-grid, .column, .column h3, .fish-item, .fish-item img { cursor: auto; }
 }
 
 .cart-summary {
-  margin-top: 20px; /* Add spacing above the summary */
+  margin-top: 20px;
   padding: 15px;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -907,7 +774,6 @@ body {
   background-color: #0056b3;
 }
 
-/* Cart Item Controls */
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -916,10 +782,17 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
+.cart-item span:first-child {
+  flex: 1;
+  text-align: left;
+}
+
 .cart-item-controls {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 250px; /* Stała szerokość dla kontrolek */
+  justify-content: flex-end;
 }
 
 .cart-item-controls button {
@@ -931,6 +804,8 @@ body {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
+  width: 30px; /* Stała szerokość przycisków */
+  height: 30px;
 }
 
 .cart-item-controls button:hover {
@@ -940,9 +815,22 @@ body {
 .cart-item-controls .quantity {
   font-size: 1rem;
   font-weight: bold;
+  width: 30px; /* Stała szerokość dla ilości */
+  text-align: center;
 }
 
 .cart-item-controls .price {
   font-size: 1rem;
   color: #333;
+  width: 80px; /* Stała szerokość dla ceny */
+  text-align: right;
+}
+
+.cart-item-controls .remove-item {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

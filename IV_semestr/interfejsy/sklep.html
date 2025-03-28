@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=no">
   <title>Bez Ryby Ani Rusz</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/menu.css">
@@ -110,7 +110,15 @@
 
     <section class="wedki" id="wedki">
       <h3 class="category-header">Wędki</h3>
-      <div class="product-grid" id="wedki-grid"></div>
+      <div class="product-grid" id="wedki-grid">
+        <!-- Przykładowy produkt -->
+        <div class="product-item">
+          <img src="images/wedka.jpg" alt="Wędka Pro 3000">
+          <p class="product-name">Wędka Pro 3000</p>
+          <p class="product-price">Cena: 184.00 PLN</p>
+          <button class="add-to-cart-button" data-product-id="1" onclick="toggleCart('1', 'Wędka Pro 3000', '184.00', this)">Dodaj do koszyka</button>
+        </div>
+      </div>
     </section>
 
     <section class="przynety" id="przynety">
