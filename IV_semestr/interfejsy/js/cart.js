@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const productId = button.getAttribute('data-product-id');
       const inCart = cart.some(item => String(item.id) === String(productId));
       console.log(`Button productId: ${productId}, inCart: ${inCart}`);
-      button.textContent = inCart ? 'Dodano do koszyka' : 'Dodaj do koszyka';
-      button.style.backgroundColor = inCart ? '#4682b4' : '#007BFF'; // Nowy odcień niebieskiego
+      button.textContent = inCart ? 'Usuń z koszyka' : 'Dodaj do koszyka';
+      button.style.backgroundColor = inCart ? '#dc3545' : '#007BFF'; // Nowy odcień niebieskiego
       button.style.transition = 'background-color 0.3s';
       button.dataset.inCart = inCart;
     });
