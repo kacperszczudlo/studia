@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   cursor: url('/images/worm.png') 8 8, auto; /* Custom cursor */
+  overflow: auto; /* Allow scrolling on mobile and tablet devices */
 }
 
 .hero {
@@ -96,15 +97,18 @@ body {
 }
 
 .fish-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 kolumny na desktopie */
-  gap: 20px;
+  display: flex; /* Change from grid to flexbox */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Add spacing between items */
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the grid container */
   cursor: inherit;
 }
 
 .column {
+  flex: 1 1 300px; /* Allow columns to grow and shrink, with a base width of 300px */
+  max-width: 400px; /* Limit the maximum width of each column */
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -112,7 +116,7 @@ body {
   cursor: inherit;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Wyśrodkowanie zawartości */
+  align-items: center; /* Center content inside the column */
 }
 
 .column h3 {
@@ -241,6 +245,7 @@ body {
   margin: 5px;
   white-space: nowrap;
   background: none; /* Remove blue background */
+  cursor: pointer; /* Ensure modal buttons have a pointer cursor */
 }
 
 .modal-footer .login-btn {
@@ -331,6 +336,7 @@ body {
   border-radius: 4px;
   object-fit: contain;
   margin-bottom: 10px;
+  cursor: pointer; /* Ensure product images have a pointer cursor */
 }
 
 .product-name {
@@ -346,9 +352,9 @@ body {
 }
 
 .add-to-cart-button {
-  padding: 8px 16px; /* Adjusted padding */
-  font-size: 0.9rem; /* Adjusted font size */
-  background-color: #007BFF; /* Changed to blue to match app theme */
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background-color: #007BFF; /* Default blue for "Dodaj" */
   color: white;
   border: none;
   border-radius: 5px;
@@ -357,7 +363,23 @@ body {
 }
 
 .add-to-cart-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; /* Darker blue for "Dodaj" hover */
+}
+
+.add-to-cart-button[style*="background-color: #6ab0ff"] {
+  background-color: #6ab0ff; /* Light blue for "Dodano" */
+}
+
+.add-to-cart-button[style*="background-color: #6ab0ff"]:hover {
+  background-color: #5a9ae6; /* Slightly darker blue for "Dodano" hover */
+}
+
+.add-to-cart-button[style*="background-color: #dc3545"] {
+  background-color: #dc3545; /* Red for "Usuń" */
+}
+
+.add-to-cart-button[style*="background-color: #dc3545"]:hover {
+  background-color: #c82333; /* Darker red for "Usuń" hover */
 }
 
 /* Cart Modal Design */
@@ -367,7 +389,7 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
-  max-width: 600px;
+  max-width: 600px; /* Ensure consistent width */
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.3s;
@@ -383,16 +405,17 @@ body {
 .cart-modal-content ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Add spacing below the list */
 }
 
 .cart-modal-content ul li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px; /* Add spacing between items */
+  padding: 10px; /* Add padding for better readability */
+  border-bottom: 1px solid #ddd; /* Add a separator between items */
 }
 
 .cart-modal-content ul li:last-child {
-  border-bottom: none;
+  border-bottom: none; /* Remove the separator for the last item */
 }
 
 .cart-modal-content button {
@@ -431,27 +454,51 @@ body {
   list-style: none;
   padding: 0;
   display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Odstępy między przyciskami */
 }
 
 .shop-menu ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0;
 }
 
 .shop-menu ul li a {
-  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #007BFF;
   color: #007BFF;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
-.shop-menu ul li a:hover {
-  color: #0056b3;
+.shop-menu ul li a:hover,
+.shop-menu ul li a.active {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Responsywność dla menu kategorii */
+@media (max-width: 768px) {
+  .shop-menu ul {
+    flex-direction: column; /* Ustawienie przycisków w kolumnie */
+    gap: 5px; /* Mniejsze odstępy między przyciskami */
+  }
+
+  .shop-menu ul li a {
+    width: 100%; /* Przyciski zajmują pełną szerokość */
+    text-align: center;
+  }
 }
 
 #fish {
   position: absolute;
-  width: 100px;
+  width: 100px; /* Reduced size for better usability */
   height: auto;
   pointer-events: none;
   transition: transform 0.1s ease-out, left 0.1s linear, top 0.1s linear;
@@ -820,4 +867,82 @@ body {
   .fish-item img {
     cursor: auto;
   }
+}
+
+.cart-summary {
+  margin-top: 20px; /* Add spacing above the summary */
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cart-summary p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.cart-summary .total-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+#checkoutBtn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#checkoutBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Cart Item Controls */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-controls button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.cart-item-controls button:hover {
+  background-color: #0056b3;
+}
+
+.cart-item-controls .quantity {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-item-controls .price {
+  font-size: 1rem;
+  color: #333;
 }

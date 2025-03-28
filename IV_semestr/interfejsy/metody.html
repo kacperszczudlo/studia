@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Bez Ryby Ani Rusz - Metody Wędkowania</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/menu.css">
@@ -166,6 +166,12 @@
     .filter-btn:hover, .filter-btn.active {
       background-color: #007BFF;
       color: white;
+    }
+
+    @media (max-width: 1023px) {
+      #fish {
+        display: none; /* Hide the fish cursor on mobile and tablet */
+      }
     }
   </style>
   <script src="/js/methods.js"></script> <!-- Added reference to methods.js -->

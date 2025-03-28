@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Bez Ryby Ani Rusz - Łowiska</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/menu.css">
@@ -14,6 +14,11 @@
     .logo a {
       text-decoration: none;
       color: inherit;
+    }
+    @media (max-width: 1023px) {
+      #fish {
+        display: none; /* Hide the fish cursor on mobile and tablet */
+      }
     }
   </style>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk917fRIFg03UUE0BghFKPpvnSFxiYqh4&callback=initMap" async defer></script>

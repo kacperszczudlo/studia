@@ -1,11 +1,7 @@
 // script.js
-// Zablokowanie alertów w przeglądarce
 const originalAlert = window.alert;
-window.alert = function(message) {
-  return null;
-};
+window.alert = function(message) { return null; };
 
-// Globalne zmienne i funkcje dla koszyka
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartCountElement = document.getElementById('cart-count');
 
@@ -24,92 +20,160 @@ window.updateCartCount = function() {
   }
 };
 
-window.toggleCart = function(productId, productName, productPrice, button) {
-  const existingItemIndex = cart.findIndex(item => item.id === productId);
+window.updateCartCount();
 
-  if (button.textContent === 'Dodano do koszyka') {
-    if (existingItemIndex !== -1) {
-      cart.splice(existingItemIndex, 1);
-      button.style.backgroundColor = '#007BFF';
-      button.style.color = '#fff';
-      button.textContent = 'Dodaj do koszyka';
-    }
-  } else if (button.textContent === 'Dodaj do koszyka') {
-    if (existingItemIndex === -1) {
-      cart.push({
-        id: productId,
-        name: productName,
-        price: parseFloat(productPrice),
-        quantity: 1
-      });
-      button.style.backgroundColor = '#6ab0ff';
-      button.style.color = '#fff';
-      button.textContent = 'Dodano do koszyka';
-    }
+window.toggleCart = function(productId, productName, productPrice, button) {
+  const productIndex = cart.findIndex(item => item.id === productId);
+
+  if (productIndex === -1) {
+    // Dodaj produkt do koszyka
+    cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+    button.textContent = 'Usuń z koszyka';
+    button.style.backgroundColor = '#dc3545'; // Czerwony kolor
+  } else {
+    // Usuń produkt z koszyka
+    cart.splice(productIndex, 1);
+    button.textContent = 'Dodaj do koszyka';
+    button.style.backgroundColor = '#007BFF'; // Niebieski kolor
   }
 
   window.saveCart();
+  window.updateCartButtons(); // Synchronizuj przyciski
 };
 
-// Inicjalizacja licznika koszyka
-window.updateCartCount();
+window.updateCartButtons = function() {
+  const buttons = document.querySelectorAll('.add-to-cart-button');
+  buttons.forEach(button => {
+    const productId = button.getAttribute('data-product-id');
+    const isInCart = cart.some(item => item.id === productId);
 
-// Obsługa menu hamburgera
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  });
-}
-
-// Aktywacja linku na podstawie aktualnej strony
-const currentPage = window.location.pathname.split('/').pop();
-const links = document.querySelectorAll('.nav-links li a');
-
-if (links.length > 0) {
-  links.forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
+    if (isInCart) {
+      button.textContent = 'Usuń z koszyka';
+      button.style.backgroundColor = '#dc3545'; // Czerwony kolor
+    } else {
+      button.textContent = 'Dodaj do koszyka';
+      button.style.backgroundColor = '#007BFF'; // Niebieski kolor
     }
   });
-}
+};
 
-// Funkcja do pobierania danych z Wikipedii
-async function fetchFishData(fishName) {
-  try {
-    const response = await fetch(
-      `https://pl.wikipedia.org/w/api.php?action=query&prop=extracts&titles=${encodeURIComponent(fishName)}&format=json&origin=*`
-    );
-    const data = await response.json();
-    const page = Object.values(data.query.pages)[0];
-    return page.extract ? page.extract : "Brak opisu dla tej ryby w Wikipedii.";
-  } catch (error) {
-    console.error(`Błąd podczas pobierania danych dla ${fishName}:`, error);
-    return "Wystąpił błąd podczas ładowania opisu.";
+window.updateCartModal = function() {
+  const cartItemsContainer = document.getElementById('cartItems');
+  const totalAmountElement = document.querySelector('.total-amount');
+
+  if (!cartItemsContainer || !totalAmountElement) return;
+
+  cartItemsContainer.innerHTML = '';
+  let totalAmount = 0;
+
+  cart.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('cart-item');
+    listItem.innerHTML = `
+      <span>${item.name}</span>
+      <div class="cart-item-controls">
+        <button class="decrease-btn" data-product-id="${item.id}">-</button>
+        <span class="quantity">${item.quantity}</span>
+        <button class="increase-btn" data-product-id="${item.id}">+</button>
+        <span class="price">${(item.price * item.quantity).toFixed(2)} PLN</span>
+      </div>
+    `;
+    cartItemsContainer.appendChild(listItem);
+
+    totalAmount += item.price * item.quantity;
+  });
+
+  totalAmountElement.textContent = `${totalAmount.toFixed(2)} PLN`;
+
+  // Obsługa przycisków "+" i "-"
+  document.querySelectorAll('.increase-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const productId = button.getAttribute('data-product-id');
+      const product = cart.find(item => item.id === productId);
+      if (product) {
+        product.quantity++;
+        window.saveCart();
+        window.updateCartModal();
+      }
+    });
+  });
+
+  document.querySelectorAll('.decrease-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const productId = button.getAttribute('data-product-id');
+      const product = cart.find(item => item.id === productId);
+      if (product) {
+        product.quantity--;
+        if (product.quantity <= 0) {
+          cart = cart.filter(item => item.id !== productId);
+        }
+        window.saveCart();
+        window.updateCartModal();
+      }
+    });
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const staticReviews = [
+    { name: "Jan Kowalski", body: "Świetna wędka, bardzo dobrze leży w ręce i jest wytrzymała. Polecam każdemu wędkarzowi!", avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}` },
+    { name: "Anna Nowak", body: "Przynęta działa rewelacyjnie, ryby biorą jak szalone. Na pewno kupię więcej!", avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}` },
+    { name: "Piotr Wiśniewski", body: "Produkt godny polecenia, jakość wykonania na wysokim poziomie. Idealny na długie wyprawy.", avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}` },
+    { name: "Katarzyna Zielińska", body: "Trochę droga, ale warta swojej ceny. Sprawdza się na każdym łowisku!", avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}` },
+    { name: "Marek Dudek", body: "Super sprzęt, łatwy w obsłudze i skuteczny. Ryby same się proszą o złapanie!", avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}` },
+    { name: "Ewa Malinowska", body: "Bardzo szybka dostawa, a produkt dokładnie taki, jak w opisie. Jestem zadowolona.", avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}` },
+    { name: "Tomasz Lewandowski", body: "Solidna konstrukcja, nic się nie psuje nawet po wielu użyciach. Polecam!", avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}` },
+    { name: "Magdalena Kwiatkowska", body: "Najlepsza przynęta, jaką miałam. Efekty widoczne od razu po zarzuceniu!", avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}` },
+  ];
+
+  function displayReviews(reviews) {
+    const reviewsContainer = document.getElementById('reviews-container');
+    if (reviewsContainer) {
+      reviews.forEach(review => {
+        const reviewElement = document.createElement('div');
+        reviewElement.className = 'review';
+        reviewElement.innerHTML = `
+          <img src="${review.avatar}" alt="${review.name}">
+          <p><strong>${review.name}:</strong> ${review.body}</p>
+        `;
+        reviewsContainer.appendChild(reviewElement);
+      });
+    }
   }
-}
 
-// Funkcje walidacyjne
-function validateUsername(username) {
-  return username.length >= 3 && /^[a-zA-Z0-9_]+$/.test(username);
-}
+  displayReviews(staticReviews);
 
-function validatePassword(password) {
-  return password.length >= 6 && /[A-Z]/.test(password) && /[0-9]/.test(password);
-}
+  const scrollTrack = document.getElementById('scroll-track');
+  const scrollLeftBtn = document.getElementById('scroll-left');
+  const scrollRightBtn = document.getElementById('scroll-right');
 
-function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+  if (scrollTrack && scrollLeftBtn && scrollRightBtn) {
+    const itemWidth = 320;
+    let currentPosition = 0;
+    const maxPosition = (scrollTrack.children.length - 3) * itemWidth;
 
-// Animacja rybki i ładowanie opisów ryb
-document.addEventListener('DOMContentLoaded', async () => {
+    function updateButtons() {
+      scrollLeftBtn.classList.toggle('hidden', currentPosition <= 0);
+      scrollRightBtn.classList.toggle('hidden', currentPosition >= maxPosition);
+    }
+
+    scrollLeftBtn.addEventListener('click', () => {
+      currentPosition = Math.max(currentPosition - itemWidth, 0);
+      scrollTrack.style.transform = `translateX(-${currentPosition}px)`;
+      updateButtons();
+    });
+
+    scrollRightBtn.addEventListener('click', () => {
+      currentPosition = Math.min(currentPosition + itemWidth, maxPosition);
+      scrollTrack.style.transform = `translateX(-${currentPosition}px)`;
+      updateButtons();
+    });
+
+    updateButtons();
+  }
+
   const fish = document.getElementById('fish');
   const navbar = document.querySelector('.navbar');
-
   if (fish && navbar) {
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
@@ -159,7 +223,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     animateFish();
   }
 
-  // Logika logowania
   const loginIcon = document.getElementById('loginIcon');
   const loginModal = document.getElementById('loginModal');
   const closeLoginModal = document.querySelector('#loginModal .close');
@@ -241,16 +304,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
       }
 
-      if (!validateUsername(username)) {
-        loginError.textContent = 'Nazwa użytkownika musi mieć co najmniej 3 znaki i zawierać tylko litery, cyfry lub "_".';
-        return;
-      }
-
-      if (!validatePassword(password)) {
-        loginError.textContent = 'Hasło musi mieć co najmniej 6 znaków, zawierać dużą literę i cyfrę.';
-        return;
-      }
-
       const storedUsername = localStorage.getItem('username');
       const storedPassword = localStorage.getItem('password');
 
@@ -275,28 +328,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function updateUserInterface() {
       const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-      console.log('Updating UI, isLoggedIn:', isLoggedIn);
-
       if (isLoggedIn) {
-        console.log('Setting logged-in icon');
         loginIcon.src = 'images/user-logged-in.png';
         loginIcon.alt = 'Wyloguj';
-        loginIcon.style.display = 'block';
       } else {
-        console.log('Setting logged-out icon');
         loginIcon.src = 'images/user.png';
         loginIcon.alt = 'Login';
-        loginIcon.style.display = 'block';
       }
-
-      loginIcon.onerror = () => {
-        console.error('Failed to load image:', loginIcon.src);
-        loginIcon.src = 'images/user.png';
-      };
     }
 
     window.logout = function() {
-      console.log('Logging out');
       localStorage.removeItem('isLoggedIn');
       localStorage.removeItem('username');
       localStorage.removeItem('password');
@@ -307,7 +348,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateUserInterface();
   }
 
-  // Logika rejestracji
   const registerBtn = document.querySelector('#loginModal .register-btn');
   const registerModal = document.getElementById('registerModal');
   const closeRegisterModal = document.querySelector('#registerModal .close');
@@ -319,7 +359,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (registerBtn && registerModal && closeRegisterModal) {
     registerModal.querySelector('.modal-body').appendChild(registerError);
 
-    // Sprawdzenie i dodanie pola "Powtórz hasło" jeśli nie istnieje
     let repeatPasswordInput = registerModal.querySelector('input[placeholder="Powtórz hasło"]');
     if (!repeatPasswordInput) {
       repeatPasswordInput = document.createElement('input');
@@ -346,8 +385,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         registerModal.style.display = 'none';
         registerError.textContent = '';
       });
-    } else {
-      console.error('Cancel button not found in register modal');
     }
 
     window.addEventListener('click', (event) => {
@@ -372,26 +409,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
       }
 
-      if (!validateUsername(username)) {
-        registerError.textContent = 'Nazwa użytkownika musi mieć co najmniej 3 znaki i zawierać tylko litery, cyfry lub "_".';
-        return;
-      }
-
-      if (!validateEmail(email)) {
-        registerError.textContent = 'Proszę podać poprawny adres email.';
-        return;
-      }
-
-      if (!validatePassword(password)) {
-        registerError.textContent = 'Hasło musi mieć co najmniej 6 znaków, zawierać dużą literę i cyfrę.';
-        return;
-      }
-
-      if (password !== repeatPassword) {
-        registerError.textContent = 'Hasła nie są zgodne.';
-        return;
-      }
-
       localStorage.setItem('username', username);
       localStorage.setItem('password', password);
       localStorage.setItem('isLoggedIn', 'true');
@@ -401,52 +418,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
   }
 
-  // Obsługa przewijania do sekcji
-  const shopMenuLinks = document.querySelectorAll('.shop-menu ul li a');
-  if (shopMenuLinks.length > 0) {
-    shopMenuLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          const navbarHeight = document.querySelector('.navbar').offsetHeight;
-          const targetPosition = targetSection.offsetTop - navbarHeight;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  }
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
-  // Dynamiczne ładowanie opisów ryb z Wikipedii
-  const fishImages = document.querySelectorAll('.fish-image');
-  const fishInfoModal = document.getElementById('fishInfoModal');
-  const fishInfoModalHeader = document.getElementById('fishInfoModalHeader');
-  const fishInfoModalBody = document.getElementById('fishInfoModalBody');
-  const closeFishInfoModal = fishInfoModal?.querySelector('.close');
-
-  if (fishImages.length > 0 && fishInfoModal && closeFishInfoModal) {
-    for (let image of fishImages) {
-      const fishName = image.getAttribute('data-fish-name');
-      image.addEventListener('click', async () => {
-        const description = await fetchFishData(fishName);
-        fishInfoModalHeader.textContent = fishName;
-        fishInfoModalBody.innerHTML = description;
-        fishInfoModal.style.display = 'block';
-      });
-    }
-
-    closeFishInfoModal.addEventListener('click', () => {
-      fishInfoModal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-      if (event.target === fishInfoModal) {
-        fishInfoModal.style.display = 'none';
-      }
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
     });
   }
 });

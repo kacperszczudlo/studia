@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Bez Ryby Ani Rusz</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/menu.css">
@@ -52,6 +52,11 @@
       color: #007BFF;
       margin-top: 20px;
       margin-bottom: 10px;
+    }
+    @media (max-width: 1023px) {
+      #fish {
+        display: none; /* Hide the fish cursor on mobile and tablet */
+      }
     }
   </style>
   <!-- Dołączamy script.js i cart.js w head, ale shop.js na końcu body -->
@@ -192,8 +197,13 @@
       <span class="close">×</span>
       <h2>Koszyk</h2>
       <ul id="cartItems">
-        <!-- Cart items will be displayed here -->
+        <!-- Elementy koszyka będą generowane dynamicznie -->
+        <!-- Każdy element będzie zawierał nazwę produktu, przyciski "+" i "-", ilość oraz cenę -->
       </ul>
+      <div class="cart-summary">
+        <p>Łączna kwota do zapłaty:</p>
+        <p class="total-amount">0.00 PLN</p>
+      </div>
       <button id="checkoutBtn">Do kasy</button>
     </div>
   </div>
@@ -214,39 +224,23 @@
   <script src="/js/shop.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
+      const navbarHeight = document.querySelector('.navbar').offsetHeight;
 
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-      });
+      document.querySelectorAll('.shop-menu ul li a').forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
 
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      const productGrid = document.getElementById('product-grid');
-
-      filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          // Zmień aktywny przycisk
-          filterButtons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-
-          // Filtruj produkty
-          const filter = button.getAttribute('data-filter');
-          const products = document.querySelectorAll('.product-item');
-
-          products.forEach(product => {
-            if (filter === 'all' || product.dataset.category === filter) {
-              product.style.display = 'block';
-            } else {
-              product.style.display = 'none';
-            }
-          });
+          if (targetElement) {
+            const targetPosition = targetElement.offsetTop - navbarHeight - 10; // Offset for navbar and spacing
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
         });
       });
-
-      // Wyświetl produkty
-      displayProducts();
     });
   </script>
 </body>
