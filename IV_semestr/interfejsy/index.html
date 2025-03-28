@@ -284,20 +284,5 @@
 
   <img id="fish" src="images/fish.png" alt="Rybka" />
   <script src="/js/home.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-
-      if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-          hamburger.classList.toggle('active');
-          navLinks.classList.toggle('active');
-        });
-      } else {
-        console.error('Hamburger menu or nav-links not found.');
-      }
-    });
-  </script>
 </body>
 </html>

@@ -736,6 +736,13 @@ body {
   body, .hero, .hero h1, .hero p, .fishing-spots, .fishing-spots h1, .fishing-spots p, .footer, .footer p, .fish-atlas, .fish-atlas h2, .fish-grid, .column, .column h3, .fish-item, .fish-item img { cursor: auto; }
 }
 
+/* Hide fish cursor on tablet and mobile */
+@media (max-width: 1023px) {
+  #fish {
+    display: none;
+  }
+}
+
 .cart-summary {
   margin-top: 20px;
   padding: 15px;

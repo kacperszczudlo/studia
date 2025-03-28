@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bez Ryby Ani Rusz</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/menu.css">
@@ -53,9 +53,19 @@
       margin-top: 20px;
       margin-bottom: 10px;
     }
-    @media (max-width: 1023px) {
-      #fish {
-        display: none; /* Hide the fish cursor on mobile and tablet */
+    /* Two-column layout for tablets (768px–1023px) */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 15px;
+        justify-items: center;
+      }
+      .product-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 0;
       }
     }
   </style>
@@ -110,15 +120,7 @@
 
     <section class="wedki" id="wedki">
       <h3 class="category-header">Wędki</h3>
-      <div class="product-grid" id="wedki-grid">
-        <!-- Przykładowy produkt -->
-        <div class="product-item">
-          <img src="images/wedka.jpg" alt="Wędka Pro 3000">
-          <p class="product-name">Wędka Pro 3000</p>
-          <p class="product-price">Cena: 184.00 PLN</p>
-          <button class="add-to-cart-button" data-product-id="1" onclick="toggleCart('1', 'Wędka Pro 3000', '184.00', this)">Dodaj do koszyka</button>
-        </div>
-      </div>
+      <div class="product-grid" id="wedki-grid"></div>
     </section>
 
     <section class="przynety" id="przynety">
@@ -204,14 +206,8 @@
     <div class="cart-modal-content">
       <span class="close">×</span>
       <h2>Koszyk</h2>
-      <ul id="cartItems">
-        <!-- Elementy koszyka będą generowane dynamicznie -->
-        <!-- Każdy element będzie zawierał nazwę produktu, przyciski "+" i "-", ilość oraz cenę -->
-      </ul>
-      <div class="cart-summary">
-        <p>Łączna kwota do zapłaty:</p>
-        <p class="total-amount">0.00 PLN</p>
-      </div>
+      <ul id="cartItems"></ul>
+      <div class="cart-summary"></div>
       <button id="checkoutBtn">Do kasy</button>
     </div>
   </div>
@@ -232,23 +228,25 @@
   <script src="/js/shop.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const navbarHeight = document.querySelector('.navbar').offsetHeight;
-
-      document.querySelectorAll('.shop-menu ul li a').forEach(link => {
-        link.addEventListener('click', event => {
-          event.preventDefault();
-          const targetId = link.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-
-          if (targetElement) {
-            const targetPosition = targetElement.offsetTop - navbarHeight - 10; // Offset for navbar and spacing
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-            });
-          }
+      const shopMenuLinks = document.querySelectorAll('.shop-menu ul li a');
+      if (shopMenuLinks.length > 0) {
+        shopMenuLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+              const navbarHeight = document.querySelector('.navbar').offsetHeight;
+              const offset = 20; // Additional offset to ensure visibility
+              const targetPosition = targetSection.offsetTop - navbarHeight - offset;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
         });
-      });
+      }
     });
   </script>
 </body>
