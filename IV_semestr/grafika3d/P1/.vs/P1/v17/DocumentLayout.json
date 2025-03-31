@@ -3,27 +3,16 @@
   "WorkspaceRootPath": "D:\\studia\\IV_semestr\\grafika3d\\P1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\przyklad1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\przyklad2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\BibliotekiOpenGL\\lib\\GLAD\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,80 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "zad1.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.cpp",
-              "RelativeDocumentMoniker": "P1\\zad1.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.cpp",
-              "RelativeToolTip": "P1\\zad1.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "Title": "zad2.3.cpp",
+              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp",
+              "RelativeDocumentMoniker": "P1\\zad2.3.cpp",
+              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp",
+              "RelativeToolTip": "P1\\zad2.3.cpp",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAiwIoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T14:44:25.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "zad2.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.cpp",
-              "RelativeDocumentMoniker": "P1\\zad2.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.cpp",
-              "RelativeToolTip": "P1\\zad2.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T17:02:40.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "zad3.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp",
-              "RelativeDocumentMoniker": "P1\\zad3.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad3.cpp",
-              "RelativeToolTip": "P1\\zad3.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T17:10:31.643Z",
+              "WhenOpened": "2025-03-31T22:40:26.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "przyklad2.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.cpp",
-              "RelativeDocumentMoniker": "P1\\przyklad2.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.cpp",
-              "RelativeToolTip": "P1\\przyklad2.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAABsAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "zad2.2.cpp",
+              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp",
+              "RelativeDocumentMoniker": "P1\\zad2.2.cpp",
+              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp",
+              "RelativeToolTip": "P1\\zad2.2.cpp",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAiwI0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T17:02:11.048Z"
+              "WhenOpened": "2025-03-31T22:40:08.554Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "przyklad1.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad1.cpp",
-              "RelativeDocumentMoniker": "P1\\przyklad1.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad1.cpp",
-              "RelativeToolTip": "P1\\przyklad1.cpp",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAiwMAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "zad2.1.cpp",
+              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp",
+              "RelativeDocumentMoniker": "P1\\zad2.1.cpp",
+              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp",
+              "RelativeToolTip": "P1\\zad2.1.cpp",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAiwIQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T16:53:29.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "glad.c",
-              "DocumentMoniker": "D:\\BibliotekiOpenGL\\lib\\GLAD\\glad.c",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\BibliotekiOpenGL\\lib\\GLAD\\glad.c",
-              "ToolTip": "D:\\BibliotekiOpenGL\\lib\\GLAD\\glad.c",
-              "RelativeToolTip": "..\\..\\..\\..\\BibliotekiOpenGL\\lib\\GLAD\\glad.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-03-05T14:45:32.546Z"
+              "WhenOpened": "2025-03-31T22:38:57.41Z",
+              "EditorCaption": ""
             }
           ]
         }
