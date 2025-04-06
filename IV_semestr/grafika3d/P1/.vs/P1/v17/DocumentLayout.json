@@ -1,18 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\studia\\IV_semestr\\grafika3d\\P1\\",
+  "WorkspaceRootPath": "C:\\studia\\IV_semestr\\grafika3d\\P1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\przyklad2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad1.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\przyklad1.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\przyklad2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\fragment_shader.fs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\fragment_shader.fs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\vertex_shader.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\vertex_shader.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\zad1.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F5DECC0-E556-4B25-99BE-DC3304636698}|P1\\P1.vcxproj|solutionrelative:P1\\przyklad2.3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +50,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "zad2.3.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp",
-              "RelativeDocumentMoniker": "P1\\zad2.3.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp",
-              "RelativeToolTip": "P1\\zad2.3.cpp",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAiwIoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "przyklad2.2.cpp",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.2.cpp",
+              "RelativeDocumentMoniker": "P1\\przyklad2.2.cpp",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.2.cpp",
+              "RelativeToolTip": "P1\\przyklad2.2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-31T22:40:26.336Z",
+              "WhenOpened": "2025-04-02T10:20:35.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "przyklad2.3.cpp",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.3.cpp",
+              "RelativeDocumentMoniker": "P1\\przyklad2.3.cpp",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.3.cpp",
+              "RelativeToolTip": "P1\\przyklad2.3.cpp",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-02T10:14:45.823Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "zad2.2.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp",
               "RelativeDocumentMoniker": "P1\\zad2.2.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.2.cpp",
               "RelativeToolTip": "P1\\zad2.2.cpp",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAiwI0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-31T22:40:08.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "zad2.3.cpp",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp",
+              "RelativeDocumentMoniker": "P1\\zad2.3.cpp",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.3.cpp",
+              "RelativeToolTip": "P1\\zad2.3.cpp",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAIcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-31T22:40:26.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "zad2.1.cpp",
-              "DocumentMoniker": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp",
               "RelativeDocumentMoniker": "P1\\zad2.1.cpp",
-              "ToolTip": "D:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad2.1.cpp",
               "RelativeToolTip": "P1\\zad2.1.cpp",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAiwIQAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAD4vxEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-31T22:38:57.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "vertex_shader.vs",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\vertex_shader.vs",
+              "RelativeDocumentMoniker": "P1\\vertex_shader.vs",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\vertex_shader.vs",
+              "RelativeToolTip": "P1\\vertex_shader.vs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-02T10:32:11.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "fragment_shader.fs",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\fragment_shader.fs",
+              "RelativeDocumentMoniker": "P1\\fragment_shader.fs",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\fragment_shader.fs",
+              "RelativeToolTip": "P1\\fragment_shader.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-02T10:32:15.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "przyklad2.1.cpp",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.1.cpp",
+              "RelativeDocumentMoniker": "P1\\przyklad2.1.cpp",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad2.1.cpp",
+              "RelativeToolTip": "P1\\przyklad2.1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-02T10:20:36.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "przyklad1.1.cpp",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad1.1.cpp",
+              "RelativeDocumentMoniker": "P1\\przyklad1.1.cpp",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\przyklad1.1.cpp",
+              "RelativeToolTip": "P1\\przyklad1.1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-02T10:31:02.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "zad1.1.cpp",
+              "DocumentMoniker": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.1.cpp",
+              "RelativeDocumentMoniker": "P1\\zad1.1.cpp",
+              "ToolTip": "C:\\studia\\IV_semestr\\grafika3d\\P1\\P1\\zad1.1.cpp",
+              "RelativeToolTip": "P1\\zad1.1.cpp",
+              "ViewState": "AgIAALMAAAAAAAAAAAAIwM8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-02T10:21:02.348Z",
               "EditorCaption": ""
             }
           ]
