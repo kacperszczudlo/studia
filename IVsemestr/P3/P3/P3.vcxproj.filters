@@ -24,35 +24,19 @@
     <ClCompile Include="..\..\..\..\..\..\..\..\BibliotekiOpenGL\lib\GLAD\glad.c">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="lab3zad3.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="p7_2.fs.txt">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
-    <Text Include="p7_2.vs.txt">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
-    <Text Include="p7_1.fs.txt">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
-    <Text Include="p7_1.vs.txt">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
-    <Text Include="..\..\..\..\..\..\Downloads\lab3zad3.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
-    <Text Include="p6_1.fs">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
-    <Text Include="p6_1.vs">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
-    <Text Include="p6_2.fs">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
-    <Text Include="p6_2.vs">
-      <Filter>Pliki źródłowe</Filter>
-    </Text>
+    <Text Include="p6_1.fs" />
+    <Text Include="p6_1.vs" />
+    <Text Include="p6_2.fs" />
+    <Text Include="p6_2.vs" />
+    <Text Include="p7_1.fs" />
+    <Text Include="p7_1.vs" />
+    <Text Include="p7_2.fs" />
+    <Text Include="p7_2.vs" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">

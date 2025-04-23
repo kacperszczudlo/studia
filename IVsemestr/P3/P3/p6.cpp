@@ -3,7 +3,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-#include "../../shader.h"
+#include "shader.h"
 
 #include <iostream>
 
@@ -38,8 +38,8 @@ int main(int argc, char * argv[])
     }
 
     // Zaladowanie, kompilowanie i linkowanie shaderow
-    char vs[] = "../shader/p6_1.vs";
-    char fs[] = "../shader/p6_1.fs";
+    char vs[] = "p6_1.vs";
+    char fs[] = "p6_1.fs";
     if (argc == 2) {
         vs[13] = argv[1][0];
         fs[13] = argv[1][0];
@@ -106,7 +106,7 @@ int main(int argc, char * argv[])
     // width - szerokosc
     // height - wysokosc
     // nrChannels - ilosc kanalow koloru
-    unsigned char* data = stbi_load("../texture/1.jpg", &width, &height, &nrChannels, 0);
+    unsigned char* data = stbi_load("C:\BibliotekiOpenGL\texture\1.jpg", &width, &height, &nrChannels, 0);
     if (data)
     {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);

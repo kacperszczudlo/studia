@@ -1,2 +1,10 @@
-﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: nierozpoznany symbol zewnętrzny main przywołany w funkcji "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\P3\x64\Debug\P3.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 1
+﻿  p6.cpp
+C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\P3\P3\p6.cpp(109,37): warning C4129: „B”: nierozpoznana sekwencja ucieczki znaków
+  p7.cpp
+C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\P3\P3\p7.cpp(107,37): warning C4129: „B”: nierozpoznana sekwencja ucieczki znaków
+C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\P3\P3\p7.cpp(132,22): warning C4129: „B”: nierozpoznana sekwencja ucieczki znaków
+  Generowanie kodu...
+C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\P3\P3\p7.cpp(45,1): error C4789: w funkcji „main” bufor „fs” o rozmiarze 8 bajtów zostanie przekroczony; 1 bajtów zostanie zapisanych począwszy od przesunięcia 13
+C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\P3\P3\p7.cpp(44,1): error C4789: w funkcji „main” bufor „vs” o rozmiarze 8 bajtów zostanie przekroczony; 1 bajtów zostanie zapisanych począwszy od przesunięcia 13
+C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\P3\P3\p6.cpp(45,1): error C4789: w funkcji „main” bufor „fs” o rozmiarze 8 bajtów zostanie przekroczony; 1 bajtów zostanie zapisanych począwszy od przesunięcia 13
+C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\P3\P3\p6.cpp(44,1): error C4789: w funkcji „main” bufor „vs” o rozmiarze 8 bajtów zostanie przekroczony; 1 bajtów zostanie zapisanych począwszy od przesunięcia 13

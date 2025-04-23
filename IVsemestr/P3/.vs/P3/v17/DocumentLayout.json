@@ -3,22 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Downloads\\lab3zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\lab3zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\lab3zad3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\BibliotekiOpenGL\\lib\\GLAD\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p6_1.fs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\p6_1.fs||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p8_1.fs||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\p8_1.fs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\p7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p8_1.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\p8_1.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\BibliotekiOpenGL\\lib\\GLAD\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p8_1.fs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\p8_1.fs||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,10 +36,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p6_1.fs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\p6_1.fs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0C2E17BE-7822-4719-BFF7-1F6F47D610AD}|P3\\P3.vcxproj|solutionrelative:P3\\p7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,11 +45,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 341,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "p6_1.fs",
               "DocumentMoniker": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p6_1.fs",
               "RelativeDocumentMoniker": "P3\\p6_1.fs",
@@ -57,33 +62,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "p7.cpp",
               "DocumentMoniker": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p7.cpp",
               "RelativeDocumentMoniker": "P3\\p7.cpp",
               "ToolTip": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p7.cpp",
               "RelativeToolTip": "P3\\p7.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-23T10:49:27.983Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "p6.cpp",
               "DocumentMoniker": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p6.cpp",
               "RelativeDocumentMoniker": "P3\\p6.cpp",
               "ToolTip": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p6.cpp",
               "RelativeToolTip": "P3\\p6.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAADwv2wAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-23T10:49:15.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "shader.h",
               "DocumentMoniker": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\shader.h",
               "RelativeDocumentMoniker": "P3\\shader.h",
@@ -95,12 +100,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "glad.c",
               "DocumentMoniker": "C:\\BibliotekiOpenGL\\lib\\GLAD\\glad.c",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\BibliotekiOpenGL\\lib\\GLAD\\glad.c",
@@ -113,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "p8_1.vs",
               "DocumentMoniker": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p8_1.vs",
               "RelativeDocumentMoniker": "P3\\p8_1.vs",
@@ -126,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "p8_1.fs",
               "DocumentMoniker": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p8_1.fs",
               "RelativeDocumentMoniker": "P3\\p8_1.fs",
@@ -141,13 +142,26 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "lab3zad3.cpp",
-              "DocumentMoniker": "C:\\Users\\Kacper\\Downloads\\lab3zad3.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\lab3zad3.cpp",
-              "ToolTip": "C:\\Users\\Kacper\\Downloads\\lab3zad3.cpp",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\lab3zad3.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\lab3zad3.cpp",
+              "RelativeDocumentMoniker": "P3\\lab3zad3.cpp",
+              "ToolTip": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\lab3zad3.cpp",
+              "RelativeToolTip": "P3\\lab3zad3.cpp",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAYwLUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-23T11:37:01.225Z",
+              "WhenOpened": "2025-04-23T11:59:12.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "p6_1.fs",
+              "DocumentMoniker": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p6_1.fs",
+              "RelativeDocumentMoniker": "P3\\p6_1.fs",
+              "ToolTip": "C:\\Users\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\P3\\P3\\p6_1.fs",
+              "RelativeToolTip": "P3\\p6_1.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-23T12:09:18.291Z",
               "EditorCaption": ""
             }
           ]

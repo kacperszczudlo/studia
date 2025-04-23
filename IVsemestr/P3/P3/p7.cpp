@@ -3,7 +3,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-#include "../../shader.h"
+#include "shader.h"
 
 #include <iostream>
 
@@ -38,8 +38,8 @@ int main(int argc, char * argv[])
     }
 
     // Zaladowanie, kompilowanie i linkowanie shaderow
-    char vs[] = "../shader/p7_1.vs";
-    char fs[] = "../shader/p7_1.fs";
+    char vs[] = "p7_1.vs";
+    char fs[] = "p7_1.fs";
     if (argc == 2) {
         vs[13] = argv[1][0];
         fs[13] = argv[1][0];
@@ -104,7 +104,7 @@ int main(int argc, char * argv[])
     // zaladowanie tekstury 1 i generacja mip-map
     int width, height, nrChannels;
     stbi_set_flip_vertically_on_load(true); // ustawienie odwrócenia podczas ladowania wzgledem osi y
-    unsigned char* data = stbi_load("../texture/1.jpg", &width, &height, &nrChannels, 0);
+    unsigned char* data = stbi_load("C:\BibliotekiOpenGL\texture\1.jpg", &width, &height, &nrChannels, 0);
     if (data)
     {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
@@ -129,7 +129,7 @@ int main(int argc, char * argv[])
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     // zaladowanie tekstury 2 i generacja mip-map
-    data = stbi_load("../texture/2.png", &width, &height, &nrChannels, 0);
+    data = stbi_load("C:\BibliotekiOpenGL\texture\2.jpg", &width, &height, &nrChannels, 0);
     if (data)
     {
         // tekstura ma kanal przezroczystosci, wiec trzeba poinformowac OpenGL, ze typ danych to GL_RGBA
