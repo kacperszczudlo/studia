@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki źródłowe\shader">
+      <UniqueIdentifier>{c2b4d069-b099-43ae-8e28-7cf76702f239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\texture">
+      <UniqueIdentifier>{13a3fbf2-e1b9-48be-baa4-1b84bfc6031d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\Lib\GLAD\src\glad.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="p5_1.fs">
+      <Filter>Pliki źródłowe\shader</Filter>
+    </None>
+    <None Include="p5_1.vs">
+      <Filter>Pliki źródłowe\shader</Filter>
+    </None>
+    <None Include="p6_1.fs">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+    <None Include="p6_1.vs">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+    <None Include="p6_2.fs">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+    <None Include="p6_2.vs">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+    <None Include="p7_1.fs">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+    <None Include="p7_1.vs">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+    <None Include="p7_2.fs">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+    <None Include="p7_2.vs">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shader.h">
+      <Filter>Pliki źródłowe</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
