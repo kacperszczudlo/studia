@@ -2,7 +2,7 @@
 #define SHADER_H
 
 #include <glad/glad.h>
-#include "C:/Users/Kacper/Documents/GitHub/studia/IVsemestr/grafika3d/materialy/glm/glm/glm.hpp"
+#include "C:\Lib\glm\glm\glm.hpp"
 #include <string>
 #include <fstream>
 #include <sstream>

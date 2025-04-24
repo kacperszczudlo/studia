@@ -1,7 +1,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #define STB_IMAGE_IMPLEMENTATION
-#include "C:\Users\Kacper\Documents\GitHub\studia\IVsemestr\grafika3d\materialy\stb_image.h"
+#include "C:\Lib\stb_image.h"
 #include "../../shader.h"
 
 #include <iostream>
@@ -103,7 +103,7 @@ int main(int argc, char* argv[])
     // zaladowanie tekstury 1 i generacja mip-map
     int width, height, nrChannels;
     stbi_set_flip_vertically_on_load(true); // ustawienie odwrócenia podczas ladowania wzgledem osi y
-    unsigned char* data = stbi_load("C:\\sers\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\grafika3d\\materialy\\1.jpg", &width, &height, &nrChannels, 0);
+    unsigned char* data = stbi_load("C:\\Lib\\images\\1.jpg", &width, &height, &nrChannels, 0);
     if (data)
     {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
@@ -128,7 +128,7 @@ int main(int argc, char* argv[])
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
     // zaladowanie tekstury 2 i generacja mip-map
-    data = stbi_load("C:\\sers\\Kacper\\Documents\\GitHub\\studia\\IVsemestr\\grafika3d\\materialy\\2.png", &width, &height, &nrChannels, 0);
+    data = stbi_load("C:\\Lib\\images\\2.png", &width, &height, &nrChannels, 0);
     if (data)
     {
         // tekstura ma kanal przezroczystosci, wiec trzeba poinformowac OpenGL, ze typ danych to GL_RGBA
