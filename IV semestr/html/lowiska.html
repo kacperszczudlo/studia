@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bez Ryby Ani Rusz - Łowiska</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="icon" type="image/jpeg" href="images/icon.png" sizes="any" class="favicon">
+  <style>
+    .favicon {
+      border-radius: 50%;
+    }
+    .logo a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk917fRIFg03UUE0BghFKPpvnSFxiYqh4&callback=initMap" async defer></script>
+</head>
+<body style="cursor: url('images/worm.png') 8 8, auto;">
+  <!-- Nowoczesne menu -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/icon.png" alt="Logo" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 10px;">
+        Bez Ryby Ani Rusz
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Strona Główna</a></li>
+      <li><a href="ryby.html">Ryby</a></li>
+      <li><a href="metody.html">Metody</a></li>
+      <li><a href="lowiska.html" class="active">Łowiska</a></li>
+      <li><a href="sklep.html">Sklep</a></li>
+    </ul>
+    <div class="icons">
+      <img src="images/user.png" alt="Login" id="loginIcon" style="border-radius: 50%;">
+      <a href="#" id="cartBtn" class="cart-link">
+        <img src="images/shopping-cart.png" alt="Koszyk" class="cart-img">
+        <span id="cart-count" class="cart-count">0</span>
+      </a>
+    </div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <!-- Modal for Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <div class="modal-header">Logowanie</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="password" placeholder="Hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="login-btn" onclick="signIn()">Zaloguj się</button>
+        <button class="register-btn">Zarejestruj się</button>
+      </div>
+      <span class="forgot-password"><a href="#">Nie pamiętasz hasła?</a></span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <!-- Modal for Registration -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <div class="modal-header">Rejestracja</div>
+      <div class="modal-body">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Hasło" required>
+        <input type="password" placeholder="Powtórz hasło" required>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn">Anuluj</button>
+        <button class="register-btn" onclick="register()">Zarejestruj się</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Treść strony łowisk -->
+  <section class="fishing-spots">
+    <h1>Łowiska w Polsce</h1>
+    <p>Odkryj najlepsze miejsca do wędkowania w Polsce na interaktywnej mapie!</p>
+
+    <div class="filters">
+        <input type="text" id="nameFilter" placeholder="Nazwa łowiska (np. Jezioro Białe)">
+        <select id="voivodeshipFilter">
+            <option value="">Wszystkie województwa</option>
+            <option value="Dolnośląskie">Dolnośląskie</option>
+            <option value="Kujawsko-Pomorskie">Kujawsko-Pomorskie</option>
+            <option value="Lubelskie">Lubelskie</option>
+            <option value="Lubuskie">Lubuskie</option>
+            <option value="Łódzkie">Łódzkie</option>
+            <option value="Małopolskie">Małopolskie</option>
+            <option value="Mazowieckie">Mazowieckie</option>
+            <option value="Opolskie">Opolskie</option>
+            <option value="Podkarpackie">Podkarpackie</option>
+            <option value="Podlaskie">Podlaskie</option>
+            <option value="Pomorskie">Pomorskie</option>
+            <option value="Śląskie">Śląskie</option>
+            <option value="Świętokrzyskie">Świętokrzyskie</option>
+            <option value="Warmińsko-Mazurskie">Warmińsko-Mazurskie</option>
+            <option value="Wielkopolskie">Wielkopolskie</option>
+            <option value="Zachodniopomorskie">Zachodniopomorskie</option>
+        </select>
+        <select id="fishFilter">
+            <option value="">Wszystkie ryby</option>
+            <option value="pike">Szczupak</option>
+            <option value="perch">Okoń</option>
+            <option value="carp">Karp</option>
+            <option value="zander">Sandacz</option>
+            <option value="roach">Płoć</option>
+            <option value="bream">Leszcz</option>
+            <option value="catfish">Sum</option>
+        </select>
+        <button id="applyFilters">Filtruj</button>
+        <button id="resetFilters">Wyczyść filtry</button>
+    </div>
+
+    <div id="map" style="height: 600px; width: 100%; margin: 20px 0;"></div>
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="cart-modal-content">
+      <span class="close">×</span>
+      <h2>Koszyk</h2>
+      <ul id="cartItems"></ul>
+      <div class="cart-summary"></div>
+      <button id="checkoutBtn">Do kasy</button>
+    </div>
+  </div>
+
+  <!-- Stopka -->
+  <footer class="footer" style="position: relative;">
+    <p>Bez Ryby Ani Rusz - projekt zaliczeniowy z Projektowanie Interfejsów Użytkownika</p>
+    <div class="social-media">
+      <a href="https://www.google.com" target="_blank"><img src="images/google.png" alt="Google"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+    <p>© 2025 Bez Ryby Ani Rusz. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- Rybka podążająca za kursorem -->
+  <img id="fish" src="images/fish.png" alt="Rybka" />
+
+  <!-- Skrypty -->
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+  <script src="lowiska.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (typeof initMap === 'function') {
+        initMap();
+      }
+    });
+  </script>
+</body>
+</html>

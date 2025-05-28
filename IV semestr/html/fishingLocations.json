@@ -1,0 +1,4170 @@
+[
+    {
+        "name": "Wisła (Warszawa)",
+        "lat": 52.2297,
+        "lng": 21.0122,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "catfish",
+            "pike",
+            "bream",
+            "zander",
+            "roach"
+        ],
+        "type": "river",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Białe - Gostynin",
+        "lat": 52.4167,
+        "lng": 19.4667,
+        "district": "PZW Płock",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "tench"
+        ],
+        "type": "lake",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Zalew Zegrzyński",
+        "lat": 52.4667,
+        "lng": 21.0333,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Kanał Żerański (Aleksandrów)",
+        "lat": 52.3167,
+        "lng": 21.0667,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "canal",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Stawy Grodzisk Mazowiecki",
+        "lat": 52.1,
+        "lng": 20.6333,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "carp",
+            "pike",
+            "tench",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Rzeka Narew (Pułtusk)",
+        "lat": 52.7,
+        "lng": 21.0833,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "perch"
+        ],
+        "type": "river",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Czerniakowskie",
+        "lat": 52.1833,
+        "lng": 21.05,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Zbiornik Domaniów",
+        "lat": 51.3167,
+        "lng": 21.4667,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "carp",
+            "pike",
+            "zander",
+            "perch",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Rzeka Bug (Wyszków)",
+        "lat": 52.5833,
+        "lng": 21.4667,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "catfish",
+            "pike",
+            "bream",
+            "zander",
+            "roach"
+        ],
+        "type": "river",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Zdworskie",
+        "lat": 52.3167,
+        "lng": 20.3167,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream",
+            "carp"
+        ],
+        "type": "lake",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Stawy w Kozienicach",
+        "lat": 51.5833,
+        "lng": 21.55,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "carp",
+            "pike",
+            "tench",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Rzeka Pilica (Nowe Miasto nad Pilicą)",
+        "lat": 51.6167,
+        "lng": 20.5667,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "perch"
+        ],
+        "type": "river",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Zbiornik Młyny",
+        "lat": 52.1167,
+        "lng": 21.3167,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "zander"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Zalew Kryspinów",
+        "lat": 50.0333,
+        "lng": 19.8,
+        "district": "PZW Kraków",
+        "fish": [
+            "carp",
+            "roach",
+            "pike",
+            "perch",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Jezioro Rożnowskie",
+        "lat": 49.7167,
+        "lng": 20.6833,
+        "district": "PZW Nowy Sącz",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "zander",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Zbiornik Zbrzyca",
+        "lat": 49.9167,
+        "lng": 21.7667,
+        "district": "PZW Kraków",
+        "fish": [
+            "perch",
+            "roach",
+            "pike",
+            "carp"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Jezioro Czorsztyńskie",
+        "lat": 49.4333,
+        "lng": 20.2667,
+        "district": "PZW Nowy Targ",
+        "fish": [
+            "pike",
+            "perch",
+            "trout",
+            "zander"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Zalew Bagry",
+        "lat": 50.0333,
+        "lng": 20.0,
+        "district": "PZW Kraków",
+        "fish": [
+            "carp",
+            "pike",
+            "zander",
+            "perch",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Rzeka Dunajec (Tarnów)",
+        "lat": 50.0167,
+        "lng": 20.9833,
+        "district": "PZW Tarnów",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike",
+            "barbel"
+        ],
+        "type": "river",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Zalew Zakrzówek",
+        "lat": 50.0333,
+        "lng": 19.9167,
+        "district": "PZW Kraków",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach"
+        ],
+        "type": "quarry_lake",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Jezioro Dobczyckie",
+        "lat": 49.8833,
+        "lng": 20.0667,
+        "district": "PZW Kraków",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "perch",
+            "carp"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Rzeka Raba (Myślenice)",
+        "lat": 49.8333,
+        "lng": 19.9333,
+        "district": "PZW Kraków",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike",
+            "barbel"
+        ],
+        "type": "river",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Zalew Brzegi",
+        "lat": 50.0667,
+        "lng": 20.1333,
+        "district": "PZW Kraków",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Jezioro Mucharskie",
+        "lat": 49.8167,
+        "lng": 19.5667,
+        "district": "PZW Kraków",
+        "fish": [
+            "pike",
+            "zander",
+            "carp",
+            "perch",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Rzeka Poprad (Muszyna)",
+        "lat": 49.35,
+        "lng": 20.9,
+        "district": "PZW Nowy Sącz",
+        "fish": [
+            "trout",
+            "grayling",
+            "perch",
+            "pike"
+        ],
+        "type": "river",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Zalew Czchowski",
+        "lat": 49.8333,
+        "lng": 20.6667,
+        "district": "PZW Tarnów",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "carp",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Zalew Chechło",
+        "lat": 50.1167,
+        "lng": 19.9,
+        "district": "PZW Kraków",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Zbiornik Mietków (Chwałów)",
+        "lat": 50.9167,
+        "lng": 16.6167,
+        "district": "PZW Wrocław",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "zander",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Dziewin Morocha",
+        "lat": 51.4167,
+        "lng": 16.45,
+        "district": "PZW Wrocław",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "oxbow_lake",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Akwen Brodno",
+        "lat": 51.15,
+        "lng": 16.7333,
+        "district": "PZW Wrocław",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Staw Biały Kościół",
+        "lat": 50.8167,
+        "lng": 16.9333,
+        "district": "PZW Wrocław",
+        "fish": [
+            "catfish",
+            "pike",
+            "carp",
+            "roach",
+            "tench"
+        ],
+        "type": "pond",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Zbiornik Glinianki (Grabowno Wielkie)",
+        "lat": 51.0167,
+        "lng": 17.0833,
+        "district": "PZW Wrocław",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach"
+        ],
+        "type": "quarry_lake",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Rzeka Odra (Wrocław)",
+        "lat": 51.1167,
+        "lng": 17.0333,
+        "district": "PZW Wrocław",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "catfish"
+        ],
+        "type": "river",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Jezioro Słoneczne (Legnica)",
+        "lat": 51.2,
+        "lng": 16.1667,
+        "district": "PZW Legnica",
+        "fish": [
+            "carp",
+            "pike",
+            "tench",
+            "roach",
+            "perch"
+        ],
+        "type": "lake",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Zbiornik Jeżów Sudecki",
+        "lat": 50.85,
+        "lng": 15.7167,
+        "district": "PZW Jelenia Góra",
+        "fish": [
+            "trout",
+            "perch",
+            "pike",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Jezioro Leśne (Lubiąż)",
+        "lat": 51.2667,
+        "lng": 16.4667,
+        "district": "PZW Legnica",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Zalew Radoniów",
+        "lat": 50.9833,
+        "lng": 15.75,
+        "district": "PZW Jelenia Góra",
+        "fish": [
+            "carp",
+            "pike",
+            "zander",
+            "perch",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Rzeka Bóbr (Jelenia Góra)",
+        "lat": 50.9,
+        "lng": 15.7333,
+        "district": "PZW Jelenia Góra",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike",
+            "perch"
+        ],
+        "type": "river",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Zbiornik Sosnówka",
+        "lat": 50.8167,
+        "lng": 15.6833,
+        "district": "PZW Jelenia Góra",
+        "fish": [
+            "pike",
+            "perch",
+            "trout",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Staw w Ścinawce Średniej",
+        "lat": 50.4833,
+        "lng": 16.4667,
+        "district": "PZW Wałbrzych",
+        "fish": [
+            "carp",
+            "tench",
+            "pike",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Jezioro Świętno",
+        "lat": 52.1167,
+        "lng": 16.3167,
+        "district": "PZW Zielona Góra",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Łowisko Myślina",
+        "lat": 52.0667,
+        "lng": 16.5,
+        "district": "PZW Poznań",
+        "fish": [
+            "carp",
+            "pike",
+            "tench",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Owieczki",
+        "lat": 52.3833,
+        "lng": 17.0833,
+        "district": "PZW Poznań",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Żwirownia w Owińskach",
+        "lat": 52.4833,
+        "lng": 16.8333,
+        "district": "PZW Poznań",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach"
+        ],
+        "type": "quarry_lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Brzednia",
+        "lat": 52.2167,
+        "lng": 16.6167,
+        "district": "PZW Poznań",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Niepruszewskie",
+        "lat": 52.2833,
+        "lng": 16.5,
+        "district": "PZW Poznań",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "perch",
+            "roach"
+        ],
+        "type": "lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Jezierzyckie",
+        "lat": 52.35,
+        "lng": 16.5667,
+        "district": "PZW Poznań",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Kanał Kościański Obry",
+        "lat": 52.0833,
+        "lng": 16.65,
+        "district": "PZW Poznań",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "canal",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Krzywińskie",
+        "lat": 52.0833,
+        "lng": 16.7,
+        "district": "PZW Poznań",
+        "fish": [
+            "bream",
+            "perch",
+            "carp",
+            "roach"
+        ],
+        "type": "lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Ziemnice",
+        "lat": 52.1,
+        "lng": 16.6667,
+        "district": "PZW Poznań",
+        "fish": [
+            "zander",
+            "bream",
+            "perch",
+            "roach",
+            "pike"
+        ],
+        "type": "lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Staw w Sernikach",
+        "lat": 51.2667,
+        "lng": 22.7,
+        "district": "PZW Lublin",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Jezioro Białe (Lubelskie)",
+        "lat": 51.3167,
+        "lng": 23.0833,
+        "district": "PZW Lublin",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream",
+            "carp"
+        ],
+        "type": "lake",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Zbiornik Zemborzyce",
+        "lat": 51.2167,
+        "lng": 22.5667,
+        "district": "PZW Lublin",
+        "fish": [
+            "carp",
+            "pike",
+            "zander",
+            "perch",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Rzeka Wieprz (Lubartów)",
+        "lat": 51.4667,
+        "lng": 22.6,
+        "district": "PZW Lublin",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "zander"
+        ],
+        "type": "river",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Jezioro Uściwierz",
+        "lat": 51.3833,
+        "lng": 23.1167,
+        "district": "PZW Lublin",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Staw w Piaskach",
+        "lat": 51.1333,
+        "lng": 22.8667,
+        "district": "PZW Lublin",
+        "fish": [
+            "carp",
+            "tench",
+            "pike",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Zbiornik Dratów",
+        "lat": 51.4167,
+        "lng": 23.0833,
+        "district": "PZW Lublin",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "perch",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Jezioro Rotcze",
+        "lat": 51.35,
+        "lng": 23.05,
+        "district": "PZW Lublin",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream",
+            "carp"
+        ],
+        "type": "lake",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Gościcina",
+        "lat": 54.5833,
+        "lng": 18.15,
+        "district": "PZW Gdańsk",
+        "fish": [
+            "trout",
+            "perch",
+            "pike",
+            "roach"
+        ],
+        "type": "river",
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Bolszewka",
+        "lat": 54.55,
+        "lng": 18.1667,
+        "district": "PZW Gdańsk",
+        "fish": [
+            "perch",
+            "roach",
+            "pike",
+            "trout"
+        ],
+        "type": "river",
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Jezioro Raduńskie Górne",
+        "lat": 54.3167,
+        "lng": 17.8333,
+        "district": "PZW Słupsk",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Zalew Wiślany (Krynica Morska)",
+        "lat": 54.3833,
+        "lng": 19.45,
+        "district": "PZW Elbląg",
+        "fish": [
+            "pike",
+            "bream",
+            "perch",
+            "roach",
+            "zander"
+        ],
+        "type": "lagoon",
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Rzeka Radunia (Żukowo)",
+        "lat": 54.3333,
+        "lng": 18.35,
+        "district": "PZW Gdańsk",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike",
+            "perch"
+        ],
+        "type": "river",
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Jezioro Dąbrowskie",
+        "lat": 54.45,
+        "lng": 18.4,
+        "district": "PZW Gdańsk",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Zbiornik Żarnowieckie",
+        "lat": 54.75,
+        "lng": 18.0833,
+        "district": "PZW Wejherowo",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "perch",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Jezioro Małe Łąkie",
+        "lat": 53.4167,
+        "lng": 18.2167,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezioro Gopło",
+        "lat": 52.55,
+        "lng": 18.3833,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "bream",
+            "roach",
+            "zander"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Rzeka Brda",
+        "lat": 53.5167,
+        "lng": 17.75,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "river",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezioro Kusowo",
+        "lat": 53.1833,
+        "lng": 18.2667,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezioro Ostrowo",
+        "lat": 53.4167,
+        "lng": 17.5,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezioro Kosz",
+        "lat": 53.3333,
+        "lng": 18.15,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "tench",
+            "pike",
+            "perch",
+            "roach"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezioro Piaseczno",
+        "lat": 53.45,
+        "lng": 18.3333,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Zbiornik Pogoria III",
+        "lat": 50.3,
+        "lng": 19.0833,
+        "district": "PZW Katowice",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach",
+            "zander"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Rzeka Wisła (Tychy)",
+        "lat": 50.1167,
+        "lng": 18.9833,
+        "district": "PZW Katowice",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "catfish"
+        ],
+        "type": "river",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Zbiornik Kozłowa Góra",
+        "lat": 50.45,
+        "lng": 19.15,
+        "district": "PZW Katowice",
+        "fish": [
+            "carp",
+            "pike",
+            "tench",
+            "roach",
+            "perch"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Jezioro Dzierżno Duże",
+        "lat": 50.3167,
+        "lng": 18.7667,
+        "district": "PZW Gliwice",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Rzeka Przemsza (Sosnowiec)",
+        "lat": 50.2833,
+        "lng": 19.1167,
+        "district": "PZW Katowice",
+        "fish": [
+            "pike",
+            "roach",
+            "perch",
+            "bream"
+        ],
+        "type": "river",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Staw Kajakowy (Częstochowa)",
+        "lat": 50.8,
+        "lng": 19.1167,
+        "district": "PZW Częstochowa",
+        "fish": [
+            "carp",
+            "pike",
+            "tench",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Jezioro Wigry",
+        "lat": 54.0058,
+        "lng": 23.1022,
+        "district": "PZW Suwałki",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream",
+            "zander"
+        ],
+        "type": "lake",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Jezioro Zelwa",
+        "lat": 53.3667,
+        "lng": 23.3833,
+        "district": "PZW Białystok",
+        "fish": [
+            "pike",
+            "perch",
+            "tench",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Staw Stary Młyn",
+        "lat": 53.1333,
+        "lng": 23.1667,
+        "district": "PZW Białystok",
+        "fish": [
+            "carp",
+            "roach",
+            "pike",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Rzeka Supraśl",
+        "lat": 53.2,
+        "lng": 23.2,
+        "district": "PZW Białystok",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike",
+            "roach"
+        ],
+        "type": "river",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Zbiornik Siemianówka",
+        "lat": 52.9667,
+        "lng": 23.6167,
+        "district": "PZW Białystok",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "perch"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Zalew Sulejowski",
+        "lat": 51.4333,
+        "lng": 19.8833,
+        "district": "PZW Piotrków Trybunalski",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "perch"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Łódzkie"
+    },
+    {
+        "name": "Rzeka Pilica (Tomaszów Mazowiecki)",
+        "lat": 51.5333,
+        "lng": 20.0167,
+        "district": "PZW Piotrków Trybunalski",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream",
+            "zander"
+        ],
+        "type": "river",
+        "voivodeship": "Łódzkie"
+    },
+    {
+        "name": "Jezioro Jeziorsko",
+        "lat": 51.8167,
+        "lng": 18.6667,
+        "district": "PZW Sieradz",
+        "fish": [
+            "carp",
+            "pike",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Łódzkie"
+    },
+    {
+        "name": "Staw w Łagiewnikach",
+        "lat": 51.75,
+        "lng": 19.4167,
+        "district": "PZW Łódź",
+        "fish": [
+            "carp",
+            "tench",
+            "pike",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Łódzkie"
+    },
+    {
+        "name": "Zbiornik Gałkówek",
+        "lat": 51.9333,
+        "lng": 19.7,
+        "district": "PZW Łódź",
+        "fish": [
+            "pike",
+            "perch",
+            "bream",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Łódzkie"
+    },
+    {
+        "name": "Jezioro Solińskie",
+        "lat": 49.3667,
+        "lng": 22.45,
+        "district": "PZW Krosno",
+        "fish": [
+            "pike",
+            "zander",
+            "perch",
+            "carp",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Rzeka San (Przemyśl)",
+        "lat": 49.7833,
+        "lng": 22.7667,
+        "district": "PZW Przemyśl",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike",
+            "barbel"
+        ],
+        "type": "river",
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Zbiornik Myczkowce",
+        "lat": 49.3833,
+        "lng": 22.4833,
+        "district": "PZW Krosno",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "zander"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Staw w Ropczycach",
+        "lat": 50.05,
+        "lng": 21.6167,
+        "district": "PZW Rzeszów",
+        "fish": [
+            "carp",
+            "pike",
+            "tench",
+            "roach"
+        ],
+        "type": "pond",
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Rzeka Wisłok (Rzeszów)",
+        "lat": 50.0333,
+        "lng": 21.9833,
+        "district": "PZW Rzeszów",
+        "fish": [
+            "trout",
+            "perch",
+            "pike",
+            "roach",
+            "barbel"
+        ],
+        "type": "river",
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Zbiornik Rozoga",
+        "lat": 53.5,
+        "lng": 21.9333,
+        "district": "PZW Białystok",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Jezioro Śniardwy",
+        "lat": 53.7167,
+        "lng": 21.85,
+        "district": "PZW Olsztyn",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "perch"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Rzeka Łyna (Olsztyn)",
+        "lat": 53.7833,
+        "lng": 20.4833,
+        "district": "PZW Olsztyn",
+        "fish": [
+            "trout",
+            "pike",
+            "perch",
+            "roach",
+            "grayling"
+        ],
+        "type": "river",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Jezioro Mamry",
+        "lat": 54.15,
+        "lng": 21.6167,
+        "district": "PZW Giżycko",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Zbiornik Dgał Wielki",
+        "lat": 53.6667,
+        "lng": 21.5,
+        "district": "PZW Mrągowo",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Zalew Sielpia",
+        "lat": 51.1167,
+        "lng": 20.3,
+        "district": "PZW Kielce",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach",
+            "zander"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Świętokrzyskie"
+    },
+    {
+        "name": "Rzeka Nida (Pińczów)",
+        "lat": 50.5167,
+        "lng": 20.5333,
+        "district": "PZW Kielce",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "zander"
+        ],
+        "type": "river",
+        "voivodeship": "Świętokrzyskie"
+    },
+    {
+        "name": "Jezioro Chańcza",
+        "lat": 50.7333,
+        "lng": 21.05,
+        "district": "PZW Kielce",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Świętokrzyskie"
+    },
+    {
+        "name": "Zalew Otmuchowski",
+        "lat": 50.4667,
+        "lng": 17.1667,
+        "district": "PZW Opole",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach",
+            "zander"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Opolskie"
+    },
+    {
+        "name": "Rzeka Nysa Kłodzka",
+        "lat": 50.4667,
+        "lng": 17.3167,
+        "district": "PZW Opole",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike",
+            "roach"
+        ],
+        "type": "river",
+        "voivodeship": "Opolskie"
+    },
+    {
+        "name": "Jezioro Turawskie",
+        "lat": 50.7333,
+        "lng": 18.0833,
+        "district": "PZW Opole",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Opolskie"
+    },
+    {
+        "name": "Jezioro Miedwie",
+        "lat": 53.2833,
+        "lng": 14.9,
+        "district": "PZW Szczecin",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Rzeka Odra (Szczecin)",
+        "lat": 53.4333,
+        "lng": 14.55,
+        "district": "PZW Szczecin",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "catfish"
+        ],
+        "type": "river",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Zalew Szczeciński",
+        "lat": 53.6667,
+        "lng": 14.5833,
+        "district": "PZW Szczecin",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream",
+            "zander"
+        ],
+        "type": "lagoon",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Jezioro Sławskie",
+        "lat": 51.8833,
+        "lng": 16.0667,
+        "district": "PZW Zielona Góra",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Rzeka Warta (Kostrzyn)",
+        "lat": 52.5833,
+        "lng": 14.6667,
+        "district": "PZW Gorzów Wielkopolski",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "zander",
+            "catfish"
+        ],
+        "type": "river",
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Zalew Bledzewski",
+        "lat": 52.5167,
+        "lng": 15.4,
+        "district": "PZW Gorzów Wielkopolski",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach",
+            "zander"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Jezioro Długie (Olsztyn Area)",
+        "lat": 53.7667,
+        "lng": 20.4667,
+        "district": "PZW Olsztyn",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Rzeka Warta (Poznań Area)",
+        "lat": 52.4,
+        "lng": 16.9167,
+        "district": "PZW Poznań",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach",
+            "catfish"
+        ],
+        "type": "river",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Zalew Koronowski (Bydgoszcz Area)",
+        "lat": 53.3167,
+        "lng": 17.9167,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezioro Niegocin (Giżycko Area)",
+        "lat": 54.0333,
+        "lng": 21.7667,
+        "district": "PZW Giżycko",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Zbiornik Goczałkowice (Katowice Area)",
+        "lat": 49.9333,
+        "lng": 18.8667,
+        "district": "PZW Katowice",
+        "fish": [
+            "carp",
+            "pike",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Jezioro Drawsko (Drawsko Pomorskie Area)",
+        "lat": 53.5333,
+        "lng": 16.2,
+        "district": "PZW Szczecin",
+        "fish": [
+            "pike",
+            "perch",
+            "bream",
+            "roach",
+            "zander"
+        ],
+        "type": "lake",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Rzeka Noteć (Gorzów Wielkopolski Area)",
+        "lat": 52.7333,
+        "lng": 15.2333,
+        "district": "PZW Gorzów Wielkopolski",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "zander",
+            "catfish"
+        ],
+        "type": "river",
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Zbiornik Nielisz (Zamość Area)",
+        "lat": 50.8,
+        "lng": 23.05,
+        "district": "PZW Lublin",
+        "fish": [
+            "carp",
+            "pike",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Jezioro Łuknajno (Mrągowo Area)",
+        "lat": 53.8167,
+        "lng": 21.6167,
+        "district": "PZW Mrągowo",
+        "fish": [
+            "pike",
+            "perch",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Rzeka Jasiołka - Nowa Wieś",
+        "lat": 49.527214,
+        "lng": 21.6875267,
+        "district": "PZW Krosno",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike"
+        ],
+        "type": "mountain river",
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Wkra Sochocin",
+        "lat": 52.68361512,
+        "lng": 20.46512604,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "medium lowland river",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Siercz (Siercze)",
+        "lat": 54.0766400312,
+        "lng": 21.4707827568,
+        "district": "PZW Olsztyn",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Zalew Czapielówka",
+        "lat": 53.30936505,
+        "lng": 23.26041698,
+        "district": "PZW Białystok",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Jezioro Dzikowo",
+        "lat": 52.93679339,
+        "lng": 18.76851082,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezierzyckie",
+        "lat": 51.98213131,
+        "lng": 16.7105484,
+        "district": "PZW Poznań",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach"
+        ],
+        "type": "lake",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Staw Upadowy",
+        "lat": 50.25200725,
+        "lng": 19.07205105,
+        "district": "PZW Katowice",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Staw Ostropek",
+        "lat": 50.280701,
+        "lng": 18.615622,
+        "district": "PZW Gliwice",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Rzeka Odra - Bielinek",
+        "lat": 52.96575237,
+        "lng": 14.16352272,
+        "district": "PZW Szczecin",
+        "fish": [
+            "pike",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "river",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Obra - Kanał Kościański",
+        "lat": 52.05760991,
+        "lng": 16.66282654,
+        "district": "PZW Poznań",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "canal",
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Piecuch (Czerwone)",
+        "lat": 53.8850274,
+        "lng": 21.2718942,
+        "district": "PZW Olsztyn",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Jezioro Juno",
+        "lat": 53.9087284,
+        "lng": 21.2918602,
+        "district": "PZW Olsztyn",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Wisła w Tyńcu (Piekarach)",
+        "lat": 50.02023159,
+        "lng": 19.80019569,
+        "district": "PZW Kraków",
+        "fish": [
+            "pike",
+            "zander",
+            "bream",
+            "roach"
+        ],
+        "type": "large lowland river",
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Jegocin Mały - Jegocinek",
+        "lat": 53.64952199,
+        "lng": 21.70503616,
+        "district": "PZW Mrągowo",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Dziki Staw - Klępczewo",
+        "lat": 53.77712346,
+        "lng": 15.70152283,
+        "district": "PZW Szczecin",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Zbiornik Terebela I",
+        "lat": 52.0875,
+        "lng": 23.083333,
+        "district": "PZW Białystok",
+        "fish": [
+            "pike",
+            "perch",
+            "carp",
+            "roach"
+        ],
+        "type": "reservoir",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Staw Gminny Cigacice",
+        "lat": 52.02675249,
+        "lng": 15.61071396,
+        "district": "PZW Zielona Góra",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Jezioro Serwy",
+        "lat": 53.92253791,
+        "lng": 23.21308136,
+        "district": "PZW Suwałki",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Jezioro Linówek",
+        "lat": 53.506030581,
+        "lng": 20.4763484001,
+        "district": "PZW Olsztyn",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Staw Strzelnica",
+        "lat": 50.2583456,
+        "lng": 18.77623558,
+        "district": "PZW Gliwice",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Jezioro Leśne okolice Szczecinka",
+        "lat": 53.69548685,
+        "lng": 16.75415039,
+        "district": "PZW Szczecin",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Jezioro Szurpiły",
+        "lat": 54.22675794,
+        "lng": 22.88855553,
+        "district": "PZW Suwałki",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Żwirownia Rakowice Wlk",
+        "lat": 51.1325820925,
+        "lng": 15.5722939968,
+        "district": "PZW Legnica",
+        "fish": [
+            "carp",
+            "pike",
+            "perch",
+            "roach"
+        ],
+        "type": "quarry_lake",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Stawy El Coyote",
+        "lat": 49.43408714,
+        "lng": 22.30117321,
+        "district": "PZW Krosno",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Jezioro Wilczkowo",
+        "lat": 53.7349244,
+        "lng": 15.7737813,
+        "district": "PZW Szczecin",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Rzeka Osława - Darów",
+        "lat": 49.45,
+        "lng": 21.93,
+        "district": "PZW Krosno",
+        "fish": [
+            "trout",
+            "grayling",
+            "pike"
+        ],
+        "type": "mountain river",
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Stawy Hodowlane w Chrząstawie",
+        "lat": 51.08670383,
+        "lng": 17.30484009,
+        "district": "PZW Wrocław",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Giszowiec-Staw Janina",
+        "lat": 50.2228475,
+        "lng": 19.0694536,
+        "district": "PZW Katowice",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Gruba-Rybka.pl",
+        "lat": 54.143078,
+        "lng": 16.029711,
+        "district": "PZW Szczecin",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Jezioro Nowojasinieckie",
+        "lat": 53.35377893,
+        "lng": 18.02843571,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Bieliczówka",
+        "lat": 50.65356917,
+        "lng": 17.54889965,
+        "district": "PZW Opole",
+        "fish": [
+            "carp",
+            "pike",
+            "roach",
+            "perch"
+        ],
+        "type": "pond",
+        "voivodeship": "Opolskie"
+    },
+    {
+        "name": "Jezioro Kupowo",
+        "lat": 54.3041997,
+        "lng": 23.0443841,
+        "district": "PZW Suwałki",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Narew w Arciechowie",
+        "lat": 52.5040232018,
+        "lng": 21.0788583755,
+        "district": "PZW Mazowiecki",
+        "fish": [
+            "pike",
+            "zander",
+            "roach",
+            "bream"
+        ],
+        "type": "large lowland river",
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Ostrowskie",
+        "lat": 52.5339439,
+        "lng": 18.1146866,
+        "district": "PZW Bydgoszcz",
+        "fish": [
+            "pike",
+            "perch",
+            "roach",
+            "bream"
+        ],
+        "type": "lake",
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jeziorko Łosickie",
+        "lat": 52.20950013,
+        "lng": 22.71131516,
+        "district": "PZW Mazowiecki",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Łowisko Pólko",
+        "lat": 53.21996168,
+        "lng": 23.29676628,
+        "district": "PZW Białystok",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Jezioro Strzyżewskie",
+        "lat": 52.5699436,
+        "lng": 17.662512,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Brzezinek Duży",
+        "lat": 54.0292019,
+        "lng": 17.2320182,
+        "district": "PZW Słupsk",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Jezioro Głęboczek",
+        "lat": 52.648852,
+        "lng": 17.6264983,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Stawy Koplany",
+        "lat": 53.05689807,
+        "lng": 23.09128761,
+        "district": "PZW Białystok",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Kraina Trzech Stawów",
+        "lat": 51.34642953,
+        "lng": 16.52644157,
+        "district": "PZW Wrocław",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Zalew Karnin",
+        "lat": 52.6826265,
+        "lng": 15.274086,
+        "district": "PZW Gorzów Wielkopolski",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Osadnik Puławy Azoty - Łowisko Specjalne dla zaawansowanych",
+        "lat": 51.44649168,
+        "lng": 21.9473362,
+        "district": "PZW Lublin",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Zbiornik Droniowiczki - C03 - Lubliniec",
+        "lat": 50.66540345,
+        "lng": 18.69478226,
+        "district": "PZW Katowice",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Kanał Chobienicki",
+        "lat": 52.3050149575,
+        "lng": 18.3916282654,
+        "district": "PZW Bydgoszcz",
+        "type": "canal",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Kanał Delfin",
+        "lat": 53.4037372569,
+        "lng": 14.5399439335,
+        "district": "PZW Szczecin",
+        "type": "canal",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Zbiornik Lisów - C32 - Lisów",
+        "lat": 50.7270022866,
+        "lng": 18.7946033478,
+        "district": "PZW Katowice",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Zbiornik Kaplyciok",
+        "lat": 50.1279327,
+        "lng": 18.8644256,
+        "district": "PZW Katowice",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Zbiornik Wielopole - nr 611 - Rybnik",
+        "lat": 50.1238386573,
+        "lng": 18.5621148348,
+        "district": "PZW Katowice",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Jezioro Ziemnickie",
+        "lat": 51.9415003291,
+        "lng": 16.7611455917,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Stawy Rybne Miłków",
+        "lat": 50.16579337,
+        "lng": 22.8591156,
+        "district": "PZW Przemyśl",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Staw Radosław przy os.Radosław w Nowogardzie",
+        "lat": 53.66315397,
+        "lng": 15.14842987,
+        "district": "PZW Szczecin",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Rzeka Muchawka - Okolice Siedlec",
+        "lat": 52.16824652,
+        "lng": 22.22890377,
+        "district": "PZW Mazowiecki",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Nowy Lubiel",
+        "lat": 52.7696844,
+        "lng": 21.4191944,
+        "district": "PZW Mazowiecki",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Zalew Blewązka Kobyla Góra",
+        "lat": 51.3829272252,
+        "lng": 17.8231716156,
+        "district": "PZW Kalisz",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Rogóźno - Starorzecze Narwi",
+        "lat": 52.7767049016,
+        "lng": 21.3431739807,
+        "district": "PZW Mazowiecki",
+        "type": "oxbow_lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Zalew Cieszanowice",
+        "lat": 51.23290256,
+        "lng": 19.68578339,
+        "district": "PZW Piotrków Trybunalski",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Łódzkie"
+    },
+    {
+        "name": "Pusty Staw - jezioro",
+        "lat": 54.36413313,
+        "lng": 18.72293472,
+        "district": "PZW Gdańsk",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Martwa Wisła",
+        "lat": 54.35740654,
+        "lng": 18.70877266,
+        "district": "PZW Gdańsk",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Kołobrzeg na dorsze",
+        "lat": 54.18931056,
+        "lng": 15.55037498,
+        "district": "PZW Koszalin",
+        "type": "sea",
+        "fish": [
+            "cod",
+            "flounder",
+            "herring",
+            "perch",
+            "pike"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Łowisko krajowe",
+        "lat": 52.09553874,
+        "lng": 16.99001312,
+        "district": "PZW Poznań",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Końskie",
+        "lat": 53.77839144,
+        "lng": 17.25214005,
+        "district": "PZW Słupsk",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Jezioro Jelito",
+        "lat": 52.098011,
+        "lng": 15.2847349,
+        "district": "PZW Zielona Góra",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Łowisko Woliczno",
+        "lat": 53.4935861,
+        "lng": 15.72001934,
+        "district": "PZW Szczecin",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Zalew Węgrowski",
+        "lat": 52.39519173,
+        "lng": 22.00059414,
+        "district": "PZW Mazowiecki",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Niechorz",
+        "lat": 53.4381319,
+        "lng": 17.5662084,
+        "district": "PZW Bydgoszcz",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezioro Sumowo",
+        "lat": 54.09018262,
+        "lng": 22.64436722,
+        "district": "PZW Suwałki",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Okunin - Narew",
+        "lat": 52.436653149,
+        "lng": 20.7291412354,
+        "district": "PZW Mazowiecki",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Kiczarowo",
+        "lat": 53.377318,
+        "lng": 15.1051074,
+        "district": "PZW Szczecin",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Rzeka Uszewka",
+        "lat": 50.140303152,
+        "lng": 20.6039571762,
+        "district": "PZW Tarnów",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Niekanin",
+        "lat": 54.1500166,
+        "lng": 15.6165276,
+        "district": "PZW Koszalin",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Rzeka Łeba",
+        "lat": 54.5424969386,
+        "lng": 17.702922821,
+        "district": "PZW Słupsk",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Rowy",
+        "lat": 52.7768347,
+        "lng": 21.31231785,
+        "district": "PZW Mazowiecki",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Wolskie (gmina Rogowo)",
+        "lat": 52.7666164,
+        "lng": 17.6346819,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Staw Rozlewisko koło Szczecina",
+        "lat": 53.381139749,
+        "lng": 14.433567524,
+        "district": "PZW Szczecin",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Wysoki Staw na Warszewie w Szczecinie",
+        "lat": 53.4884285477,
+        "lng": 14.5581695437,
+        "district": "PZW Szczecin",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Rzeka Regalica - Międzyodrze",
+        "lat": 53.421589,
+        "lng": 14.6264814,
+        "district": "PZW Szczecin",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Jezioro Nyskie (Głębinów)",
+        "lat": 50.4500718338,
+        "lng": 17.2681045532,
+        "district": "PZW Opole",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Opolskie"
+    },
+    {
+        "name": "Kanał Warta w Szczecinie",
+        "lat": 53.4068840892,
+        "lng": 14.5995211601,
+        "district": "PZW Szczecin",
+        "type": "canal",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Jezioro Woświn",
+        "lat": 53.5272554,
+        "lng": 15.4107105,
+        "district": "PZW Szczecin",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Jezioro Orkusz",
+        "lat": 53.789751,
+        "lng": 19.1320805,
+        "district": "PZW Elbląg",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Jezioro Słoneczne w Szczecinie",
+        "lat": 53.4263439,
+        "lng": 14.4978862,
+        "district": "PZW Szczecin",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Rzeka Sąpólna",
+        "lat": 53.6108910817,
+        "lng": 15.1700592041,
+        "district": "PZW Szczecin",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Zbiornik Sieniawa",
+        "lat": 49.5605599209,
+        "lng": 21.9330668449,
+        "district": "PZW Krosno",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Łowisko Oleśnikowa Dolina",
+        "lat": 51.7781963717,
+        "lng": 20.691204071,
+        "district": "PZW Mazowiecki",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Zalew Łoje",
+        "lat": 53.1247447844,
+        "lng": 20.8067643642,
+        "district": "PZW Olsztyn",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Rościmin Młyńskie",
+        "lat": 53.27914848,
+        "lng": 17.47388363,
+        "district": "PZW Bydgoszcz",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Zbiornik Niwa",
+        "lat": 51.2736791,
+        "lng": 23.3908486,
+        "district": "PZW Lublin",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Jezioro Lubrza",
+        "lat": 52.3120326,
+        "lng": 15.443825,
+        "district": "PZW Zielona Góra",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Jezioro Mezowskie",
+        "lat": 54.3073567,
+        "lng": 18.2559811,
+        "district": "PZW Gdańsk",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Rzeka Biała Łada",
+        "lat": 50.6354024,
+        "lng": 22.6680814,
+        "district": "PZW Rzeszów",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Skoszewy Nowe",
+        "lat": 51.8473313194,
+        "lng": 19.6364307404,
+        "district": "PZW Łódź",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Łódzkie"
+    },
+    {
+        "name": "Jezioro Kołdrąbskie",
+        "lat": 52.7479188,
+        "lng": 17.5627793,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro w Łąkim",
+        "lat": 52.60747818,
+        "lng": 18.12795639,
+        "district": "PZW Bydgoszcz",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Zagórska Struga",
+        "lat": 54.5753433579,
+        "lng": 18.3974701166,
+        "district": "PZW Gdańsk",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Jezioro Kaczkowo",
+        "lat": 52.797812,
+        "lng": 17.6249074,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Rzeka Radunia",
+        "lat": 54.2847192748,
+        "lng": 18.2277774811,
+        "district": "PZW Gdańsk",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Rzeka Reda",
+        "lat": 54.6190218,
+        "lng": 18.0713723,
+        "district": "PZW Gdańsk",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Jezioro Marchowo",
+        "lat": 54.4730323,
+        "lng": 18.3184085,
+        "district": "PZW Gdańsk",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Jezioro Orle Stare",
+        "lat": 54.6484069,
+        "lng": 18.1433632,
+        "district": "PZW Gdańsk",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Rzeka Nida i jej tajemnice",
+        "lat": 50.6393879169,
+        "lng": 20.4578250647,
+        "district": "PZW Kielce",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Świętokrzyskie"
+    },
+    {
+        "name": "Zbiornik Pompa",
+        "lat": 50.45523623,
+        "lng": 20.58601856,
+        "district": "PZW Kielce",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Świętokrzyskie"
+    },
+    {
+        "name": "Dunajec nr.1",
+        "lat": 49.4793622213,
+        "lng": 20.1709842682,
+        "district": "PZW Nowy Sącz",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Zbiornik Podkowa",
+        "lat": 50.46007223,
+        "lng": 20.58958054,
+        "district": "PZW Kielce",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Świętokrzyskie"
+    },
+    {
+        "name": "Kozłówka Inowrocław",
+        "lat": 52.79861003,
+        "lng": 18.28828812,
+        "district": "PZW Bydgoszcz",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Jezioro Bnińskie",
+        "lat": 52.2110411,
+        "lng": 17.1094974,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Staw w Długołęce",
+        "lat": 51.1710561184,
+        "lng": 17.156867981,
+        "district": "PZW Wrocław",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Rzeka Lutynia",
+        "lat": 51.9578602811,
+        "lng": 17.5859570503,
+        "district": "PZW Poznań",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Zalew Kocie Doły",
+        "lat": 52.3255633889,
+        "lng": 16.8927884102,
+        "district": "PZW Poznań",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Leśne",
+        "lat": 52.58323447,
+        "lng": 17.09352493,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Staw Kobylin Na Osiedlu",
+        "lat": 51.71479872,
+        "lng": 17.21918106,
+        "district": "PZW Kalisz",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Staw w Targoszycach",
+        "lat": 51.76284668,
+        "lng": 17.27145195,
+        "district": "PZW Kalisz",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Cybina (Gortatów)",
+        "lat": 52.43353966,
+        "lng": 17.10064888,
+        "district": "PZW Poznań",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Dobre",
+        "lat": 52.60604478,
+        "lng": 17.07434177,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Śremskie",
+        "lat": 52.60784303,
+        "lng": 16.04656219,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Bucharzewskie",
+        "lat": 52.68554026,
+        "lng": 16.09711647,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Wygnańczyce Jezioro Dąbie",
+        "lat": 51.8071084,
+        "lng": 16.3164767,
+        "district": "PZW Leszno",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jeziorko Kętrzyńskie",
+        "lat": 54.08006291,
+        "lng": 21.37737751,
+        "district": "PZW Olsztyn",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Zalew Lipsko",
+        "lat": 51.1570081,
+        "lng": 21.64534092,
+        "district": "PZW Radom",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Staw 740",
+        "lat": 50.23748896,
+        "lng": 18.94145966,
+        "district": "PZW Katowice",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Chodelka",
+        "lat": 51.24805571,
+        "lng": 21.89163208,
+        "district": "PZW Lublin",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Staw Ferdynandów",
+        "lat": 51.77102675,
+        "lng": 18.73512268,
+        "district": "PZW Sieradz",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Łódzkie"
+    },
+    {
+        "name": "Opisu łowiska Karolewo Czarne",
+        "lat": 52.65311376,
+        "lng": 17.15429306,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Zalew Gródek",
+        "lat": 53.51142843,
+        "lng": 18.3741188,
+        "district": "PZW Bydgoszcz",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "ZEK w Radymnie",
+        "lat": 49.952777,
+        "lng": 22.8275,
+        "district": "PZW Przemyśl",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Staw nr 1 LIN",
+        "lat": 50.23479889,
+        "lng": 18.91901493,
+        "district": "PZW Katowice",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Rzeka Orzyc w miejscowości Jednororzec",
+        "lat": 53.1677684,
+        "lng": 21.06285095,
+        "district": "PZW Mazowiecki",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Zbiornik retencyjny Świętokrzyska Nr 1",
+        "lat": 54.31704893,
+        "lng": 18.57839584,
+        "district": "PZW Gdańsk",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Zbiornik Kolbudy Dolne - Jezioro Bielkowskie",
+        "lat": 54.27464707,
+        "lng": 18.48981857,
+        "district": "PZW Gdańsk",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Pomorskie"
+    },
+    {
+        "name": "Rzeka Głomia",
+        "lat": 53.29579845,
+        "lng": 16.98881149,
+        "district": "PZW Piła",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Staw Ślepiotka",
+        "lat": 50.26125383,
+        "lng": 19.11621094,
+        "district": "PZW Katowice",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Staw Ochotka nr 421",
+        "lat": 50.16414393,
+        "lng": 19.00291443,
+        "district": "PZW Katowice",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Zalew Na Piaskach Kryspinów",
+        "lat": 50.052978145,
+        "lng": 19.7915697098,
+        "district": "PZW Kraków",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Małopolskie"
+    },
+    {
+        "name": "Jezioro Ciemino",
+        "lat": 53.64300964,
+        "lng": 16.56137466,
+        "district": "PZW Koszalin",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Zachodniopomorskie"
+    },
+    {
+        "name": "Kanał Warta-Gopło (od tamy w Koszewie do Gopła)",
+        "lat": 52.45705543,
+        "lng": 18.37875366,
+        "district": "PZW Bydgoszcz",
+        "type": "canal",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Zalew Zemborzycki - mekka lubelskich wędkarzy",
+        "lat": 51.18106474,
+        "lng": 22.53038406,
+        "district": "PZW Lublin",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Jezioro Zagłębocze, Pojezierze Łęczyńsko-Włodawskie",
+        "lat": 51.43046755,
+        "lng": 23.02322388,
+        "district": "PZW Lublin",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Jezioro Lutomskie",
+        "lat": 52.62743658,
+        "lng": 16.11557007,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Tryszczyn",
+        "lat": 52.67617392,
+        "lng": 18.36785316,
+        "district": "PZW Bydgoszcz",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Zbiornik Łaziska - Chałupki Łaziska",
+        "lat": 51.32589202,
+        "lng": 20.92586517,
+        "district": "PZW Radom",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Jezioro Krzywek",
+        "lat": 53.60725011,
+        "lng": 20.87814331,
+        "district": "PZW Olsztyn",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Jezioro Mój - koło Kętrzyna",
+        "lat": 54.09302677,
+        "lng": 21.46213531,
+        "district": "PZW Olsztyn",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Jezioro Wolskie",
+        "lat": 0.0,
+        "lng": 0.0,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Zalew Kamienna Góra",
+        "lat": 50.77940353,
+        "lng": 16.03935242,
+        "district": "PZW Wałbrzych",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Zbiornik Żwirownia Sędzisław",
+        "lat": 50.81358203,
+        "lng": 16.05849266,
+        "district": "PZW Wałbrzych",
+        "type": "quarry_lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Zapora w Krępnej",
+        "lat": 49.51361849,
+        "lng": 21.5057373,
+        "district": "PZW Krosno",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podkarpackie"
+    },
+    {
+        "name": "Rzeka Bóbr powiat Kamienna Góra",
+        "lat": 50.86967816,
+        "lng": 15.98768234,
+        "district": "PZW Jelenia Góra",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Zbiornik Bukówka w Sudetach Zachodnich",
+        "lat": 50.71341727,
+        "lng": 15.94905853,
+        "district": "PZW Jelenia Góra",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Dolnośląskie"
+    },
+    {
+        "name": "Jezioro Godziszewskie (Lesionki)",
+        "lat": 52.651916,
+        "lng": 16.120781,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Jezioro Ławickie",
+        "lat": 52.6091967,
+        "lng": 16.0158319,
+        "district": "PZW Poznań",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Wielkopolskie"
+    },
+    {
+        "name": "Bystrzyca – rzeka w Grodzie Koziołka",
+        "lat": 51.22489409,
+        "lng": 22.53853798,
+        "district": "PZW Lublin",
+        "type": "river",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Łowisko Sudół",
+        "lat": 0.0,
+        "lng": 0.0,
+        "district": "PZW Unknown",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Unknown"
+    },
+    {
+        "name": "Jezioro Świesz",
+        "lat": 52.54167616,
+        "lng": 18.5564661,
+        "district": "PZW Bydgoszcz",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Kujawsko-Pomorskie"
+    },
+    {
+        "name": "Zbiornik Majdan Zahorodyński",
+        "lat": 51.22790415,
+        "lng": 23.138237,
+        "district": "PZW Lublin",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Łowisko specjalne Podzamcze Bychawa",
+        "lat": 51.02239369,
+        "lng": 22.52471924,
+        "district": "PZW Lublin",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Kaśki Staw",
+        "lat": 50.89250378,
+        "lng": 23.14866543,
+        "district": "PZW Zamość",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubelskie"
+    },
+    {
+        "name": "Stawy Kasia w Mikołowie",
+        "lat": 0.0,
+        "lng": 0.0,
+        "district": "PZW Katowice",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Czarny Staw - Lasy Panewnickie",
+        "lat": 0.0,
+        "lng": 0.0,
+        "district": "PZW Katowice",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Śląskie"
+    },
+    {
+        "name": "Jeziorko Czerniakowskie",
+        "lat": 52.19229824,
+        "lng": 21.07134819,
+        "district": "PZW Mazowiecki",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Goszczanowski Staw",
+        "lat": 52.7199183,
+        "lng": 15.63440323,
+        "district": "PZW Gorzów Wielkopolski",
+        "type": "pond",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Lubuskie"
+    },
+    {
+        "name": "Jaczno",
+        "lat": 54.27584985,
+        "lng": 22.8719902,
+        "district": "PZW Suwałki",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Podlaskie"
+    },
+    {
+        "name": "Jezioro Drweckie",
+        "lat": 53.7214166,
+        "lng": 19.9157234,
+        "district": "PZW Olsztyn",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Warmińsko-Mazurskie"
+    },
+    {
+        "name": "Zbiornik zaporowy Borki w Radomiu",
+        "lat": 51.4027236,
+        "lng": 21.1471333,
+        "district": "PZW Radom",
+        "type": "reservoir",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Mazowieckie"
+    },
+    {
+        "name": "Łowisko Stowarzyszenia Wędkarskiego Kormoran",
+        "lat": 50.8768276,
+        "lng": 17.53083229,
+        "district": "PZW Opole",
+        "type": "lake",
+        "fish": [
+            "pike",
+            "bream",
+            "roach",
+            "perch",
+            "carp"
+        ],
+        "voivodeship": "Opolskie"
+    }
+]
