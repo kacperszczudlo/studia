@@ -1,0 +1,71 @@
+package rules
+
+import pl.edu.atar.recruitment.model.Candidate;
+import pl.edu.atar.recruitment.model.ExamSubjectResult;
+import pl.edu.atar.recruitment.model.AdmissionDecision;
+
+// Reguła do liczenia punktów za matematykę (ważna dla informatyki)
+rule "Calculate Points for Math"
+    // Atrybut no-loop zapobiega ponownemu uruchomieniu reguły,
+    // jeśli jedyną zmianą w fakcie była ta dokonana przez tę samą regułę.
+    no-loop true
+    salience 10 // Musi się wykonać przed podjęciem decyzji, ale po regule o laureacie
+when
+    $c: Candidate(status == "Qualified", desiredFieldOfStudy == "Informatyka")
+    $result: ExamSubjectResult(examSubject == "Matematyka") from $c.getExamResults
+then
+    // Przelicznik punktów: wynik z matury * 1.5
+    int points = (int)($result.getExamResult() * 1.5);
+    modify($c) {
+        setRecruitmentPoints($c.getRecruitmentPoints() + points)
+    }
+    System.out.println("Rule 'Calculate Points for Math' added " + points + " points to " + $c.getFirstName());
+end
+
+// Reguła do liczenia punktów za angielski (bonus)
+rule "Calculate Points for English"
+    no-loop true
+    salience 9
+when
+    $c: Candidate(status == "Qualified")
+    $result: ExamSubjectResult(examSubject == "Angielski") from $c.getExamResults
+then
+    // Przelicznik punktów: wynik z matury * 0.5
+    int points = (int)($result.getExamResult() * 0.5);
+    modify($c) {
+        setRecruitmentPoints($c.getRecruitmentPoints() + points)
+    }
+    System.out.println("Rule 'Calculate Points for English' added " + points + " points to " + $c.getFirstName());
+end
+
+// Reguła decyzyjna: Przyjęcie na Informatykę na podstawie punktów
+// Tylko 1 miejsce! Kto lepszy, ten wygrywa.
+rule "Final Admission for Computer Science"
+    // activation-group sprawia, że tylko jedna reguła z tej grupy zostanie odpalona.
+    // W połączeniu z salience, pozwala nam to stworzyć ranking.
+    activation-group "admission-decisions"
+    salience ($c.getRecruitmentPoints()) // Dynamiczne salience - im więcej punktów, tym wyższy priorytet!
+when
+    $c: Candidate(status == "Qualified", desiredFieldOfStudy == "Informatyka")
+then
+    // Wstawiamy nowy fakt 'AdmissionDecision', który potwierdza przyjęcie.
+    // To pokazuje użycie 'insert'.
+    insert(new AdmissionDecision($c));
+    System.out.println("Rule 'Final Admission for CS' fired. Candidate " + $c.getFirstName() + " is the winner!");
+end
+
+// Reguła, która reaguje na nowy fakt 'AdmissionDecision'
+rule "Update Status based on Admission Decision"
+    salience -10 // Wykona się na końcu
+when
+    $decision: AdmissionDecision($winner: candidate)
+    $c: Candidate(this == $winner) // Znajdź oryginalny obiekt kandydata
+then
+    // Zmieniamy jego status na "Admitted"
+    modify($c) {
+        setStatus("Admitted")
+    }
+    System.out.println("Updating status for " + $c.getFirstName() + " to Admitted.");
+    // Usuwamy fakt decyzyjny, żeby nie zaśmiecać pamięci
+    retract($decision);
+end

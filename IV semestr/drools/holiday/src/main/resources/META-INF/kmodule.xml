@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="triage" packages="rules_old">
+        <ksession name="triageSession" type="stateless"/>
+    </kbase>
+
+    <kbase name="holidayKbase" packages="rules" default="true">
+        <ksession name="holidaySession" type="stateful" default="true"/>
+    </kbase>
+</kmodule>

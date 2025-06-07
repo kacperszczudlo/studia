@@ -1,0 +1,141 @@
+package rules;
+
+import pl.edu.atar.holidayconfigurator.model.Activity;
+import pl.edu.atar.holidayconfigurator.model.Flight;
+import pl.edu.atar.holidayconfigurator.model.HolidayPackage;
+import pl.edu.atar.holidayconfigurator.model.Hotel;
+import pl.edu.atar.holidayconfigurator.model.TravelRequest;
+import java.util.Arrays;
+
+global org.slf4j.Logger LOGGER;
+
+rule "Step 1: Select European Flight"
+    salience 100
+    when
+        $req: TravelRequest(preferredRegion == "Europa")
+        $pkg: HolidayPackage(status == "NEW")
+    then
+        LOGGER.info("Reguła '{}' -> Znaleziono lot.", drools.getRule().getName());
+        Flight flight = new Flight("Hiszpania", "Linie Budżetowe", 800.0 * $req.getNumberOfTravelers(), "Ekonomiczna");
+        modify($pkg) {
+            setFlight(flight),
+            setStatus("FLIGHT_SELECTED"),
+            addNote("Krok 1: Wybrano lot.")
+        };
+end
+
+rule "Step 2: Select Budget Hotel"
+    salience 90
+    activation-group "hotel-selection"
+    when
+        $req: TravelRequest(maxBudget < 5000)
+        $pkg: HolidayPackage(status == "FLIGHT_SELECTED")
+    then
+        LOGGER.info("Reguła '{}' -> Znaleziono hotel budżetowy.", drools.getRule().getName());
+        Hotel hotel = new Hotel("Hotel Słoneczny Brzeg", 3, 150.0, "Europa", Arrays.asList("blisko plaży"));
+        modify($pkg) {
+            setHotel(hotel),
+            setStatus("HOTEL_SELECTED"),
+            addNote("Krok 2: Wybrano hotel budżetowy.")
+        };
+end
+
+rule "Step 2: Select Luxury Hotel"
+    salience 90
+    activation-group "hotel-selection"
+    when
+        $req: TravelRequest(maxBudget >= 5000)
+        $pkg: HolidayPackage(status == "FLIGHT_SELECTED")
+    then
+        LOGGER.info("Reguła '{}' -> Znaleziono hotel luksusowy.", drools.getRule().getName());
+        Hotel hotel = new Hotel("Grand Hotel Paradiso", 5, 450.0, "Europa", Arrays.asList("blisko plaży", "spa", "basen"));
+        modify($pkg) {
+            setHotel(hotel),
+            setStatus("HOTEL_SELECTED"),
+            addNote("Krok 2: Wybrano hotel luksusowy.")
+        };
+end
+
+rule "Step 3: Initial Pricing"
+    salience 80
+    when
+        $pkg: HolidayPackage(status == "HOTEL_SELECTED", flight != null, hotel != null)
+    then
+        LOGGER.info("Reguła '{}' -> Obliczanie ceny wstępnej.", drools.getRule().getName());
+        modify($pkg) {
+            recalculateTotalPrice(),
+            setStatus("PRICED"),
+            addNote("Krok 3: Obliczono cenę wstępną.")
+        };
+end
+
+rule "Step 4: Add Sightseeing Activity"
+    salience 70
+    when
+        $req: TravelRequest(interests contains "zwiedzanie")
+        $pkg: HolidayPackage(status == "PRICED")
+        not( Activity( name == "Wycieczka po mieście" ) from $pkg.getActivities() )
+    then
+        LOGGER.info("Reguła '{}' -> Propozycja dodania wycieczki.", drools.getRule().getName());
+        Activity tour = new Activity("Wycieczka po mieście", 300.0, "OPCJONALNA", "zwiedzanie");
+        insert(tour);
+end
+
+rule "Step 5: Incorporate New Activity"
+    salience 60
+    no-loop true
+    when
+        $activity: Activity()
+        $pkg: HolidayPackage(status == "PRICED")
+    then
+        LOGGER.info("Reguła '{}' -> Włączanie atrakcji '{}' do pakietu.", drools.getRule().getName(), $activity.getName());
+        $pkg.getActivities().add($activity);
+        modify($pkg) {
+            recalculateTotalPrice(),
+            addNote("Dodano atrakcję: " + $activity.getName())
+        };
+        delete($activity);
+end
+
+rule "Step 6: Correct Package - Over Budget"
+    salience 50
+    no-loop true
+    when
+        $req: TravelRequest()
+        $pkg: HolidayPackage(status == "PRICED", totalPrice > $req.maxBudget)
+        $activityToRemove: Activity(type == "OPCJONALNA") from $pkg.getActivities()
+    then
+        LOGGER.warn("Reguła '{}' -> Budżet przekroczony. Usuwanie opcjonalnej aktywności: {}", drools.getRule().getName(), $activityToRemove.getName());
+        $pkg.getActivities().remove($activityToRemove);
+        modify($pkg) {
+            recalculateTotalPrice(),
+            addNote("Usunięto atrakcję w celu redukcji kosztów: " + $activityToRemove.getName())
+        };
+end
+
+rule "Step 7: Final Validation - Within Budget"
+    salience 40
+    when
+        $req: TravelRequest()
+        $pkg: HolidayPackage(status == "PRICED", totalPrice <= $req.maxBudget)
+    then
+        LOGGER.info("Reguła '{}' -> Pakiet mieści się w budżecie.", drools.getRule().getName());
+        modify($pkg) {
+            setStatus("COMPLETED"),
+            addNote("Krok 7: Walidacja zakończona pomyślnie.")
+        };
+end
+
+rule "Step 8: Limited Time Discount Offer"
+    timer (int: 2s)
+    salience 30
+    when
+        $pkg: HolidayPackage(status == "COMPLETED", discount == 0.0)
+    then
+        LOGGER.info("Reguła '{}' -> Przyznawanie zniżki czasowej!", drools.getRule().getName());
+        modify($pkg) {
+            setDiscount(100.0),
+            recalculateTotalPrice(),
+            addNote("Przyznano specjalną zniżkę czasową!")
+        };
+end

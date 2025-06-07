@@ -1,0 +1,78 @@
+package rules
+
+import pl.edu.atar.recruitment.model.Candidate;
+import pl.edu.atar.recruitment.model.ExamSubjectResult;
+
+// Reguła 1: Przyjęcie laureata olimpiady bezwarunkowo
+// Używamy 'salience', aby ta reguła miała najwyższy priorytet
+rule "Admit Olympic Laureate"
+    salience 100
+when
+    // Warunek: Kandydat jest laureatem olimpiady i jego status to "Pending"
+    $c: Candidate(olympicLaureate == true, status == "Pending")
+then
+    // Akcja: Zmień status kandydata na "Admitted"
+    modify($c) {
+        setStatus("Admitted (Laureate)")
+    }
+    System.out.println("Rule 'Admit Olympic Laureate' fired for: " + $c.getFirstName());
+end
+
+// Reguła 2: Kwalifikacja na kierunek Informatyka
+// Wymagana matura rozszerzona z matematyki na min. 60%
+rule "Qualify for Computer Science"
+    salience 50
+when
+    // Warunek: Kandydat aplikuje na Informatykę i ma odpowiedni wynik z matematyki
+    $c: Candidate(
+        status == "Pending",
+        desiredFieldOfStudy == "Informatyka"
+    )
+    // Sprawdzamy, czy na liście wyników ISTNIEJE odpowiedni wpis
+    exists ExamSubjectResult(
+        examSubject == "Matematyka",
+        examLevel == "Rozszerzony",
+        examResult >= 60.0
+    ) from $c.getExamResults
+then
+    // Akcja: Zmień status na "Qualified" (zakwalifikowany)
+    modify($c) {
+        setStatus("Qualified")
+    }
+    System.out.println("Rule 'Qualify for Computer Science' fired for: " + $c.getFirstName());
+end
+
+// Reguła 3: Kwalifikacja na kierunek Prawo
+// Wymagana matura rozszerzona z Historii (min. 70%) ORAZ Polskiego (min. 60%)
+rule "Qualify for Law"
+    salience 50
+when
+    $c: Candidate(
+        status == "Pending",
+        desiredFieldOfStudy == "Prawo"
+    )
+    // Złożony warunek logiczny - oba wyniki muszą istnieć
+    exists ExamSubjectResult(examSubject == "Historia", examLevel == "Rozszerzony", examResult >= 70.0) from $c.getExamResults
+    and
+    exists ExamSubjectResult(examSubject == "Polski", examLevel == "Rozszerzony", examResult >= 60.0) from $c.getExamResults
+then
+    modify($c) {
+        setStatus("Qualified")
+    }
+    System.out.println("Rule 'Qualify for Law' fired for: " + $c.getFirstName());
+end
+
+// Reguła 4: Odrzucenie kandydatów, którzy się nie zakwalifikowali
+// Niski priorytet ('salience') sprawia, że ta reguła odpali się na końcu
+rule "Reject Unqualified Candidates"
+    salience -100
+when
+    // Warunek: Status kandydata wciąż jest "Pending" po sprawdzeniu wszystkich innych reguł
+    $c: Candidate(status == "Pending")
+then
+    // Akcja: Zmień status na "Rejected"
+    modify($c) {
+        setStatus("Rejected")
+    }
+    System.out.println("Rule 'Reject Unqualified Candidates' fired for: " + $c.getFirstName());
+end

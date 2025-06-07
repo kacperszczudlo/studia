@@ -1,0 +1,393 @@
+<object-stream>
+<org.drools.kiesession.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>1</type>
+      <factId>2</factId>
+      <objectToString>Candidate{id=2, name=&apos;Anna Nowak&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>1</type>
+      <factId>3</factId>
+      <objectToString>Candidate{id=3, name=&apos;Piotr Zieliński&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Pending&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>1</type>
+      <factId>4</factId>
+      <objectToString>Candidate{id=4, name=&apos;Ewa Wiśniewska&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Pending&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>1</type>
+      <factId>5</factId>
+      <objectToString>Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Reject Unqualified Candidates [1]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Reject Unqualified Candidates [2]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=2, name=&apos;Anna Nowak&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Admit Olympic Laureate [3]</activationId>
+      <rule>Admit Olympic Laureate</rule>
+      <declarations>$c=Candidate{id=3, name=&apos;Piotr Zieliński&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Reject Unqualified Candidates [3]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=3, name=&apos;Piotr Zieliński&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Reject Unqualified Candidates [4]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=4, name=&apos;Ewa Wiśniewska&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Reject Unqualified Candidates [5]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Admit Olympic Laureate [3]</activationId>
+      <rule>Admit Olympic Laureate</rule>
+      <declarations>$c=Candidate{id=3, name=&apos;Piotr Zieliński&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>3</factId>
+      <objectToString>Candidate{id=3, name=&apos;Piotr Zieliński&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Admitted (Laureate)&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Admit Olympic Laureate [3]</activationId>
+      <rule>Admit Olympic Laureate</rule>
+      <declarations>$c=Candidate{id=3, name=&apos;Piotr Zieliński&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Admitted (Laureate)&apos;}</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>5</type>
+      <activationId>Reject Unqualified Candidates [3]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=3, name=&apos;Piotr Zieliński&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Admitted (Laureate)&apos;}</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Qualify for Computer Science [1]</activationId>
+      <rule>Qualify for Computer Science</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Qualify for Computer Science [5]</activationId>
+      <rule>Qualify for Computer Science</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Qualify for Computer Science [1]</activationId>
+      <rule>Qualify for Computer Science</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Qualify for Computer Science [1]</activationId>
+      <rule>Qualify for Computer Science</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Final Admission for Computer Science [1]</activationId>
+      <rule>Final Admission for Computer Science</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>5</type>
+      <activationId>Reject Unqualified Candidates [1]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Calculate Points for Math [1, 11]</activationId>
+      <rule>Calculate Points for Math</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@21e20ad5</declarations>
+      <factHandleIds>1,11</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Calculate Points for English [1, 14]</activationId>
+      <rule>Calculate Points for English</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@35e8316e</declarations>
+      <factHandleIds>1,14</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Qualify for Computer Science [5]</activationId>
+      <rule>Qualify for Computer Science</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Qualify for Computer Science [5]</activationId>
+      <rule>Qualify for Computer Science</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Final Admission for Computer Science [5]</activationId>
+      <rule>Final Admission for Computer Science</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>5</type>
+      <activationId>Reject Unqualified Candidates [5]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Calculate Points for Math [5, 15]</activationId>
+      <rule>Calculate Points for Math</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@149c3204</declarations>
+      <factHandleIds>5,15</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Calculate Points for English [5, 18]</activationId>
+      <rule>Calculate Points for English</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@3b9632d1</declarations>
+      <factHandleIds>5,18</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Qualify for Law [4]</activationId>
+      <rule>Qualify for Law</rule>
+      <declarations>$c=Candidate{id=4, name=&apos;Ewa Wiśniewska&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Qualify for Law [4]</activationId>
+      <rule>Qualify for Law</rule>
+      <declarations>$c=Candidate{id=4, name=&apos;Ewa Wiśniewska&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>4</factId>
+      <objectToString>Candidate{id=4, name=&apos;Ewa Wiśniewska&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Qualified&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Qualify for Law [4]</activationId>
+      <rule>Qualify for Law</rule>
+      <declarations>$c=Candidate{id=4, name=&apos;Ewa Wiśniewska&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>5</type>
+      <activationId>Reject Unqualified Candidates [4]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=4, name=&apos;Ewa Wiśniewska&apos;, fieldOfStudy=&apos;Prawo&apos;, points=0, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Calculate Points for Math [1, 11]</activationId>
+      <rule>Calculate Points for Math</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@21e20ad5</declarations>
+      <factHandleIds>1,11</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=127, status=&apos;Qualified&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Calculate Points for Math [1, 11]</activationId>
+      <rule>Calculate Points for Math</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=127, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@21e20ad5</declarations>
+      <factHandleIds>1,11</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Calculate Points for Math [5, 15]</activationId>
+      <rule>Calculate Points for Math</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@149c3204</declarations>
+      <factHandleIds>5,15</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=126, status=&apos;Qualified&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Calculate Points for Math [5, 15]</activationId>
+      <rule>Calculate Points for Math</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=126, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@149c3204</declarations>
+      <factHandleIds>5,15</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Calculate Points for English [1, 14]</activationId>
+      <rule>Calculate Points for English</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=127, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@35e8316e</declarations>
+      <factHandleIds>1,14</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=172, status=&apos;Qualified&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Calculate Points for English [1, 14]</activationId>
+      <rule>Calculate Points for English</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=172, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@35e8316e</declarations>
+      <factHandleIds>1,14</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Calculate Points for English [5, 18]</activationId>
+      <rule>Calculate Points for English</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=126, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@3b9632d1</declarations>
+      <factHandleIds>5,18</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Qualified&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Calculate Points for English [5, 18]</activationId>
+      <rule>Calculate Points for English</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Qualified&apos;}; $result=pl.edu.atar.recruitment.model.ExamSubjectResult@3b9632d1</declarations>
+      <factHandleIds>5,18</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Final Admission for Computer Science [5]</activationId>
+      <rule>Final Admission for Computer Science</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>5</type>
+      <activationId>Final Admission for Computer Science [1]</activationId>
+      <rule>Final Admission for Computer Science</rule>
+      <declarations>$c=Candidate{id=1, name=&apos;Jan Kowalski&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=172, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>1</type>
+      <factId>25</factId>
+      <objectToString>pl.edu.atar.recruitment.model.AdmissionDecision@65753040</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Final Admission for Computer Science [5]</activationId>
+      <rule>Final Admission for Computer Science</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Update Status based on Admission Decision [25, 5]</activationId>
+      <rule>Update Status based on Admission Decision</rule>
+      <declarations>$decision=pl.edu.atar.recruitment.model.AdmissionDecision@65753040; $winner=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Qualified&apos;}; $c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>5,25</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Update Status based on Admission Decision [25, 5]</activationId>
+      <rule>Update Status based on Admission Decision</rule>
+      <declarations>$decision=pl.edu.atar.recruitment.model.AdmissionDecision@65753040; $winner=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Qualified&apos;}; $c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Qualified&apos;}</declarations>
+      <factHandleIds>5,25</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Admitted&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>3</type>
+      <factId>25</factId>
+      <objectToString>pl.edu.atar.recruitment.model.AdmissionDecision@65753040</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Update Status based on Admission Decision [25, 5]</activationId>
+      <rule>Update Status based on Admission Decision</rule>
+      <declarations>$c=Candidate{id=5, name=&apos;Adam Mickiewicz&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=173, status=&apos;Admitted&apos;}</declarations>
+      <factHandleIds>5,25</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Reject Unqualified Candidates [2]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=2, name=&apos;Anna Nowak&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Pending&apos;}</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+    <org.drools.kiesession.audit.ObjectLogEvent>
+      <type>2</type>
+      <factId>2</factId>
+      <objectToString>Candidate{id=2, name=&apos;Anna Nowak&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Rejected&apos;}</objectToString>
+    </org.drools.kiesession.audit.ObjectLogEvent>
+    <org.drools.kiesession.audit.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Reject Unqualified Candidates [2]</activationId>
+      <rule>Reject Unqualified Candidates</rule>
+      <declarations>$c=Candidate{id=2, name=&apos;Anna Nowak&apos;, fieldOfStudy=&apos;Informatyka&apos;, points=0, status=&apos;Rejected&apos;}</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.kiesession.audit.ActivationLogEvent>
+  </events>
+</org.drools.kiesession.audit.WorkingMemoryLog>
+</object-stream>
