@@ -1,0 +1,38 @@
+@use 'variables' as *;
+@use 'mixins';
+
+@each $theme-name, $theme-map in $themes {
+  [data-theme="#{$theme-name}"] {
+    @include mixins.theme-variables($theme-map);
+  }
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--spacing) calc(var(--spacing) * 2);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+main {
+  padding: calc(var(--spacing) * 2);
+}

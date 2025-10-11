@@ -1,0 +1,17 @@
+@use 'sass:color';
+
+@mixin elevation($level) {
+  @if $level == 1 {
+    box-shadow: var(--shadow);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  } @else {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+}
+
+@mixin theme-variables($theme-map) {
+  @each $name, $value in $theme-map {
+    --#{$name}: #{$value};
+  }
+}

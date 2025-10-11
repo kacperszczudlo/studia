@@ -1,0 +1,45 @@
+@use 'mixins';
+
+.header {
+  &__title {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  &__toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 0.25rem 0.5rem;
+  }
+  &__select {
+    padding: 0.25rem;
+    border: 1px solid white;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+}
+
+.task-list {
+  display: grid;
+  gap: var(--spacing);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.task-card {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-radius: var(--radius);
+  padding: calc(var(--spacing) * 1.5);
+  @include mixins.elevation(1);
+  transition: background-color 0.3s ease;
+
+  &__title {
+    margin: 0 0 0.5rem 0;
+    font-weight: bold;
+  }
+}

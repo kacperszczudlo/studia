@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App — SCSS i motywy</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/R.ab0189e1d9c1292cbc840ba315f04e20?rik=UWoeilnHAoSoWA&pid=ImgRaw&r=0" type="image/x-icon">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="header__nav">
+            <h1 class="header__title">Lista Zadań 📝</h1>
+            <div>
+                <button id="font-dec" class="header__toggle">A-</button>
+                <button id="font-inc" class="header__toggle">A+</button>
+                <select id="theme-select" class="header__select" style="margin-left: 1rem;">
+                    <option value="light">Jasny</option>
+                    <option value="dark">Ciemny</option>
+                    <option value="contrast">Kontrast</option>
+                    <option value="sepia">Sepia</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="task-list">
+        <article class="task-card">
+            <h2 class="task-card__title">Zadanie 1</h2>
+            <p class="task-card__desc">Zaimplementuj motyw Light/Dark w SCSS.</p>
+        </article>
+        <article class="task-card">
+            <h2 class="task-card__title">Zadanie 2</h2>
+            <p class="task-card__desc">Dodaj mixiny i zmienne SCSS.</p>
+        </article>
+        <article class="task-card">
+            <h2 class="task-card__title">Zadanie 3</h2>
+            <p class="task-card__desc">Utwórz estetyczne layouty z BEM.</p>
+        </article>
+    </main>
+
+    <script>
+        const root = document.documentElement;
+
+        const themeSelect = document.getElementById('theme-select');
+
+        function setTheme(theme) {
+            root.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeSelect.value = theme;
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
+        themeSelect.addEventListener('change', () => {
+            const newTheme = themeSelect.value;
+            setTheme(newTheme);
+        });
+
+        const fontIncButton = document.getElementById('font-inc');
+        const fontDecButton = document.getElementById('font-dec');
+        const defaultFontSize = 16;
+
+        function setFontSize(size) {
+            root.style.fontSize = size + 'px';
+            localStorage.setItem('fontSize', size);
+        }
+
+        const savedFontSize = parseInt(localStorage.getItem('fontSize')) || defaultFontSize;
+        setFontSize(savedFontSize);
+
+        fontIncButton.addEventListener('click', () => {
+            let currentSize = parseInt(root.style.fontSize) || defaultFontSize;
+            setFontSize(currentSize + 1);
+        });
+
+        fontDecButton.addEventListener('click', () => {
+            let currentSize = parseInt(root.style.fontSize) || defaultFontSize;
+            setFontSize(currentSize - 1);
+        });
+    </script>
+
+</body>
+</html>
