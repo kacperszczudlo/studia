@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorium</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+    
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 900px; margin: auto; }
+        table { border-collapse: collapse; margin-top: 20px; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        hr { margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <h1><%= subject %></h1>
+    <p>Laboratorium 3. Na stronie powinny pojawić się 2 wykresy oraz tabela.</p>
+    <hr>
+
+    <h2>Wykres 1: Przykładowe dane</h2>
+    <div style="width: 100%;">
+        <canvas id="chart1"></canvas>
+    </div>
+    <hr>
+
+    <h2>Wykres 2: Temperatura</h2>
+    <div style="width: 100%;">
+        <canvas id="chart2"></canvas>
+    </div>
+    <hr>
+
+    <h2>Lista Produktów (Zadanie 7a)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nazwa produktu</th>
+                <th>Cena</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(function(product) { %>
+                <tr>
+                    <td><%= product.name %></td>
+                    <td><%= product.price %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <script>
+        const chart1ConfigString = '<%- chart1 %>';
+        const chart1Config = JSON.parse(chart1ConfigString);
+        new Chart(document.getElementById('chart1'), chart1Config);
+    </script>
+
+    <script>
+        const chart2DataString = '<%- chart2 %>';
+        const chart2Data = JSON.parse(chart2DataString);
+
+        const configChart2 = {
+            type: 'line',
+            data: {
+                datasets: [{
+                    data: chart2Data,
+                    label: "Temperatura",
+                    borderColor: "#3e95cd",
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'hour',
+                            tooltipFormat: 'YYYY-MM-DD HH:mm:ss'
+                        }
+                    }
+                }
+            }
+        };
+        new Chart(document.getElementById('chart2'), configChart2);
+    </script>
+</body>
+</html>

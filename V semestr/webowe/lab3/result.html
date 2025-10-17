@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wynik operacji</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; text-align: center; }
+        .operation-title { font-size: 3em; font-weight: bold; }
+        .result { font-size: 4em; font-weight: bold; margin: 20px 0; font-family: monospace; }
+        .back-link { margin-top: 40px; font-size: 1.2em; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="operation-title">Operacja: <%= variant %></div>
+    <div class="result">
+        <span><%= a %></span>
+        <span><%= operation %></span>
+        <span><%= b %></span>
+        <span>=</span>
+        <span><%= result %></span>
+    </div>
+
+    <% if (chartData && chartData !== '[]') { %>
+        <div style="width: 80%; max-width: 800px; margin: 40px auto 0 auto;">
+            <canvas id="resultChart"></canvas>
+        </div>
+
+        <script>
+            const chartDataString = '<%- chartData %>';
+            const chartData = JSON.parse(chartDataString);
+
+            const config = {
+                type: 'line',
+                data: {
+                    datasets: [{
+                        label: `Wykres dla y = x ${operation} ${b}`,
+                        data: chartData,
+                        borderColor: '#007bff',
+                        backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                        fill: true
+                    }]
+                }
+            };
+
+            new Chart(document.getElementById('resultChart'), config);
+        </script>
+    <% } %>
+
+    <a href="/" class="back-link">Powrót do strony głównej</a>
+</body>
+</html>
