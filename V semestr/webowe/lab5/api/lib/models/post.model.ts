@@ -1,13 +1,23 @@
-// lib/models/post.model.ts
-import mongoose from 'mongoose';
+import mongoose, { Schema, Document } from 'mongoose';
 import Post from '../interfaces/post.interface';
 
-const postSchema = new mongoose.Schema<Post>({
-    author: String,
-    title: String,
-    content: String,
+export interface PostDocument extends Post, Document {}
+
+const postSchema: Schema = new Schema({
+    author: {
+        type: String,
+        required: true,
+    },
+    title: {
+        type: String,
+        required: true,
+    },
+    content: {
+        type: String,
+        required: true,
+    },
 });
 
-const postModel = mongoose.model<Post>('Post', postSchema);
+const postModel = mongoose.model<PostDocument>('Post', postSchema);
 
 export default postModel;
