@@ -4,15 +4,12 @@
     "slug": "quiz-app-lab8",
     "version": "1.0.0",
     "orientation": "portrait",
-    
     "icon": "./assets/icon.png",
-    
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#4A90E2"
     },
-    
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -30,6 +27,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }

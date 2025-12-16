@@ -1,6 +1,6 @@
 // screens/WelcomeScreen.js
 import React from 'react';
-import { View, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const WelcomeScreen = ({ onAccept }) => {
   return (
@@ -10,10 +10,10 @@ const WelcomeScreen = ({ onAccept }) => {
         <Text style={styles.content}>
           Witamy w aplikacji Quiz! Korzystanie z naszej aplikacji wymaga akceptacji poniższego regulaminu:
           
-          \n1. Dane o wynikach quizów są anonimowo przechowywane lokalnie (AsyncStorage).
-          \n2. Aplikacja wymaga dostępu do sieci tylko w celu pobrania aktualnej daty (dla wyników).
-          \n3. Wszystkie treści quizów są własnością twórców i przeznaczone są tylko do celów edukacyjnych i rozrywkowych.
-          \n4. Kliknięcie "Akceptuję" spowoduje trwałe zapisanie Twojej zgody i nie zobaczysz tego ekranu ponownie.
+          {'\n'}1. Dane o wynikach quizów są anonimowo przechowywane lokalnie (AsyncStorage).
+          {'\n'}2. Aplikacja wymaga dostępu do sieci w celu pobierania testów i wysyłania wyników.
+          {'\n'}3. Wszystkie treści quizów są pobierane z serwera tgryl.pl.
+          {'\n'}4. Kliknięcie "Akceptuję" spowoduje trwałe zapisanie Twojej zgody.
         </Text>
       </View>
       
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 26,
-    fontWeight: 'bold',
+    fontFamily: 'Oswald_700Bold', // Nowy font
     color: '#333',
     marginBottom: 30,
     textAlign: 'center',
@@ -57,9 +57,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     color: '#666',
+    fontFamily: 'Lato_400Regular', // Nowy font
   },
   button: {
-    backgroundColor: '#4CAF50', // Zielony kolor akceptacji
+    backgroundColor: '#4CAF50',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'Oswald_700Bold', // Nowy font
   }
 });
 

@@ -1,26 +1,26 @@
 // App.js
-import 'react-native-gesture-handler'; // TA LINIA MUSI BYĆ PIERWSZA!
+import 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator, DrawerContentScrollView } from '@react-navigation/drawer';
 import { TouchableOpacity, View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import AsyncStorage from '@react-native-async-storage/async-storage'; 
-import * as SplashScreen from 'expo-splash-screen'; // Import dla Splash Screenu
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as SplashScreen from 'expo-splash-screen';
 
-// Import ekranów
+// Import Fontów (Zadanie 1 - Lab 9)
+import { useFonts, Oswald_400Regular, Oswald_700Bold } from '@expo-google-fonts/oswald';
+import { Lato_400Regular, Lato_700Bold } from '@expo-google-fonts/lato';
+
 import HomeScreen from './screens/HomeScreen';
 import TestScreen from './screens/TestScreen';
 import ResultsScreen from './screens/ResultsScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 
-// KLUCZ ASYNCSTORAGE
 const AGREEMENT_KEY = '@MyApp:agreementAccepted';
 
-// Zapobieganie automatycznemu ukryciu Splash Screenu (abyśmy mogli kontrolować ten moment)
 SplashScreen.preventAutoHideAsync();
 
-// --- Komponent przycisku w szufladzie ---
 const DrawerItem = ({ icon, label, onPress }) => (
   <TouchableOpacity style={drawerStyles.itemContainer} onPress={onPress}>
     <Ionicons name={icon} size={24} color="#333" style={drawerStyles.icon} />
@@ -28,187 +28,97 @@ const DrawerItem = ({ icon, label, onPress }) => (
   </TouchableOpacity>
 );
 
-// --- Niestandardowa zawartość Drawera ---
 const CustomDrawerContent = (props) => {
-  const testTitles = [
-    { id: 1, title: 'Test title #1', icon: 'flask-outline' },
-    { id: 2, title: 'Test title #2', icon: 'flask-outline' },
-    { id: 3, title: 'Test title #3', icon: 'flask-outline' },
-  ];
-
   return (
     <DrawerContentScrollView {...props} contentContainerStyle={{ padding: 0 }}>
-      {/* Nagłówek Drawera */}
       <View style={drawerStyles.header}>
         <Ionicons name="bulb-outline" size={50} color="#fff" />
         <Text style={drawerStyles.appTitle}>Quiz App</Text>
       </View>
-      
-      {/* Główne przyciski nawigacyjne */}
       <View style={drawerStyles.mainSection}>
-        <DrawerItem 
-          icon="home-outline" 
-          label="Home Page" 
-          onPress={() => props.navigation.navigate('Home')} 
-        />
-        <DrawerItem 
-          icon="bar-chart-outline" 
-          label="Results (Ranking)" 
-          onPress={() => props.navigation.navigate('Results')} 
-        />
-      </View>
-
-      {/* Lista Testów */}
-      <Text style={drawerStyles.sectionTitle}>Dostępne Testy</Text>
-      <View style={drawerStyles.testSection}>
-        {testTitles.map((test) => (
-          <DrawerItem 
-            key={test.id}
-            icon={test.icon} 
-            label={test.title} 
-            onPress={() => props.navigation.navigate('Test', { testId: test.id, title: test.title })} 
-          />
-        ))}
+        <DrawerItem icon="home-outline" label="Strona Główna" onPress={() => props.navigation.navigate('Home')} />
+        <DrawerItem icon="bar-chart-outline" label="Wyniki" onPress={() => props.navigation.navigate('Results')} />
       </View>
     </DrawerContentScrollView>
   );
 };
 
 const drawerStyles = StyleSheet.create({
-  header: {
-    backgroundColor: '#4A90E2', 
-    padding: 20,
-    paddingTop: 40,
-    alignItems: 'center',
-    marginBottom: 10,
-  },
-  appTitle: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: '#fff',
-    marginTop: 10,
-  },
-  mainSection: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
-    paddingBottom: 10,
-    marginHorizontal: 10,
-  },
-  itemContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 12,
-    marginVertical: 4,
-    borderRadius: 8,
-  },
-  icon: {
-    marginRight: 15,
-  },
-  itemLabel: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#333',
-  },
-  sectionTitle: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    color: '#999',
-    marginTop: 10,
-    marginLeft: 20,
-    textTransform: 'uppercase',
-  },
-  testSection: {
-    paddingHorizontal: 10,
-  }
+    header: { backgroundColor: '#4A90E2', padding: 20, paddingTop: 40, alignItems: 'center', marginBottom: 10 },
+    // Użycie fontu Oswald dla nagłówka
+    appTitle: { fontSize: 22, fontFamily: 'Oswald_700Bold', color: '#fff', marginTop: 10 },
+    mainSection: { borderBottomWidth: 1, borderBottomColor: '#eee', paddingBottom: 10, marginHorizontal: 10 },
+    itemContainer: { flexDirection: 'row', alignItems: 'center', padding: 12, marginVertical: 4, borderRadius: 8 },
+    icon: { marginRight: 15 },
+    // Użycie fontu Lato dla menu
+    itemLabel: { fontSize: 16, fontFamily: 'Lato_400Regular', color: '#333' },
 });
 
 const Drawer = createDrawerNavigator();
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [appIsReady, setAppIsReady] = useState(false);
   const [agreementAccepted, setAgreementAccepted] = useState(false);
 
+  // Ładowanie fontów z Google Fonts
+  let [fontsLoaded] = useFonts({
+    Oswald_400Regular,
+    Oswald_700Bold,
+    Lato_400Regular,
+    Lato_700Bold,
+  });
+
   useEffect(() => {
-    const checkAgreement = async () => {
+    const prepare = async () => {
       try {
         const value = await AsyncStorage.getItem(AGREEMENT_KEY);
-        if (value === 'true') {
-          setAgreementAccepted(true);
-        }
+        if (value === 'true') setAgreementAccepted(true);
       } catch (e) {
-        console.error("Błąd odczytu AsyncStorage", e);
+        console.warn(e);
       } finally {
-        setLoading(false);
-        // Ukrywamy Splash Screen dopiero po zakończeniu ładowania danych
-        SplashScreen.hideAsync();
+        setAppIsReady(true);
       }
     };
-    checkAgreement();
+    prepare();
   }, []);
 
-  const handleAccept = async () => {
-    try {
+  useEffect(() => {
+    if (appIsReady && fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [appIsReady, fontsLoaded]);
+
+  if (!appIsReady || !fontsLoaded) {
+    return null;
+  }
+
+  if (!agreementAccepted) {
+    const handleAccept = async () => {
       await AsyncStorage.setItem(AGREEMENT_KEY, 'true');
       setAgreementAccepted(true);
-    } catch (e) {
-      console.error("Błąd zapisu AsyncStorage", e);
-    }
-  };
-
-  // 1. Stan ładowania (widoczny przez ułamek sekundy, po zniknięciu Splash Screenu)
-  if (loading) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" color="#4A90E2" />
-        <Text style={{ marginTop: 10 }}>Ładowanie...</Text>
-      </View>
-    );
-  }
-
-  // 2. Ekran powitalny (tylko, jeśli zgoda NIE została zaakceptowana)
-  if (!agreementAccepted) {
+    };
     return <WelcomeScreen onAccept={handleAccept} />;
   }
-  
-  // 3. Główna aplikacja (gdy zgoda została zaakceptowana)
+
   return (
     <NavigationContainer>
       <Drawer.Navigator
         initialRouteName="Home"
         drawerContent={props => <CustomDrawerContent {...props} />}
         screenOptions={{
-          headerStyle: {
-            backgroundColor: '#fff',
-            shadowColor: 'transparent', 
-            elevation: 0,
-          },
-          headerTitleStyle: {
-              fontWeight: 'bold',
-              color: '#333',
-          },
-          headerLeftContainerStyle: {
-              paddingLeft: 10
-          }
+          headerStyle: { backgroundColor: '#fff', elevation: 0 },
+          // Aplikujemy fonty globalnie do nagłówków nawigacji
+          headerTitleStyle: { fontFamily: 'Oswald_700Bold', color: '#333' },
+          headerLeftContainerStyle: { paddingLeft: 10 }
         }}
       >
+        <Drawer.Screen name="Home" component={HomeScreen} options={{ title: 'QUIZ APP' }} />
         <Drawer.Screen 
-          name="Home" 
-          component={HomeScreen} 
-          options={{ title: 'HOME PAGE' }} 
+            name="Test" 
+            component={TestScreen} 
+            options={{ title: 'TEST', drawerItemStyle: { display: 'none' } }} 
         />
-        <Drawer.Screen 
-          name="Test" 
-          component={TestScreen} 
-          options={({ route }) => ({ 
-            title: route.params?.title || 'TEST W TOKU',
-            drawerItemStyle: { display: 'none' } 
-          })}
-        />
-        <Drawer.Screen 
-          name="Results" 
-          component={ResultsScreen} 
-          options={{ title: 'WYNIKI RANKINGU' }} 
-        />
+        <Drawer.Screen name="Results" component={ResultsScreen} options={{ title: 'WYNIKI' }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
