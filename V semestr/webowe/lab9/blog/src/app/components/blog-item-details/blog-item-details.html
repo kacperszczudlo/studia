@@ -1,0 +1,14 @@
+<div class="container my-5">
+    <div *ngIf="text; else loading">
+        <img [src]="image" class="img-fluid mb-4 rounded" alt="Blog Image" style="max-height: 400px; width: 100%; object-fit: cover;">
+        <p class="fs-5">{{ text }}</p>
+        
+        <a routerLink="/" class="btn btn-secondary mt-3">Wróć do listy</a>
+    </div>
+    
+    <ng-template #loading>
+        <div class="text-center mt-5">
+            <p>Ładowanie lub nie znaleziono posta...</p>
+        </div>
+    </ng-template>
+</div>

@@ -1,9 +1,10 @@
 import express from 'express';
 import morgan from 'morgan';
-import mongoose from 'mongoose'; // Dodano
+import mongoose from 'mongoose';
 import { config } from './config';
 import Controller from './interfaces/controller.interface';
 import { loggingMiddleware } from './middlewares/logging.middleware';
+import cors from 'cors'; // Import już miałeś, to dobrze!
 
 class App {
     public app: express.Application;
@@ -13,13 +14,17 @@ class App {
 
         this.initializeMiddlewares();
         this.initializeControllers(controllers);
-        this.connectToDatabase(); // Dodano
+        this.connectToDatabase();
     }
     
     private initializeMiddlewares(): void {
+        // --- TUTAJ DODANO OBSŁUGĘ CORS ---
+        // Pozwala na połączenia z innych portów (np. Angular 4200 -> API 3100)
+        this.app.use(cors()); 
+
         this.app.use(express.json());
-        // this.app.use(morgan('dev')); // ZAKOMENTOWANO / USUNIĘTO - Zgodnie z Lab. 8 używamy własnego middleware
-        this.app.use(loggingMiddleware); // Dodano własny middleware logujący
+        // this.app.use(morgan('dev')); 
+        this.app.use(loggingMiddleware);
     }
 
     private initializeControllers(controllers: Controller[]): void {
@@ -28,9 +33,8 @@ class App {
         });
     }
 
-    private async connectToDatabase(): Promise<void> { // Dodano
+    private async connectToDatabase(): Promise<void> {
         try {
-            // Używamy body-parser, który jest częścią express.json()
             await mongoose.connect(config.databaseUrl);
             console.log('Connection with database established'); 
         } catch (error) {
@@ -45,7 +49,6 @@ class App {
             console.log('MongoDB disconnected'); 
         });
 
-        // Obsługa zamknięcia połączenia przy terminacji
         process.on('SIGINT', async () => {
             await mongoose.connection.close();
             console.log('MongoDB connection closed due to app termination');

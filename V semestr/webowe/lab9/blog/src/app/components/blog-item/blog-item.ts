@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'; 
 import { CommonModule } from "@angular/common"; 
-// Zakładamy, że klasy wewnątrz plików to BlogItemImageComponent i BlogItemTextComponent
+// Upewnij się, że te importy są poprawne (bez .component jeśli zmieniłeś nazwy plików)
 import { BlogItemImageComponent } from '../blog-item-image/blog-item-image'; 
 import { BlogItemTextComponent } from '../blog-item-text/blog-item-text'; 
 
@@ -11,7 +11,8 @@ import { BlogItemTextComponent } from '../blog-item-text/blog-item-text';
   templateUrl: './blog-item.html',
   styleUrl: './blog-item.scss'
 })
-export class BlogItemComponent { // Klasa musi być poprawnie eksportowana!
+export class BlogItemComponent { 
   @Input() image?: string; 
   @Input() text?: string; 
+  @Input() id?: string; // <--- DODAJ TĘ LINIJKĘ
 }
